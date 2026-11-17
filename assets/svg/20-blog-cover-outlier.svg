@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" role="img" aria-label="Scatter plot, illustrative: 46 channel segments cluster along an average return line, one segment returns far above the rest."><style>.sig{fill:#2AA880}
+.ctx{fill:#6A6A6A}
+.ring{stroke:#0A0A0A;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#2AA880}
+.ctx-s{stroke:#6A6A6A}
+.grd{stroke:rgba(255,255,255,0.10);stroke-width:1}
+.grd.base{stroke:#9A9A9A;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#9A9A9A}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl.mut{fill:#9A9A9A;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#9A9A9A;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#9A9A9A;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#2AA880;stroke-width:1.5;opacity:.5}
+.leader{stroke:#9A9A9A;stroke-width:1}
+.area{fill:#2AA880;opacity:.12}
+.edge{stroke:#9A9A9A;stroke-width:1.2;opacity:.55}
+.node{fill:#F2F2F2}
+.gdot{fill:#9A9A9A;opacity:.3}
+.arc{fill:none;stroke:#2AA880;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#F2F2F2}
+.code{font:10px "JetBrains Mono",monospace;fill:#9A9A9A;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#2AA880;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#2AA880}
+</style>
+<line x1="40" x2="740" y1="344" y2="344" class="grd base"/>
+<text x="30" y="348" class="tick" text-anchor="end">0</text>
+<line x1="40" x2="740" y1="262" y2="262" class="grd"/>
+<text x="30" y="266" class="tick" text-anchor="end">50</text>
+<line x1="40" x2="740" y1="180" y2="180" class="grd"/>
+<text x="30" y="184" class="tick" text-anchor="end">100</text>
+<line x1="40" x2="740" y1="98" y2="98" class="grd"/>
+<text x="30" y="102" class="tick" text-anchor="end">150</text>
+<line x1="40" x2="740" y1="16" y2="16" class="grd"/>
+<text x="30" y="20" class="tick" text-anchor="end">200</text>
+<text x="40" y="368" class="tick" text-anchor="middle">0</text>
+<text x="215" y="368" class="tick" text-anchor="middle">25</text>
+<text x="390" y="368" class="tick" text-anchor="middle">50</text>
+<text x="565" y="368" class="tick" text-anchor="middle">75</text>
+<text x="740" y="368" class="tick" text-anchor="middle">100</text>
+<line x1="40" y1="344" x2="740" y2="114.4" class="trend"/>
+<circle cx="293.2" cy="278.7" r="5" class="ctx dot"/>
+
+<circle cx="140.1" cy="313" r="5" class="ctx dot"/>
+
+<circle cx="131.3" cy="323" r="5" class="ctx dot"/>
+
+<circle cx="360.1" cy="279.3" r="5" class="ctx dot"/>
+
+<circle cx="354.5" cy="224.2" r="5" class="ctx dot"/>
+
+<circle cx="232" cy="266.5" r="5" class="ctx dot"/>
+
+<circle cx="447.5" cy="210.8" r="5" class="ctx dot"/>
+
+<circle cx="124.4" cy="313.4" r="5" class="ctx dot"/>
+
+<circle cx="183.9" cy="313.5" r="5" class="ctx dot"/>
+
+<circle cx="593" cy="202.4" r="5" class="ctx dot"/>
+
+<circle cx="485.1" cy="210.4" r="5" class="ctx dot"/>
+
+<circle cx="134.2" cy="328.6" r="5" class="ctx dot"/>
+
+<circle cx="510.4" cy="201.4" r="5" class="ctx dot"/>
+
+<circle cx="452.6" cy="217.1" r="5" class="ctx dot"/>
+
+<circle cx="579.8" cy="146.8" r="5" class="ctx dot"/>
+
+<circle cx="445.8" cy="201.1" r="5" class="ctx dot"/>
+
+<circle cx="540.2" cy="195.3" r="5" class="ctx dot"/>
+
+<circle cx="167.9" cy="299.4" r="5" class="ctx dot"/>
+
+<circle cx="188.6" cy="304.7" r="5" class="ctx dot"/>
+
+<circle cx="502.9" cy="162" r="5" class="ctx dot"/>
+
+<circle cx="629.2" cy="172.6" r="5" class="ctx dot"/>
+
+<circle cx="458" cy="199.9" r="5" class="ctx dot"/>
+
+<circle cx="607.5" cy="99.2" r="5" class="ctx dot"/>
+
+<circle cx="500.5" cy="236.4" r="5" class="ctx dot"/>
+
+<circle cx="490.1" cy="138" r="5" class="ctx dot"/>
+
+<circle cx="269.3" cy="271.6" r="5" class="ctx dot"/>
+
+<circle cx="109.7" cy="328.3" r="5" class="ctx dot"/>
+
+<circle cx="167.3" cy="310.1" r="5" class="ctx dot"/>
+
+<circle cx="174.8" cy="309.9" r="5" class="ctx dot"/>
+
+<circle cx="626.7" cy="210.2" r="5" class="ctx dot"/>
+
+<circle cx="430.6" cy="174.5" r="5" class="ctx dot"/>
+
+<circle cx="622.2" cy="184.9" r="5" class="ctx dot"/>
+
+<circle cx="314.5" cy="220.3" r="5" class="ctx dot"/>
+
+<circle cx="187.9" cy="312" r="5" class="ctx dot"/>
+
+<circle cx="238.1" cy="278" r="5" class="ctx dot"/>
+
+<circle cx="256" cy="299.8" r="5" class="ctx dot"/>
+
+<circle cx="320.9" cy="238.6" r="5" class="ctx dot"/>
+
+<circle cx="516.5" cy="183.7" r="5" class="ctx dot"/>
+
+<circle cx="507.8" cy="231.6" r="5" class="ctx dot"/>
+
+<circle cx="571" cy="117.4" r="5" class="ctx dot"/>
+
+<circle cx="335" cy="262" r="5" class="ctx dot"/>
+
+<circle cx="482.3" cy="252.8" r="5" class="ctx dot"/>
+
+<circle cx="223.1" cy="301.6" r="5" class="ctx dot"/>
+
+<circle cx="128" cy="332.3" r="5" class="ctx dot"/>
+
+<circle cx="157.8" cy="318.5" r="5" class="ctx dot"/>
+
+<circle cx="628.5" cy="142.2" r="5" class="ctx dot"/>
+
+<circle cx="278" cy="45.5" r="18" class="halo"/>
+<circle cx="278" cy="45.5" r="7" class="sig ring"/>
+
+<line x1="298" y1="39.5" x2="348" y2="15.5" class="leader"/>
+<text x="354" y="11.5" class="dl">The outlier</text>
+<text x="354" y="27.5" class="dl mut">4.2x average return</text>
+<text x="740" y="106.4" class="dl mut" text-anchor="end">Average</text>
+</svg>

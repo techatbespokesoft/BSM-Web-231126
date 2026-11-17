@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" role="img" aria-label="Scatter plot, illustrative: 46 channel segments cluster along an average return line, one segment returns far above the rest."><style>.sig{fill:#2AA880}
+.ctx{fill:#6A6A6A}
+.ring{stroke:#0A0A0A;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#2AA880}
+.ctx-s{stroke:#6A6A6A}
+.grd{stroke:rgba(255,255,255,0.10);stroke-width:1}
+.grd.base{stroke:#9A9A9A;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#9A9A9A}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl.mut{fill:#9A9A9A;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#9A9A9A;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#9A9A9A;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#2AA880;stroke-width:1.5;opacity:.5}
+.leader{stroke:#9A9A9A;stroke-width:1}
+.area{fill:#2AA880;opacity:.12}
+.edge{stroke:#9A9A9A;stroke-width:1.2;opacity:.55}
+.node{fill:#F2F2F2}
+.gdot{fill:#9A9A9A;opacity:.3}
+.arc{fill:none;stroke:#2AA880;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#F2F2F2}
+.code{font:10px "JetBrains Mono",monospace;fill:#9A9A9A;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#2AA880;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#2AA880}
+</style>
+<line x1="10" y1="140" x2="290" y2="49" class="trend"/>
+<circle cx="142.6" cy="91.8" r="4" class="ctx dot"/>
+<circle cx="145.8" cy="94.9" r="4" class="ctx dot"/>
+<circle cx="77.4" cy="116.9" r="4" class="ctx dot"/>
+<circle cx="225.6" cy="91.8" r="4" class="ctx dot"/>
+<circle cx="54.5" cy="120.8" r="4" class="ctx dot"/>
+<circle cx="42.6" cy="122.1" r="4" class="ctx dot"/>
+<circle cx="191.7" cy="78.7" r="4" class="ctx dot"/>
+<circle cx="36.1" cy="134.8" r="4" class="ctx dot"/>
+<circle cx="78.7" cy="125.4" r="4" class="ctx dot"/>
+<circle cx="145.4" cy="95.2" r="4" class="ctx dot"/>
+<circle cx="158.9" cy="86.8" r="4" class="ctx dot"/>
+<circle cx="193.8" cy="83.8" r="4" class="ctx dot"/>
+<circle cx="275.4" cy="20.5" r="4" class="ctx dot"/>
+<circle cx="204.8" cy="87.1" r="4" class="ctx dot"/>
+<circle cx="102.8" cy="117" r="4" class="ctx dot"/>
+<circle cx="129.9" cy="92.3" r="4" class="ctx dot"/>
+<circle cx="265.8" cy="40.1" r="4" class="ctx dot"/>
+<circle cx="83.5" cy="109.4" r="4" class="ctx dot"/>
+<circle cx="271.2" cy="64.7" r="4" class="ctx dot"/>
+<circle cx="185.7" cy="73.3" r="4" class="ctx dot"/>
+<circle cx="53.6" cy="123.9" r="4" class="ctx dot"/>
+<circle cx="217.1" cy="93" r="4" class="ctx dot"/>
+<circle cx="57" cy="127.2" r="4" class="ctx dot"/>
+<circle cx="75.7" cy="118.2" r="4" class="ctx dot"/>
+<circle cx="78.9" cy="116.8" r="4" class="ctx dot"/>
+<circle cx="189.2" cy="98.3" r="4" class="ctx dot"/>
+<circle cx="84.3" cy="116.2" r="4" class="ctx dot"/>
+<circle cx="228.1" cy="76" r="4" class="ctx dot"/>
+<circle cx="83.7" cy="115.1" r="4" class="ctx dot"/>
+<circle cx="188.8" cy="94.7" r="4" class="ctx dot"/>
+<circle cx="84.3" cy="117.9" r="4" class="ctx dot"/>
+<circle cx="112.5" cy="114.9" r="4" class="ctx dot"/>
+<circle cx="54.4" cy="126.7" r="4" class="ctx dot"/>
+<circle cx="178.9" cy="90.5" r="4" class="ctx dot"/>
+<circle cx="266" cy="57.2" r="4" class="ctx dot"/>
+<circle cx="243.5" cy="84" r="4" class="ctx dot"/>
+<circle cx="253.7" cy="44.8" r="4" class="ctx dot"/>
+<circle cx="78.6" cy="110.4" r="4" class="ctx dot"/>
+<circle cx="80.3" cy="106.8" r="4" class="ctx dot"/>
+<circle cx="179.4" cy="91.1" r="4" class="ctx dot"/>
+<circle cx="41.8" cy="128.3" r="4" class="ctx dot"/>
+<circle cx="204" cy="85.4" r="4" class="ctx dot"/>
+<circle cx="177.7" cy="96.1" r="4" class="ctx dot"/>
+<circle cx="207.9" cy="97.6" r="4" class="ctx dot"/>
+<circle cx="168.7" cy="74.6" r="4" class="ctx dot"/>
+<circle cx="100.7" cy="104.1" r="4" class="ctx dot"/>
+<circle cx="105.2" cy="21.7" r="12" class="halo"/>
+<circle cx="105.2" cy="21.7" r="6" class="sig ring"/>
+</svg>

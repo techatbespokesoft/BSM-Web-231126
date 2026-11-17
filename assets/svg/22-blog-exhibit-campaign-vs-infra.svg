@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 320" role="img" aria-label="Line chart, illustrative: campaign-led revenue spikes and decays four times over 24 months, while infrastructure-led revenue compounds steadily and finishes far higher."><style>.sig{fill:#0E8A63}
+.ctx{fill:#B0B0B0}
+.ring{stroke:#FFFFFF;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#0E8A63}
+.ctx-s{stroke:#B0B0B0}
+.grd{stroke:rgba(10,10,10,0.10);stroke-width:1}
+.grd.base{stroke:#6B6B6B;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#6B6B6B}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#0A0A0A}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#0A0A0A}
+.dl.mut{fill:#6B6B6B;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#6B6B6B;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#6B6B6B;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#0E8A63;stroke-width:1.5;opacity:.5}
+.leader{stroke:#6B6B6B;stroke-width:1}
+.area{fill:#0E8A63;opacity:.12}
+.edge{stroke:#6B6B6B;stroke-width:1.2;opacity:.55}
+.node{fill:#0A0A0A}
+.gdot{fill:#6B6B6B;opacity:.3}
+.arc{fill:none;stroke:#0E8A63;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#0A0A0A}
+.code{font:10px "JetBrains Mono",monospace;fill:#6B6B6B;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#0E8A63;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#0E8A63}
+</style>
+<line x1="44" x2="690" y1="286" y2="286" class="grd base"/>
+<text x="34" y="290" class="tick" text-anchor="end">0</text>
+<line x1="44" x2="690" y1="218.5" y2="218.5" class="grd"/>
+<text x="34" y="222.5" class="tick" text-anchor="end">35</text>
+<line x1="44" x2="690" y1="151" y2="151" class="grd"/>
+<text x="34" y="155" class="tick" text-anchor="end">70</text>
+<line x1="44" x2="690" y1="83.5" y2="83.5" class="grd"/>
+<text x="34" y="87.5" class="tick" text-anchor="end">105</text>
+<line x1="44" x2="690" y1="16" y2="16" class="grd"/>
+<text x="34" y="20" class="tick" text-anchor="end">140</text>
+<text x="44" y="310" class="tick" text-anchor="middle">M0</text>
+<text x="205.5" y="310" class="tick" text-anchor="middle">M6</text>
+<text x="367" y="310" class="tick" text-anchor="middle">M12</text>
+<text x="528.5" y="310" class="tick" text-anchor="middle">M18</text>
+<text x="690" y="310" class="tick" text-anchor="middle">M24</text>
+<polyline points="44,274.4 70.9,247.4 97.8,174.1 124.8,241 151.7,263.3 178.6,270.7 205.5,273.2 232.4,247 259.3,174 286.2,241 313.2,263.3 340.1,270.7 367,273.2 393.9,247 420.8,174 447.8,241 474.7,263.3 501.6,270.7 528.5,273.2 555.4,247 582.3,174 609.2,241 636.2,263.3 663.1,270.7 690,273.2" class="ln ctx-s"/>
+<polyline points="44,270.6 70.9,268.8 97.8,266.9 124.8,264.8 151.7,262.4 178.6,259.8 205.5,256.8 232.4,253.6 259.3,249.9 286.2,245.9 313.2,241.4 340.1,236.4 367,230.8 393.9,224.7 420.8,217.8 447.8,210.2 474.7,201.7 501.6,192.2 528.5,181.7 555.4,170 582.3,157 609.2,142.6 636.2,126.5 663.1,108.7 690,88.8" class="ln sig-s"/>
+<circle cx="690" cy="88.8" r="5" class="sig ring"/>
+<text x="702" y="92.8" class="dl">Infrastructure</text>
+<circle cx="690" cy="273.2" r="5" class="ctx ring"/>
+<text x="702" y="277.2" class="dl">Campaigns</text>
+<line class="xhair" x1="0" x2="0" y1="16" y2="286" style="opacity:0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</svg>

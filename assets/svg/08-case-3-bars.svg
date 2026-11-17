@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true"><style>.sig{fill:#2AA880}
+.ctx{fill:#6A6A6A}
+.ring{stroke:#0A0A0A;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#2AA880}
+.ctx-s{stroke:#6A6A6A}
+.grd{stroke:rgba(255,255,255,0.10);stroke-width:1}
+.grd.base{stroke:#9A9A9A;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#9A9A9A}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl.mut{fill:#9A9A9A;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#9A9A9A;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#9A9A9A;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#2AA880;stroke-width:1.5;opacity:.5}
+.leader{stroke:#9A9A9A;stroke-width:1}
+.area{fill:#2AA880;opacity:.12}
+.edge{stroke:#9A9A9A;stroke-width:1.2;opacity:.55}
+.node{fill:#F2F2F2}
+.gdot{fill:#9A9A9A;opacity:.3}
+.arc{fill:none;stroke:#2AA880;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#F2F2F2}
+.code{font:10px "JetBrains Mono",monospace;fill:#9A9A9A;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#2AA880;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#2AA880}
+</style>
+<path d="M0,140 V109.5 Q0,106.5 3,106.5 H20.2 Q23.2,106.5 23.2,109.5 V140 Z" class="ctx"/>
+<path d="M25.2,140 V69.9 Q25.2,66.9 28.2,66.9 H45.3 Q48.3,66.9 48.3,69.9 V140 Z" class="ctx"/>
+<path d="M50.3,140 V97.3 Q50.3,94.3 53.3,94.3 H70.5 Q73.5,94.3 73.5,97.3 V140 Z" class="ctx"/>
+<path d="M75.5,140 V103.4 Q75.5,100.4 78.5,100.4 H95.7 Q98.7,100.4 98.7,103.4 V140 Z" class="ctx"/>
+<path d="M100.7,140 V50.1 Q100.7,47.1 103.7,47.1 H120.8 Q123.8,47.1 123.8,50.1 V140 Z" class="ctx"/>
+<path d="M125.8,140 V89.7 Q125.8,86.7 128.8,86.7 H146 Q149,86.7 149,89.7 V140 Z" class="ctx"/>
+<path d="M151,140 V98.8 Q151,95.8 154,95.8 H171.2 Q174.2,95.8 174.2,98.8 V140 Z" class="ctx"/>
+<path d="M176.2,140 V30.3 Q176.2,27.3 179.2,27.3 H196.3 Q199.3,27.3 199.3,30.3 V140 Z" class="ctx"/>
+<path d="M201.3,140 V82.1 Q201.3,79.1 204.3,79.1 H221.5 Q224.5,79.1 224.5,82.1 V140 Z" class="ctx"/>
+<path d="M226.5,140 V92.8 Q226.5,89.8 229.5,89.8 H246.7 Q249.7,89.8 249.7,92.8 V140 Z" class="ctx"/>
+<path d="M251.7,140 V9 Q251.7,6 254.7,6 H271.8 Q274.8,6 274.8,9 V140 Z" class="sig"/>
+<path d="M276.8,140 V74.5 Q276.8,71.5 279.8,71.5 H297 Q300,71.5 300,74.5 V140 Z" class="ctx"/>
+</svg>

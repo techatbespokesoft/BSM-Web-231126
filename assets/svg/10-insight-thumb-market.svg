@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 110" preserveAspectRatio="none" aria-hidden="true"><style>.sig{fill:#2AA880}
+.ctx{fill:#6A6A6A}
+.ring{stroke:#0A0A0A;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#2AA880}
+.ctx-s{stroke:#6A6A6A}
+.grd{stroke:rgba(255,255,255,0.10);stroke-width:1}
+.grd.base{stroke:#9A9A9A;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#9A9A9A}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl.mut{fill:#9A9A9A;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#9A9A9A;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#9A9A9A;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#2AA880;stroke-width:1.5;opacity:.5}
+.leader{stroke:#9A9A9A;stroke-width:1}
+.area{fill:#2AA880;opacity:.12}
+.edge{stroke:#9A9A9A;stroke-width:1.2;opacity:.55}
+.node{fill:#F2F2F2}
+.gdot{fill:#9A9A9A;opacity:.3}
+.arc{fill:none;stroke:#2AA880;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#F2F2F2}
+.code{font:10px "JetBrains Mono",monospace;fill:#9A9A9A;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#2AA880;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#2AA880}
+</style>
+<path d="M0,110 V72.7 Q0,69.7 3,69.7 H32.8 Q35.8,69.7 35.8,72.7 V110 Z" class="ctx"/>
+<path d="M37.8,110 V66.2 Q37.8,63.2 40.8,63.2 H70.5 Q73.5,63.2 73.5,66.2 V110 Z" class="ctx"/>
+<path d="M75.5,110 V59.7 Q75.5,56.7 78.5,56.7 H108.2 Q111.2,56.7 111.2,59.7 V110 Z" class="ctx"/>
+<path d="M113.2,110 V51.9 Q113.2,48.9 116.2,48.9 H146 Q149,48.9 149,51.9 V110 Z" class="ctx"/>
+<path d="M151,110 V42.8 Q151,39.8 154,39.8 H183.8 Q186.8,39.8 186.8,42.8 V110 Z" class="ctx"/>
+<path d="M188.8,110 V32.4 Q188.8,29.4 191.8,29.4 H221.5 Q224.5,29.4 224.5,32.4 V110 Z" class="ctx"/>
+<path d="M226.5,110 V20.7 Q226.5,17.7 229.5,17.7 H259.2 Q262.2,17.7 262.2,20.7 V110 Z" class="ctx"/>
+<path d="M264.2,110 V9 Q264.2,6 267.2,6 H297 Q300,6 300,9 V110 Z" class="sig"/>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 246" role="img" aria-label="Bar chart, illustrative: return on spend by channel, creator commerce leads at 4.2x."><style>.sig{fill:#0E8A63}
+.ctx{fill:#B0B0B0}
+.ring{stroke:#FFFFFF;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#0E8A63}
+.ctx-s{stroke:#B0B0B0}
+.grd{stroke:rgba(10,10,10,0.10);stroke-width:1}
+.grd.base{stroke:#6B6B6B;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#6B6B6B}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#0A0A0A}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#0A0A0A}
+.dl.mut{fill:#6B6B6B;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#6B6B6B;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#6B6B6B;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#0E8A63;stroke-width:1.5;opacity:.5}
+.leader{stroke:#6B6B6B;stroke-width:1}
+.area{fill:#0E8A63;opacity:.12}
+.edge{stroke:#6B6B6B;stroke-width:1.2;opacity:.55}
+.node{fill:#0A0A0A}
+.gdot{fill:#6B6B6B;opacity:.3}
+.arc{fill:none;stroke:#0E8A63;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#0A0A0A}
+.code{font:10px "JetBrains Mono",monospace;fill:#6B6B6B;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#0E8A63;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#0E8A63}
+</style>
+<text x="136" y="25" class="tick ink" text-anchor="end">Creator commerce</text>
+<path d="M150,10 H555.5 Q559.5,10 559.5,14 V28 Q559.5,32 555.5,32 H150 Z" class="sig"/>
+<text x="567.5" y="25" class="dl">4.2x</text>
+
+<text x="136" y="61" class="tick ink" text-anchor="end">Search</text>
+<path d="M150,46 H399.5 Q403.5,46 403.5,50 V64 Q403.5,68 399.5,68 H150 Z" class="ctx"/>
+<text x="411.5" y="61" class="dl">2.6x</text>
+
+<text x="136" y="97" class="tick ink" text-anchor="end">Paid social</text>
+<path d="M150,82 H350.8 Q354.8,82 354.8,86 V100 Q354.8,104 350.8,104 H150 Z" class="ctx"/>
+<text x="362.8" y="97" class="dl">2.1x</text>
+
+<text x="136" y="133" class="tick ink" text-anchor="end">Retail media</text>
+<path d="M150,118 H321.5 Q325.5,118 325.5,122 V136 Q325.5,140 321.5,140 H150 Z" class="ctx"/>
+<text x="333.5" y="133" class="dl">1.8x</text>
+
+<text x="136" y="169" class="tick ink" text-anchor="end">Display</text>
+<path d="M150,154 H253.3 Q257.3,154 257.3,158 V172 Q257.3,176 253.3,176 H150 Z" class="ctx"/>
+<text x="265.3" y="169" class="dl">1.1x</text>
+
+<text x="136" y="205" class="tick ink" text-anchor="end">Out-of-home</text>
+<path d="M150,190 H214.3 Q218.3,190 218.3,194 V208 Q218.3,212 214.3,212 H150 Z" class="ctx"/>
+<text x="226.3" y="205" class="dl">0.7x</text>
+
+<line x1="150" x2="150" y1="4" y2="222" class="grd base"/>
+</svg>

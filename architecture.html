@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%2218%2015%2052%2052%22%3E%3Crect%20x%3D%2218%22%20y%3D%2215%22%20width%3D%2252%22%20height%3D%2252%22%20rx%3D%2210%22%20fill%3D%22%230A0A0A%22/%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22m28.7%2C22.94c.06-.03.12-.06.17-.09h-.17v.09Z%22%3E%3C/path%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22m28.7%2C36.32h7.87c2.1%2C0%2C3.74-.62%2C4.98-1.79%2C1.32-1.17%2C1.95-2.88%2C1.95-4.98%2C0-4.44-2.41-6.7-7.24-6.7h-7.38c-.06.03-.12.06-.17.09v13.38Z%22%3E%3C/path%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22m51.21%2C35.85c-1.32%2C1.71-2.96%2C2.88-4.91%2C3.43v.31c6.09%2C1.75%2C9.47%2C5.59%2C10.09%2C11.61%2C1.55-2.91%2C2.44-6.23%2C2.44-9.76%2C0-5.23-1.94-10.01-5.14-13.66%2C0%2C.07%2C0%2C.14%2C0%2C.21%2C0%2C3.04-.86%2C5.69-2.49%2C7.87Z%22%3E%3C/path%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22m45.83%2C52.28c0-2.49-.78-4.44-2.34-5.92-1.48-1.48-3.43-2.18-5.84-2.18h-8.96v15.73h9.11c5.37%2C0%2C8.02-2.57%2C8.02-7.63Z%22%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+<meta charset="UTF-8">
+<script>/* consent mode: denied until the visitor chooses */window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("consent","default",{ad_storage:"denied",ad_user_data:"denied",ad_personalization:"denied",analytics_storage:"denied",functionality_storage:"granted",security_storage:"granted",wait_for_update:500});try{var _c=JSON.parse(localStorage.getItem("bsp_consent")||"null");if(_c)gtag("consent","update",{analytics_storage:_c.analytics?"granted":"denied",ad_storage:_c.marketing?"granted":"denied",ad_user_data:_c.marketing?"granted":"denied",ad_personalization:_c.marketing?"granted":"denied"})}catch(e){}</script>
+<script>/* start every page at the top */try{if("scrollRestoration" in history)history.scrollRestoration="manual"}catch(e){}if(!location.hash){window.scrollTo(0,0);document.addEventListener("DOMContentLoaded",function(){window.scrollTo(0,0)});window.addEventListener("load",function(){window.scrollTo(0,0)});window.addEventListener("pageshow",function(){window.scrollTo(0,0)});window.addEventListener("pagereveal",function(){window.scrollTo(0,0)})}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Architecture of Revenue | Bespoke</title>
+<link rel="canonical" href="https://bespokemarketing.asia/architecture.html">
+<meta property="og:url" content="https://bespokemarketing.asia/architecture.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Bespoke">
+<meta name="description" content="Marketing was built for campaigns. Growth needs infrastructure. How Bespoke builds revenue infrastructure for Asia's market leaders.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>:root{--sig-d:#2AA880;--sig-l:#0E8A63;--sig-soft:#9ED9C3}
+
+  /* ===== DESIGN TOKENS ===== */
+  :root{
+    --ink:#0A0A0A;
+    --ink-2:#1A1A1A;
+    --ink-3:#2A2A2A;
+    --paper:#FFFFFF;
+    --paper-2:#F4F3F0;
+    --grey:#A8A8A8;
+    --grey-2:#6B6B6B;
+    --line-dark:rgba(255,255,255,0.12);
+    --line-light:rgba(10,10,10,0.12);
+    --serif:"Be Vietnam Pro",sans-serif;
+    --sans:"Be Vietnam Pro",sans-serif;
+    --mono:"Be Vietnam Pro",sans-serif;
+    --max:1280px;
+    --pad:clamp(20px,5vw,64px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:0.14em;text-transform:uppercase}
+  .serif{font-family:var(--serif);font-weight:300;letter-spacing:-0.02em}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;font-size:15px;font-weight:500;border:1px solid currentColor;transition:background .2s,color .2s}
+  .btn-solid{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  .btn-solid:hover{background:transparent;color:var(--paper)}
+  .btn-ghost{color:var(--paper);border-color:rgba(255,255,255,0.35)}
+  .btn-ghost:hover{background:var(--ink-3)}
+  .btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn-dark:hover{background:transparent;color:var(--ink)}
+  .arrow{font-family:var(--mono)}
+
+  /* ===== NAV ===== */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(10,10,10,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line-dark);color:var(--paper)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:18px;letter-spacing:-0.01em}
+  .brand-mark{width:34px;height:34px;border-radius:50%;background:var(--paper);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:17px}
+  .nav-links{display:flex;gap:32px;font-size:14px;color:var(--grey)}
+  .nav-links a:hover{color:var(--paper)}
+  .nav-right{display:flex;align-items:center;gap:20px}
+  .lang{font-family:var(--mono);font-size:12px;color:var(--grey);display:flex;gap:8px}
+  .lang .on{color:var(--paper)}
+  .nav .btn{padding:10px 18px;font-size:13px}
+
+  /* ===== HERO ===== */
+  .hero{background:var(--ink);color:var(--paper);padding:clamp(72px,10vw,140px) 0 clamp(64px,8vw,110px);position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line-dark) 1px,transparent 1px),linear-gradient(90deg,var(--line-dark) 1px,transparent 1px);background-size:80px 80px;opacity:.35;mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 70% 40%,#000 0%,transparent 70%)}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.25fr 1fr;gap:64px;align-items:end}
+  .hero .eyebrow{color:var(--grey);margin-bottom:28px}
+  .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(44px,7vw,96px);line-height:0.98;letter-spacing:-0.035em}
+  .hero h1 em{font-style:italic;color:var(--grey)}
+  .hero-sub{margin-top:32px;font-size:clamp(17px,1.4vw,20px);line-height:1.55;color:#CFCFCF;max-width:560px}
+  .hero-ctas{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+
+  /* layer stack visual */
+  .stack{display:flex;flex-direction:column;gap:10px}
+  .layer{border:1px solid var(--line-dark);background:rgba(255,255,255,0.03);padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+  .layer:nth-child(1){margin-left:0}
+  .layer:nth-child(2){margin-left:24px}
+  .layer:nth-child(3){margin-left:48px}
+  .layer:nth-child(4){margin-left:72px;background:var(--paper);color:var(--ink);border-color:var(--paper)}
+  .layer .n{font-family:var(--mono);font-size:11px;color:var(--grey)}
+  .layer:nth-child(4) .n{color:var(--grey-2)}
+  .layer .t{font-size:15px;font-weight:500}
+  .stack-cap{margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--grey);text-align:right;letter-spacing:.08em}
+
+  /* ===== CLIENTS ===== */
+  .clients{background:var(--ink);color:var(--paper);border-top:1px solid var(--line-dark);padding:36px 0}
+  .clients-inner{display:flex;align-items:center;gap:48px;flex-wrap:wrap}
+  .clients .eyebrow{color:var(--grey);flex-shrink:0}
+  .logo-row{display:flex;gap:clamp(28px,4vw,56px);flex-wrap:wrap;align-items:center}
+  .logo{font-size:19px;font-weight:600;letter-spacing:-0.01em;color:#D9D9D9;opacity:.85}
+  /* Replace .logo text with real monochrome SVG logos in Framer */
+
+  /* ===== STATEMENT ===== */
+  .statement{padding:clamp(96px,12vw,170px) 0;background:var(--paper)}
+  .statement p{font-family:var(--serif);font-weight:300;font-size:clamp(40px,6vw,84px);line-height:1.02;letter-spacing:-0.035em;max-width:1000px}
+  .statement p span{color:var(--grey)}
+  .statement-foot{margin-top:40px;display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap;border-top:1px solid var(--line-light);padding-top:28px}
+  .statement-foot p{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--grey-2);max-width:520px;letter-spacing:0}
+
+  /* ===== SECTION HEAD ===== */
+  .sec-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+  .sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;max-width:720px}
+  .sec-head p{font-size:16px;color:var(--grey-2);max-width:380px}
+  .sec-head .eyebrow{margin-bottom:20px;color:var(--grey-2)}
+
+  /* ===== LAYERS ===== */
+  .layers{padding:clamp(80px,10vw,140px) 0;background:var(--paper-2)}
+  .layer-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+  .lcard{padding:32px 28px 36px 0;border-right:1px solid var(--line-light);display:flex;flex-direction:column;gap:18px;min-height:340px}
+  .lcard + .lcard{padding-left:28px}
+  .lcard:last-child{border-right:none}
+  .lcard .num{font-family:var(--mono);font-size:12px;color:var(--grey-2)}
+  .lcard h3{font-family:var(--serif);font-weight:400;font-size:32px;letter-spacing:-0.02em}
+  .lcard p{font-size:15.5px;color:var(--grey-2);line-height:1.6}
+  .lcard ul{list-style:none;margin-top:auto;display:flex;flex-direction:column;gap:8px;font-family:var(--mono);font-size:12px;color:var(--ink)}
+  .lcard ul li::before{content:"+ ";color:var(--grey)}
+
+  /* ===== METHOD ===== */
+  .method{background:var(--ink);color:var(--paper);padding:clamp(80px,10vw,140px) 0}
+  .method .sec-head p,.method .sec-head .eyebrow{color:var(--grey)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line-dark)}
+  .step{padding:36px 32px 8px 0;position:relative}
+  .step + .step{padding-left:32px;border-left:1px solid var(--line-dark)}
+  .step .k{font-family:var(--mono);font-size:12px;color:var(--grey);margin-bottom:28px;display:block}
+  .step h3{font-family:var(--serif);font-weight:300;font-size:44px;letter-spacing:-0.03em;margin-bottom:16px}
+  .step p{color:#BDBDBD;font-size:15.5px;line-height:1.6;max-width:340px}
+  .step .out{margin-top:28px;font-family:var(--mono);font-size:12px;color:var(--grey);line-height:1.9}
+
+  /* ===== WORK ===== */
+  .work{padding:clamp(80px,10vw,140px) 0;background:var(--paper)}
+  .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .case{border:1px solid var(--line-light);display:flex;flex-direction:column;transition:border-color .2s}
+  .case:hover{border-color:var(--ink)}
+  .case-visual{aspect-ratio:4/3;background:var(--ink);color:var(--paper);padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+  .case-visual .tag{font-family:var(--mono);font-size:11px;color:var(--grey);letter-spacing:.1em;text-transform:uppercase}
+  .case-visual .metric{font-family:var(--serif);font-weight:300;font-size:64px;line-height:1;letter-spacing:-0.03em}
+  .case-visual .metric-l{font-size:13px;color:var(--grey);margin-top:8px}
+  .case-body{padding:24px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .case-body .client{font-family:var(--mono);font-size:12px;color:var(--grey-2);text-transform:uppercase;letter-spacing:.08em}
+  .case-body h3{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.2;letter-spacing:-0.015em}
+  .case-body .layers-used{margin-top:auto;padding-top:16px;display:flex;gap:6px;flex-wrap:wrap}
+  .chip{font-family:var(--mono);font-size:11px;padding:5px 9px;border:1px solid var(--line-light)}
+  .placeholder-note{font-family:var(--mono);font-size:11px;color:#B5651D}
+
+  /* ===== ENGINE ===== */
+  .engine{background:var(--paper-2);padding:clamp(80px,10vw,140px) 0}
+  .engine-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:64px;align-items:center}
+  .engine h2{font-family:var(--serif);font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;margin:20px 0 24px}
+  .engine p.lead{font-size:17px;color:var(--grey-2);line-height:1.6;max-width:460px}
+  .feat{margin:32px 0 36px;display:flex;flex-direction:column;border-top:1px solid var(--line-light)}
+  .feat div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--line-light);font-size:15px}
+  .feat div span:last-child{font-family:var(--mono);font-size:12px;color:var(--grey-2)}
+  .dash{background:var(--ink);color:var(--paper);padding:24px;border:1px solid var(--ink)}
+  .dash-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--line-dark);font-family:var(--mono);font-size:11px;color:var(--grey)}
+  .dash-top .live{color:var(--paper)}
+  .dash-kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-dark);margin:20px 0}
+  .kpi{background:var(--ink);padding:16px}
+  .kpi .l{font-family:var(--mono);font-size:10px;color:var(--grey);text-transform:uppercase;letter-spacing:.08em}
+  .kpi .v{font-family:var(--serif);font-size:32px;font-weight:300;margin-top:6px;letter-spacing:-0.02em}
+  .kpi .d{font-family:var(--mono);font-size:11px;color:var(--sig-soft);margin-top:4px}
+  .chart{display:flex;align-items:flex-end;gap:6px;height:150px;padding:12px 0;border-bottom:1px solid var(--line-dark)}
+  .bar{flex:1;background:var(--ink-3)}
+  .bar.hi{background:var(--paper)}
+  .dash-foot{display:flex;justify-content:space-between;margin-top:14px;font-family:var(--mono);font-size:11px;color:var(--grey)}
+  .insight-row{margin-top:16px;padding:12px 14px;border:1px solid var(--line-dark);font-size:13px;color:#D0D0D0;display:flex;gap:10px}
+  .insight-row b{font-family:var(--mono);font-size:11px;color:var(--paper);font-weight:500;flex-shrink:0}
+
+  /* ===== INSIGHTS ===== */
+  .insights{padding:clamp(80px,10vw,140px) 0;background:var(--paper)}
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
+  .post{padding:28px 28px 32px 0;display:flex;flex-direction:column;gap:14px;min-height:280px}
+  .post + .post{padding-left:28px;border-left:1px solid var(--line-light)}
+  .post .meta{font-family:var(--mono);font-size:11px;color:var(--grey-2);text-transform:uppercase;letter-spacing:.08em;display:flex;justify-content:space-between}
+  .post h3{font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.18;letter-spacing:-0.015em}
+  .post p{font-size:15px;color:var(--grey-2);line-height:1.6}
+  .post .more{margin-top:auto;font-size:14px;font-weight:500}
+
+  /* ===== TRUST ===== */
+  .trust{background:var(--paper-2);padding:clamp(80px,10vw,140px) 0}
+  .trust-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+  .tcard{padding:28px 24px 8px 0;display:flex;flex-direction:column;gap:14px}
+  .tcard + .tcard{padding-left:24px;border-left:1px solid var(--line-light)}
+  .tcard .num{font-family:var(--mono);font-size:12px;color:var(--grey-2)}
+  .tcard h3{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:-0.015em;line-height:1.2}
+  .tcard p{font-size:15px;color:var(--grey-2);line-height:1.6}
+  @media (max-width:1024px){.trust-grid{grid-template-columns:1fr 1fr}.tcard:nth-child(3){padding-left:0;border-left:none}}
+  @media (max-width:720px){.trust-grid{grid-template-columns:1fr}.tcard,.tcard + .tcard{padding:24px 0;border-left:none;border-bottom:1px solid var(--line-light)}}
+
+  /* ===== ECOSYSTEM ===== */
+  .eco{background:var(--ink);color:var(--paper);padding:clamp(64px,8vw,110px) 0;border-bottom:1px solid var(--line-dark)}
+  .eco-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+  .eco h2{font-family:var(--serif);font-weight:300;font-size:clamp(30px,3.6vw,48px);line-height:1.05;letter-spacing:-0.03em;margin-top:20px}
+  .eco .eyebrow{color:var(--grey)}
+  .eco-list{display:flex;flex-direction:column;border-top:1px solid var(--line-dark)}
+  .eco-item{display:grid;grid-template-columns:80px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line-dark)}
+  .eco-item .c{font-family:var(--mono);font-size:12px;color:var(--grey)}
+  .eco-item b{font-weight:500;font-size:16px;display:block;margin-bottom:4px}
+  .eco-item span{font-size:14px;color:var(--grey)}
+
+  /* ===== CTA ===== */
+  .cta{background:var(--ink);color:var(--paper);padding:clamp(96px,12vw,170px) 0}
+  .cta h2{font-family:var(--serif);font-weight:300;font-size:clamp(42px,6.4vw,92px);line-height:1;letter-spacing:-0.035em;max-width:1050px}
+  .cta h2 em{font-style:italic;color:var(--grey)}
+  .cta-row{margin-top:48px;display:flex;gap:14px;flex-wrap:wrap}
+
+  /* ===== FOOTER ===== */
+  .foot{background:var(--ink);color:var(--grey);border-top:1px solid var(--line-dark);padding:56px 0 40px;font-size:14px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}
+  .foot h4{font-family:var(--mono);font-size:11px;font-weight:400;text-transform:uppercase;letter-spacing:.12em;color:var(--grey-2);margin-bottom:16px}
+  .foot ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot a:hover{color:var(--paper)}
+  .foot .brand{color:var(--paper);margin-bottom:16px}
+  .foot-bottom{margin-top:56px;padding-top:24px;border-top:1px solid var(--line-dark);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:11px}
+
+
+  /* ===== VISUAL SYSTEM: signal + context ===== */
+  :root{--signal:var(--sig-l);--ctx:#B0B0B0;--vink:#0A0A0A;--vmut:#6B6B6B;--vgrid:rgba(10,10,10,0.10);--surf:#FFFFFF}
+  .hero,.clients,.method,.eco,.cta,.case-visual,.dash,.thumb,.photo,.cover,.on-dark{--signal:var(--sig-d);--ctx:#6A6A6A;--vink:#F2F2F2;--vmut:#9A9A9A;--vgrid:rgba(255,255,255,0.10);--surf:#0A0A0A}
+  .viz{width:100%;height:auto;display:block;overflow:visible}
+  .viz .sig{fill:var(--signal)} .viz .ctx{fill:var(--ctx)}
+  .viz .ring{stroke:var(--surf);stroke-width:2}
+  .viz .ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+  .viz .sig-s{stroke:var(--signal)} .viz .ctx-s{stroke:var(--ctx)}
+  .viz .grd{stroke:var(--vgrid);stroke-width:1} .viz .grd.base{stroke:var(--vmut);opacity:.6}
+  .viz .tick{font:11px "Be Vietnam Pro",sans-serif;fill:var(--vmut)}
+  .viz .tick.ink{font:13px "Be Vietnam Pro",sans-serif;fill:var(--vink)}
+  .viz .dl{font:500 13px "Be Vietnam Pro",sans-serif;fill:var(--vink)} .viz .dl.mut{fill:var(--vmut);font-weight:400}
+  .viz .hit{fill:transparent;cursor:crosshair}
+  .viz .xhair{stroke:var(--vmut);stroke-dasharray:3 3;transition:opacity .1s}
+  .viz .trend{stroke:var(--vmut);stroke-dasharray:4 4;stroke-width:1.5}
+  .viz .halo{fill:none;stroke:var(--signal);stroke-width:1.5;opacity:.5}
+  .viz .leader{stroke:var(--vmut);stroke-width:1}
+  .viz .area{fill:var(--signal);opacity:.12}
+  .viz .edge{stroke:var(--vmut);stroke-width:1.2;opacity:.55}
+  .viz .node{fill:var(--vink)}
+  .viz .gdot{fill:var(--vmut);opacity:.3}
+  .viz .arc{fill:none;stroke:var(--signal);stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+  .viz .lbl{font:500 15px "Be Vietnam Pro",sans-serif;fill:var(--vink)}
+  .viz .code{font:10px "Be Vietnam Pro",sans-serif;fill:var(--vmut);letter-spacing:.1em}
+  /* hero plates */
+  .viz .face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+  .viz .p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+  .viz .side-l{fill:#121212;stroke:rgba(255,255,255,.18)} .viz .side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+  .viz .pgrid{stroke:rgba(255,255,255,.08)}
+  .viz .sigline{fill:none;stroke:var(--signal);stroke-width:2.5;stroke-linecap:round}
+  .viz .sigdot{fill:var(--signal)}
+  /* exhibit: the signature figure frame, reused on every page */
+  .exhibit{margin:56px 0 0;border-top:1px solid currentColor;padding-top:18px}
+  .ex-head{display:flex;gap:16px;align-items:baseline;margin-bottom:20px;flex-wrap:wrap}
+  .ex-n{font:12px "Be Vietnam Pro",sans-serif;color:var(--signal);letter-spacing:.12em;text-transform:uppercase}
+  .ex-t{font-family:"Be Vietnam Pro",sans-serif;font-size:22px;letter-spacing:-0.01em}
+  .ex-note{font:11px "Be Vietnam Pro",sans-serif;color:var(--vmut);margin-top:14px;letter-spacing:.02em}
+  .legend{display:flex;gap:22px;font-size:13px;margin-bottom:14px;flex-wrap:wrap}
+  .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:-1px}
+  .sig-bg{background:var(--signal)} .ctx-bg{background:var(--ctx)}
+  /* tooltip */
+  .tip{position:fixed;pointer-events:none;opacity:0;background:#0A0A0A;color:#fff;border:1px solid rgba(255,255,255,.22);padding:10px 12px;font:12px "Be Vietnam Pro",sans-serif;display:flex;flex-direction:column;gap:3px;z-index:200;transition:opacity .12s;min-width:150px}
+  .tip b{font-weight:600;font-size:12.5px} .tip span{color:#BDBDBD}
+  /* photo slot */
+  .photo{position:relative;background:#0D0D0D;overflow:hidden;color:#fff}
+  .photo-frame{aspect-ratio:21/8;min-height:300px;background:
+     radial-gradient(ellipse at 30% 70%,color-mix(in srgb,var(--sig-d) 18%,transparent),transparent 55%),
+     repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 1px,transparent 1px 22px),
+     linear-gradient(180deg,#151515,#070707);display:flex;align-items:flex-end}
+  .photo-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;width:100%;padding-bottom:40px;flex-wrap:wrap}
+  .photo-line{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(32px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;max-width:700px}
+  .photo-brief{font:11px "Be Vietnam Pro",sans-serif;color:#9A9A9A;max-width:330px;line-height:1.7;border-left:1px solid var(--signal);padding-left:14px}
+  /* in-card visuals */
+  .lviz{height:120px;margin:4px 0 6px;display:flex;align-items:flex-end}
+  .lviz .viz{height:100%}
+  .case-visual{aspect-ratio:auto;min-height:300px}
+  .case-chart{flex:1;display:flex;align-items:flex-end;margin:18px 0 14px}
+  .case-chart .viz{height:96px}
+  .thumb{background:var(--ink);color:var(--paper);padding:18px 18px 14px;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:6px}
+  .thumb .ex-n{font-size:10px}
+  .thumb{aspect-ratio:auto;height:210px} .thumb .viz{height:140px;width:100%}
+  .statement .exhibit p.ex-note{font:11px "Be Vietnam Pro",sans-serif;letter-spacing:.02em;line-height:1.5;color:var(--vmut);max-width:none}
+  /* footprint */
+  .footprint{padding:clamp(80px,10vw,140px) 0;background:var(--paper)}
+  .fp-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+  .fp-grid h2{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;margin:20px 0 24px}
+  .fp-grid p.lead{font-size:17px;color:var(--grey-2);line-height:1.6;max-width:440px}
+  .fp-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--ink)}
+  .fp-stats div{padding:18px 16px 0 0} .fp-stats div + div{padding-left:16px;border-left:1px solid var(--line-light)}
+  .fp-stats b{display:block;font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em}
+  .fp-stats span{font:11px "Be Vietnam Pro",sans-serif;color:var(--grey-2);text-transform:uppercase;letter-spacing:.08em}
+  @media (max-width:1024px){.fp-grid{grid-template-columns:1fr}}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:1024px){
+    .nav-links{display:none}
+    .hero-grid,.engine-grid,.eco-grid{grid-template-columns:1fr;gap:48px}
+    .layer-grid{grid-template-columns:1fr 1fr}
+    .lcard{border-bottom:1px solid var(--line-light);min-height:auto}
+    .lcard:nth-child(2){border-right:none}
+    .lcard:nth-child(3){padding-left:0}
+    .cases{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:720px){
+    .nav-right .btn{display:none}
+    .layer:nth-child(2),.layer:nth-child(3),.layer:nth-child(4){margin-left:0}
+    .layer-grid,.steps,.cases,.posts{grid-template-columns:1fr}
+    .lcard,.lcard + .lcard{padding:28px 0;border-right:none}
+    .step + .step,.post + .post{padding-left:0;border-left:none;border-top:1px solid var(--line-dark)}
+    .post + .post{border-top:1px solid var(--line-light)}
+    .dash-kpis{grid-template-columns:1fr 1fr 1fr}
+    .kpi .v{font-size:24px}
+    .foot-grid{grid-template-columns:1fr}
+  }
+
+  /* ===== ARCHITECTURE PAGE ===== */
+  .on-dark{background:var(--ink);color:var(--paper)}
+  .announce{background:var(--ink-2);color:#CFCFCF;font-size:13px;text-align:center;padding:10px 16px;border-bottom:1px solid var(--line-dark)}
+  .announce b{color:var(--paper);font-weight:500} .announce .sig-t{color:var(--sig-d);font-family:"Be Vietnam Pro",sans-serif;font-size:11px;letter-spacing:.1em;margin-right:10px}
+  .a-hero{padding:clamp(90px,13vw,180px) 0 clamp(70px,9vw,120px);position:relative;overflow:hidden}
+  .a-hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.14) 1px,transparent 1px);background-size:28px 28px;mask-image:radial-gradient(ellipse at 50% 40%,#000,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000,transparent 70%)}
+  .a-hero .wrap{position:relative}
+  .a-hero h1{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(46px,8vw,118px);line-height:.96;letter-spacing:-0.04em;max-width:1150px}
+  .a-hero h1 span{color:#8A8A8A;font-style:italic}
+  .a-hero p.sub{margin-top:36px;font-size:clamp(17px,1.5vw,21px);color:#C9C9C9;max-width:620px;line-height:1.55}
+  .chapters{display:flex;gap:28px;margin-top:64px;flex-wrap:wrap;font:12px "Be Vietnam Pro",sans-serif;color:#8A8A8A;letter-spacing:.08em}
+  .chapters a:hover{color:#fff}
+  .chap{padding:clamp(90px,11vw,160px) 0;border-top:1px solid var(--line-light)}
+  .on-dark.chap{border-top-color:var(--line-dark)}
+  .chap-grid{display:grid;grid-template-columns:200px 1fr;gap:56px}
+  .chap-tag{position:sticky;top:110px;align-self:start;font:12px "Be Vietnam Pro",sans-serif;letter-spacing:.1em;color:var(--grey-2)}
+  .on-dark .chap-tag{color:#8A8A8A}
+  .chap-tag b{display:block;font-family:"Be Vietnam Pro",sans-serif;font-size:56px;font-weight:300;color:var(--signal);letter-spacing:-0.03em;margin-bottom:6px}
+  .chap h2{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(36px,5vw,72px);line-height:1;letter-spacing:-0.035em;max-width:900px}
+  .chap .lead{font-size:18px;line-height:1.65;color:var(--grey-2);max-width:640px;margin-top:28px}
+  .on-dark .lead{color:#BDBDBD}
+  .fig{margin-top:56px}
+  .fig-cap{font:11px "Be Vietnam Pro",sans-serif;color:var(--vmut);margin-top:16px;letter-spacing:.04em}
+  /* problems */
+  .probs{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--ink);margin-top:56px}
+  .prob{padding:24px 20px 0 0} .prob + .prob{padding-left:20px;border-left:1px solid var(--line-light)}
+  .prob .n{font:12px "Be Vietnam Pro",sans-serif;color:var(--signal)}
+  .prob h3{font-family:"Be Vietnam Pro",sans-serif;font-weight:400;font-size:26px;margin:14px 0 10px;letter-spacing:-0.015em}
+  .prob p{font-size:15px;color:var(--grey-2);line-height:1.55}
+  /* scroll-linked signal */
+  .sig-track{height:260vh;position:relative}
+  .sig-stick{position:sticky;top:72px;height:calc(100vh - 72px);display:flex;flex-direction:column;justify-content:center}
+  .sig-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:28px;flex-wrap:wrap}
+  .sig-head h2{font-size:clamp(32px,4vw,56px)}
+  .month{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(48px,6vw,88px);letter-spacing:-0.03em;line-height:1;color:var(--signal);text-align:right}
+  .month small{display:block;font:11px "Be Vietnam Pro",sans-serif;color:#8A8A8A;letter-spacing:.1em;margin-top:6px}
+  .sig-steps{display:flex;gap:6px;margin-top:22px}
+  .sig-steps i{flex:1;height:2px;background:var(--line-dark)} .sig-steps i.on{background:var(--signal)}
+  .sig-state{font:12px "Be Vietnam Pro",sans-serif;color:#BDBDBD;margin-top:14px;letter-spacing:.04em;min-height:18px}
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-dark);margin-top:56px}
+  .pillar{padding:26px 24px 0 0} .pillar + .pillar{padding-left:24px;border-left:1px solid var(--line-dark)}
+  .pillar .n{font:12px "Be Vietnam Pro",sans-serif;color:#8A8A8A}
+  .pillar h3{font-family:"Be Vietnam Pro",sans-serif;font-weight:400;font-size:30px;margin:14px 0 10px}
+  .pillar p{color:#BDBDBD;font-size:15.5px;line-height:1.6}
+  .arch-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center;margin-top:56px}
+  /* method progress */
+  .rail{position:relative;margin-top:64px;display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+  .rail::before{content:"";position:absolute;left:0;right:0;top:9px;height:1px;background:var(--line-light)}
+  .rail-fill{position:absolute;left:0;top:9px;height:2px;background:var(--signal);width:0;transition:width 1.6s cubic-bezier(.2,.7,.2,1)}
+  .in .rail-fill{width:100%}
+  .rstep{position:relative;padding-right:32px}
+  .rstep .dot{width:19px;height:19px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);position:relative;z-index:1;transition:background .3s}
+  .in .rstep .dot{background:var(--signal);border-color:var(--signal)}
+  .in .rstep:nth-child(3) .dot{transition-delay:.4s} .in .rstep:nth-child(4) .dot{transition-delay:.9s}
+  .rstep h3{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:44px;letter-spacing:-0.03em;margin:28px 0 12px}
+  .rstep p{color:var(--grey-2);font-size:15.5px;line-height:1.6;max-width:320px}
+  .rstep .k{font:11px "Be Vietnam Pro",sans-serif;color:var(--grey-2);margin-top:18px;line-height:1.8}
+  /* counters */
+  .counters{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line-dark);margin-top:56px}
+  .counters div{padding:28px 24px 0 0} .counters div + div{padding-left:24px;border-left:1px solid var(--line-dark)}
+  .counters b{display:block;font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(56px,7vw,104px);letter-spacing:-0.04em;line-height:1}
+  .counters span{display:block;margin-top:12px;font:11px "Be Vietnam Pro",sans-serif;color:#8A8A8A;letter-spacing:.1em;text-transform:uppercase}
+  /* svg pieces */
+  .viz .burst{fill:none;stroke:var(--ctx);stroke-width:1.5;transform-box:fill-box;transform-origin:center;animation:burst 5s ease-out infinite;opacity:0}
+  @keyframes burst{0%{opacity:0;transform:scale(.3)}12%{opacity:.9;transform:scale(1)}45%{opacity:0;transform:scale(1.4)}100%{opacity:0}}
+  .viz .ring-line{fill:none;stroke:var(--vink);stroke-width:1.2;opacity:.8}
+  .viz .ring-line.faint{opacity:.3}
+  .viz .spoke{fill:none;stroke:var(--vmut);stroke-width:1;opacity:.6}
+  .viz .node-o{fill:var(--surf);stroke:var(--vink);stroke-width:1.5}
+  .viz .core{fill:var(--paper)}
+  .viz .vc{fill:rgba(255,255,255,.03);stroke:var(--vink);stroke-width:1.2}
+  /* draw-on-scroll */
+  .viz .draw{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1)}
+  .in .viz .draw{stroke-dashoffset:0}
+  .viz .fade{opacity:0;transition:opacity .8s} .in .viz .fade{opacity:1}
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  #chart-draw .ln{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s ease}
+  #chart-draw.in .ln{stroke-dashoffset:0}
+  @media (max-width:1024px){.chap-grid{grid-template-columns:1fr;gap:24px}.chap-tag{position:static}.probs{grid-template-columns:1fr 1fr}.prob:nth-child(odd){padding-left:0;border-left:none}.arch-grid{grid-template-columns:1fr}}
+  @media (max-width:720px){.probs,.pillars,.rail,.counters{grid-template-columns:1fr}.prob,.pillar,.counters div,.rstep{padding:22px 0!important;border-left:none!important}.rail::before,.rail-fill{display:none}}
+  @media (prefers-reduced-motion:reduce){.viz .draw{stroke-dashoffset:0!important;transition:none}.reveal{opacity:1;transform:none}.viz .burst{animation:none;opacity:.6}.pulse{display:none}}
+
+  /* ===== TYPE SYSTEM v2: single neo-grotesque family ===== */
+  :root{--serif:"Be Vietnam Pro",Helvetica,Arial,sans-serif;--sans:"Be Vietnam Pro",Helvetica,Arial,sans-serif;--mono:"Be Vietnam Pro",Helvetica,Arial,sans-serif}
+  body{font-family:"Be Vietnam Pro",Helvetica,Arial,sans-serif;font-feature-settings:"tnum" 0}
+  h1,h2,h3{font-weight:300!important}
+  h1 em,h2 em,h3 em{font-style:normal!important}
+  .h3 h1{font-size:clamp(40px,6.4vw,96px)!important;letter-spacing:-0.05em!important;line-height:1!important}
+  .a-hero h1,.art-head h1,.cta3 h2,.cta h2{letter-spacing:-0.045em!important}
+  .sec-head h2,.chap h2,.m-text h3,.eng3 h2,.statement p{letter-spacing:-0.04em!important}
+  .eyebrow,.tag,.ex-n,.code,.tick,.k,.num,.n,.dur,.meta,.crumbs,.panel-bar,.panel-foot,.chapters,.h3-strip .wrap,.kpis3 .l,.lang{font-weight:500;letter-spacing:.14em}
+  .kpis3 .v,.counters b,.stats b,.fp-stats b,.metric,.month{font-variant-numeric:tabular-nums;letter-spacing:-0.03em!important}
+
+  .brand-logo{height:34px;width:auto;display:block} .foot .brand-logo{height:40px;margin-bottom:10px} @media (max-width:720px){.brand-logo{height:28px}}
+
+  .h3.sub{height:76vh;min-height:560px}
+  .h3.sub h1{font-size:clamp(44px,7vw,108px)!important;max-width:1000px}
+  .h3.sub .sub-line{margin-top:28px;font-size:clamp(17px,1.4vw,20px);color:#BDBDBD;max-width:600px;line-height:1.55;opacity:0;transition:opacity 1.2s 1s}
+  .h3.sub.go .sub-line{opacity:1}
+  .crumb{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;color:#7A7A7A;text-transform:uppercase;margin-bottom:22px;display:flex;gap:10px}
+  .crumb a:hover{color:#fff}
+  .blk{padding:clamp(80px,10vw,140px) 0}
+  .blk.dark{background:var(--ink);color:#fff}
+  .blk.light{background:var(--paper)}
+  .blk.paper{background:var(--paper-2)}
+  .blk.dark .sec-head p,.blk.dark .sec-head .eyebrow{color:#9A9A9A}
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+  .blk.dark .svc{border-top-color:rgba(255,255,255,.2)}
+  .svc article{padding:30px 26px 34px 0;border-bottom:1px solid var(--line-light)}
+  .blk.dark .svc article{border-bottom-color:rgba(255,255,255,.08)}
+  .svc article:not(:nth-child(3n+1)){padding-left:26px;border-left:1px solid var(--line-light)}
+  .blk.dark .svc article:not(:nth-child(3n+1)){border-left-color:rgba(255,255,255,.08)}
+  .svc .n{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;color:var(--signal)}
+  .svc h3{font-weight:300;font-size:28px;letter-spacing:-0.03em;margin:14px 0 10px}
+  .svc p{font-size:15.5px;line-height:1.6;color:var(--grey-2)}
+  .blk.dark .svc p{color:#BDBDBD}
+  .svc ul{list-style:none;margin-top:16px;display:flex;flex-wrap:wrap;gap:6px}
+  .svc li{font-size:12px;padding:5px 9px;border:1px solid var(--line-light);color:var(--grey-2)}
+  .blk.dark .svc li{border-color:rgba(255,255,255,.14);color:#BDBDBD}
+  .qa{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--ink)}
+  .qa div{padding:22px 24px 22px 0;border-bottom:1px solid var(--line-light);font-weight:300;font-size:clamp(20px,1.8vw,26px);letter-spacing:-0.02em;line-height:1.25}
+  .qa div:nth-child(even){padding-left:24px;border-left:1px solid var(--line-light)}
+  .qa div span{display:block;font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;color:var(--signal);margin-bottom:10px}
+  .nextl{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:40px 0;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+  .nextl a{font-weight:300;font-size:clamp(28px,3.4vw,48px);letter-spacing:-0.035em;color:#fff}
+  .nextl a span{color:var(--sig-d)}
+  .nextl small{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;color:#7A7A7A;text-transform:uppercase}
+  .prin{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+  .prin div{padding:26px 22px 0 0} .prin div + div{padding-left:22px;border-left:1px solid var(--line-light)}
+  .prin b{display:block;font-weight:300;font-size:26px;letter-spacing:-0.025em;margin:12px 0 10px}
+  .prin p{font-size:15px;color:var(--grey-2);line-height:1.6}
+  .prin span{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;color:var(--signal)}
+  .story{display:grid;grid-template-columns:1fr 1.3fr;gap:64px}
+  .story p{font-size:18px;line-height:1.7;color:#3A3A3A;margin-bottom:20px}
+  .lead-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .person{border-top:1px solid var(--ink);padding-top:20px}
+  .person b{display:block;font-weight:400;font-size:22px;letter-spacing:-0.02em}
+  .person span{display:block;font-size:14px;color:var(--grey-2);margin-top:6px}
+  .person a{display:inline-block;margin-top:14px;font-size:13px;color:var(--signal)}
+  .form{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px}
+  .form label{display:flex;flex-direction:column;gap:8px;font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#9A9A9A}
+  .form input,.form select,.form textarea{font:400 16px "Be Vietnam Pro",sans-serif;letter-spacing:0;text-transform:none;background:#0C0C0C;border:1px solid rgba(255,255,255,.16);color:#F2F2F2;padding:14px 14px;outline:none;border-radius:0}
+  .form input:focus,.form select:focus,.form textarea:focus{border-color:var(--sig-d)}
+  .form .full{grid-column:1 / -1}
+  .form,.form label,.contact-grid>*{min-width:0}.form input,.form select,.form textarea{width:100%;box-sizing:border-box}.contact-side a{overflow-wrap:anywhere}
+  .form textarea{min-height:140px;resize:vertical}
+  .form .note{font-size:13px;color:#8A8A8A;text-transform:none;letter-spacing:0;font-weight:400;line-height:1.5}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:64px}
+  .contact-side p{color:#BDBDBD;font-size:16px;line-height:1.7;margin-bottom:22px}
+  .contact-side b{display:block;color:#fff;font-weight:400;margin-bottom:4px}
+  .cap-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.2)}
+  .cap{padding:26px 22px 28px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .cap:not(:nth-child(3n+1)){padding-left:22px;border-left:1px solid rgba(255,255,255,.08)}
+  .cap .st{font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;padding:4px 8px;border:1px solid rgba(255,255,255,.2);color:#9A9A9A}
+  .cap .st.live{border-color:var(--sig-d);color:var(--sig-d)}
+  .cap h3{font-weight:300;font-size:26px;letter-spacing:-0.025em;margin:16px 0 8px}
+  .cap p{color:#BDBDBD;font-size:15px;line-height:1.6}
+  .sector-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .sector-row span{border:1px solid var(--line-light);padding:10px 16px;font-size:15px}
+  @media (max-width:1024px){.svc,.cap-grid{grid-template-columns:1fr 1fr}.svc article:nth-child(odd),.cap:nth-child(odd){padding-left:0!important;border-left:none!important}.svc article:nth-child(even),.cap:nth-child(even){padding-left:26px;border-left:1px solid var(--line-light)}.prin{grid-template-columns:1fr 1fr}.story,.contact-grid{grid-template-columns:1fr;gap:36px}}
+  @media (max-width:720px){.svc,.cap-grid,.qa,.prin,.lead-row,.form{grid-template-columns:1fr}.svc article,.cap,.qa div,.prin div{padding-left:0!important;border-left:none!important}.prin div + div{border-top:1px solid var(--line-light);margin-top:18px}}
+</style>
+<link rel="stylesheet" href="assets/fx.css">
+</head>
+<body>
+<div class="announce"><span class="sig-t">NEW</span><b>The Architecture of Revenue.</b> Why growth needs infrastructure, not more campaigns.</div>
+
+<style>
+  .nav-links{align-items:center}
+  .dd{position:relative}
+  .dd > a::after{content:"";display:inline-block;width:5px;height:5px;border-right:1.2px solid currentColor;border-bottom:1.2px solid currentColor;transform:rotate(45deg) translateY(-3px);margin-left:8px}
+  .dd-menu{position:absolute;top:100%;left:-18px;padding-top:18px;opacity:0;pointer-events:none;transform:translateY(6px);transition:opacity .2s,transform .2s}
+  .dd:hover .dd-menu,.dd:focus-within .dd-menu{opacity:1;pointer-events:auto;transform:none}
+  .dd-inner{background:#0C0C0C;border:1px solid rgba(255,255,255,.1);min-width:300px;padding:8px}
+  .dd-inner a{display:flex;flex-direction:column;gap:3px;padding:12px 14px;color:#F2F2F2}
+  .dd-inner a:hover{background:#151515}
+  .dd-inner a small{font-size:12.5px;color:#8A8A8A}
+  .dd-inner a.cur{border-left:2px solid var(--sig-d)}
+  .nav-links a.cur{color:#fff}
+  .burger{display:none;background:none;border:1px solid rgba(255,255,255,.25);width:42px;height:42px;cursor:pointer;flex-direction:column;justify-content:center;gap:5px;padding:0 11px}
+  .burger i{display:block;height:1.5px;background:#fff}
+  .mnav{display:none}
+  @media (max-width:1024px){
+    .burger{display:flex}
+    .mnav{position:fixed;inset:72px 0 0 0;background:#060606;z-index:60;padding:24px var(--pad);overflow:auto;flex-direction:column}
+    .mnav.open{display:flex}
+    .mnav a{font-weight:300;font-size:30px;letter-spacing:-0.03em;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#F2F2F2}
+    .mnav a.sub{font-size:20px;color:#BDBDBD;padding-left:18px}
+    .mnav .btn{margin-top:28px;font-size:16px;justify-content:center;color:#0A0A0A;border-bottom:none}
+  }
+</style>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Bespoke Marketing home"><svg class="brand-logo" role="img" aria-label="Bespoke Marketing" xmlns="http://www.w3.org/2000/svg" viewBox="26 13 228 58"><path fill="#fff" d="m82.96,26.77c3,.86,4.51,2.86,4.51,6.06,0,2.03-.65,3.65-1.93,4.85-1.41,1.27-3.41,1.93-5.99,1.93h-8.95V15.51h8.67c2.1,0,3.79.58,5.09,1.76,1.24,1.14,1.86,2.62,1.86,4.37,0,1.34-.38,2.51-1.1,3.48-.59.76-1.31,1.27-2.17,1.51v.14Zm-4.3-1.45c.93,0,1.65-.28,2.2-.79.59-.52.86-1.27.86-2.2,0-1.96-1.07-2.96-3.2-2.96h-3.34v5.96h3.48Zm.55,10.43c2.38,0,3.55-1.14,3.55-3.37,0-1.1-.34-1.96-1.03-2.62-.65-.65-1.51-.96-2.58-.96h-3.96v6.95h4.03Z"></path><path fill="#fff" d="m90.29,15.51h15.53v4.3h-10.95v5.27h8.26v4.27h-8.26v5.96h11.08v4.3h-15.66V15.51Z"></path><path fill="#fff" d="m112.5,32.35c.31,2.41,1.89,3.62,4.68,3.62,2.44,0,3.68-.96,3.68-2.89,0-1.14-.55-2-1.69-2.58l-3.75-1.24c-2.03-.65-3.55-1.41-4.51-2.24-1.48-1.27-2.24-2.99-2.24-5.16s.72-3.86,2.13-5.06c1.41-1.17,3.41-1.75,5.96-1.75,4.82,0,7.71,2.06,8.64,6.16l-4.37,1.21c-.52-2.17-1.93-3.24-4.3-3.24-2.24,0-3.37.86-3.37,2.62,0,1.03.48,1.83,1.48,2.41.59.31,1.86.79,3.82,1.38,2.1.62,3.68,1.34,4.68,2.2,1.48,1.24,2.2,3,2.2,5.23,0,4.72-2.79,7.06-8.33,7.06s-8.33-2.17-9.09-6.51l4.37-1.21Z"></path><path fill="#fff" d="m136.12,15.51c2.69,0,4.79.69,6.3,2.07,1.51,1.41,2.27,3.37,2.27,5.96s-.76,4.41-2.27,5.82c-1.55,1.41-3.65,2.13-6.3,2.13h-3.13v8.12h-4.58V15.51h7.71Zm0,11.91c2.65,0,3.99-1.27,3.99-3.82s-1.34-3.86-3.99-3.86h-3.13v7.68h3.13Z"></path><path fill="#fff" d="m149.86,18.3c2-2.17,4.68-3.27,8.06-3.27s6.06,1.1,8.09,3.27c2.07,2.24,3.1,5.34,3.1,9.26s-1.03,6.99-3.1,9.23c-2.03,2.17-4.72,3.27-8.09,3.27s-6.06-1.1-8.06-3.27c-2.1-2.24-3.13-5.3-3.13-9.23s1.03-7.02,3.13-9.26Zm3.3,15.35c1.17,1.38,2.75,2.07,4.75,2.07s3.58-.69,4.75-2.03c1.21-1.45,1.82-3.48,1.82-6.13s-.62-4.68-1.82-6.13c-1.17-1.34-2.75-2.03-4.75-2.03s-3.58.69-4.75,2.03c-1.21,1.41-1.82,3.44-1.82,6.09s.62,4.68,1.82,6.13Z"></path><path fill="#fff" d="m176.61,32.55v7.06h-4.58V15.51h4.58v11.15h.1c.24-.31,1.14-1.51,2.75-3.58l5.89-7.57h5.37l-7.71,9.74,8.12,14.35h-5.3l-6.16-10.81-3.06,3.75Z"></path><path fill="#fff" d="m193.61,15.51h15.53v4.3h-10.95v5.27h8.26v4.27h-8.26v5.96h11.08v4.3h-15.66V15.51Z"></path><path fill="#fff" d="m87.81,60.62c0-2.17,0-4.3.03-6.4l.04-2.51h-.07c.07-.07-.69,1.58-2.24,4.96l-2.72,5.75h-2.75l-2.65-5.68c-1.51-3.2-2.27-4.85-2.27-5.03h-.14l.03,2.51c.04,2.1.04,4.23.04,6.4v7.61h-4.51v-24.1h5.16l5.82,11.91h.1l5.75-11.91h4.96v24.1h-4.58v-7.61Z"></path><path fill="#fff" d="m101.14,63.4l-1.51,4.82h-4.75l8.12-24.1h5.58l8.12,24.1h-4.85l-1.55-4.82h-9.16Zm4.65-14.39h-.1l-3.24,10.19h6.54l-3.2-10.19Z"></path><path fill="#fff" d="m126.61,59.51l-2.89.03v8.67h-4.58v-24.1h7.88c2.72,0,4.82.72,6.37,2.13,1.48,1.41,2.24,3.3,2.24,5.71,0,3.37-1.48,5.58-4.41,6.64l5.06,9.6h-5.34l-4.34-8.71Zm.58-3.72c2.51,0,3.79-1.21,3.79-3.65s-1.31-3.79-3.89-3.79h-3.37v7.44h3.48Z"></path><path fill="#fff" d="m143.55,61.17v7.06h-4.58v-24.1h4.58v11.15h.1c.24-.31,1.14-1.51,2.75-3.58l5.89-7.57h5.37l-7.71,9.74,8.12,14.35h-5.3l-6.16-10.81-3.06,3.75Z"></path><path fill="#fff" d="m160.56,44.13h15.53v4.3h-10.95v5.27h8.26v4.27h-8.26v5.96h11.08v4.3h-15.66v-24.1Z"></path><path fill="#fff" d="m189.86,48.43v19.79h-4.54v-19.79h-6.78v-4.3h18.11v4.3h-6.78Z"></path><path fill="#fff" d="m199.54,44.13h4.58v24.1h-4.58v-24.1Z"></path><path fill="#fff" d="m212.55,52.35h-.1l.04,1.86c.03,1.48.03,2.82.03,4.06v9.95h-4.51v-24.1h4.68l9.98,15.87h.1l-.03-15.87h4.51v24.1h-4.68l-10.02-15.87Z"></path><path fill="#fff" d="m247.46,68.22l.03-2.13h-.07c-1.65,1.69-3.82,2.55-6.47,2.55-3.1,0-5.65-1.07-7.61-3.2-2.1-2.27-3.17-5.37-3.17-9.33s1.03-7.02,3.13-9.26c1.96-2.13,4.61-3.2,7.95-3.2,2.51,0,4.68.65,6.44,1.96,1.62,1.2,2.75,2.82,3.41,4.85l-4.48,1.21c-.96-2.44-2.82-3.65-5.58-3.65-1.96,0-3.48.69-4.58,2.07-1.14,1.41-1.69,3.41-1.69,5.96s.62,4.72,1.83,6.16c1.2,1.41,2.82,2.13,4.89,2.13,2.86,0,4.82-1,5.82-2.96v-2.31h-5.51v-4.3h9.78v13.46h-4.13Z"></path><path fill="#fff" d="m28.7,22.94c.06-.03.12-.06.17-.09h-.17v.09Z"></path><path fill="#fff" d="m28.7,36.32h7.87c2.1,0,3.74-.62,4.98-1.79,1.32-1.17,1.95-2.88,1.95-4.98,0-4.44-2.41-6.7-7.24-6.7h-7.38c-.06.03-.12.06-.17.09v13.38Z"></path><path fill="#fff" d="m51.21,35.85c-1.32,1.71-2.96,2.88-4.91,3.43v.31c6.09,1.75,9.47,5.59,10.09,11.61,1.55-2.91,2.44-6.23,2.44-9.76,0-5.23-1.94-10.01-5.14-13.66,0,.07,0,.14,0,.21,0,3.04-.86,5.69-2.49,7.87Z"></path><path fill="#fff" d="m45.83,52.28c0-2.49-.78-4.44-2.34-5.92-1.48-1.48-3.43-2.18-5.84-2.18h-8.96v15.73h9.11c5.37,0,8.02-2.57,8.02-7.63Z"></path></svg></a>
+    <nav class="nav-links" aria-label="Main">
+      <div class="dd"><a href="architecture.html" class="cur">Infrastructure</a>
+        <div class="dd-menu"><div class="dd-inner">
+          <a href="architecture.html" class="cur">The Architecture of Revenue<small>Why growth needs infrastructure</small></a>
+          <a href="intelligence.html">01 Intelligence<small>Data, measurement and insight</small></a>
+          <a href="systems.html">02 Systems<small>Data stack, reporting and automation</small></a>
+          <a href="demand.html">03 Demand<small>Media, creators and commerce</small></a>
+          <a href="method.html">The Quant Method<small>How we measure and decide</small></a>
+          <a href="go-to-market.html">Go-to-market<small>Enter and scale in Southeast Asia</small></a>
+        </div></div>
+      </div>
+      <a href="benchmarks.html">Benchmarks</a>
+      <a href="work.html">Work</a>
+      <a href="insights.html">Insights</a>
+      <div class="dd dd-sm"><a href="about.html">Company</a>
+        <div class="dd-menu"><div class="dd-inner">
+          <a href="about.html">About<small>Story, principles and governance</small></a>
+          <a href="engine.html">Bespoke Engine<small>Our in-house measurement product</small></a>
+          <a href="contact.html">Contact<small>Offices in Vietnam and Singapore</small></a>
+        </div></div>
+      </div>
+    </nav>
+    <div class="nav-right">
+      <a href="contact.html#book" class="btn btn-solid">Book a meeting</a>
+      <button class="burger" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('mnav');var o=m.classList.toggle('open');this.setAttribute('aria-expanded',o)"><i></i><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+<nav class="mnav" id="mnav" aria-label="Mobile">
+<div class="mn-list">
+  <details class="mi" open><summary>Infrastructure<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mi-sub"><a href="architecture.html" class="cur">Architecture of Revenue</a><a href="intelligence.html">Intelligence</a><a href="systems.html">Systems</a><a href="demand.html">Demand</a><a href="method.html">Quant Method</a><a href="go-to-market.html">Go-to-market</a></div></details>
+  <a class="mi" href="benchmarks.html">Benchmarks</a>
+  <a class="mi" href="work.html">Work</a>
+  <a class="mi" href="insights.html">Insights</a>
+  <details class="mi"><summary>Company<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mi-sub"><a href="about.html">About</a><a href="engine.html">Bespoke Engine</a><a href="contact.html">Contact</a></div></details>
+</div>
+<div class="mn-cta"><a href="contact.html#book" class="btn btn-solid">Book a meeting</a><a href="https://zalo.me/2722835767291363986" class="btn btn-line" target="_blank" rel="noopener">Chat on Zalo</a></div>
+</nav>
+
+<!-- HERO -->
+<section class="on-dark a-hero">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#8A8A8A;margin-bottom:28px">The Architecture of Revenue</p>
+    <h1 class="reveal">Marketing was built for campaigns. <span>Growth needs infrastructure.</span></h1>
+    <p class="sub reveal">Most brands run marketing as a series of launches. Each one ends, and the learning ends with it. We build the system that keeps it, so every quarter starts further ahead than the last.</p>
+    <nav class="chapters"><a href="#c1">01 STORY</a><a href="#c2">02 PROBLEM</a><a href="#c3">03 SIGNAL</a><a href="#c4">04 ARCHITECTURE</a><a href="#c5">05 METHOD</a><a href="#c6">06 PROOF</a></nav>
+  </div>
+</section>
+
+<!-- 01 STORY -->
+<section class="on-dark chap" id="c1">
+  <div class="wrap chap-grid">
+    <div class="chap-tag"><b>01</b>STORY</div>
+    <div>
+      <h2 class="reveal">Marketing has two shapes.</h2>
+      <p class="lead reveal">A campaign is a burst. It lights up, then fades, and the next one starts from zero. Infrastructure is a ring. Each layer of data, process and learning sits on the one before it, and the system grows outward.</p>
+      <div class="fig"><svg class="viz" viewBox="0 0 880 360" role="img" aria-label="Diagram: campaigns appear as isolated bursts that fade; infrastructure grows as concentric rings that compound outward.">
+<circle cx="115.5" cy="84.8" r="23.5" class="burst" style="animation-delay:0.00s"/>
+<circle cx="115.5" cy="84.8" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="89.6" cy="76" r="23.6" class="burst" style="animation-delay:0.55s"/>
+<circle cx="89.6" cy="76" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="333.7" cy="252.1" r="32.4" class="burst" style="animation-delay:1.10s"/>
+<circle cx="333.7" cy="252.1" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="111" cy="188.8" r="20.6" class="burst" style="animation-delay:1.65s"/>
+<circle cx="111" cy="188.8" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="95.3" cy="85.5" r="19.1" class="burst" style="animation-delay:2.20s"/>
+<circle cx="95.3" cy="85.5" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="336.8" cy="258.9" r="33.4" class="burst" style="animation-delay:2.75s"/>
+<circle cx="336.8" cy="258.9" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="296.1" cy="106.4" r="21.4" class="burst" style="animation-delay:3.30s"/>
+<circle cx="296.1" cy="106.4" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="240.6" cy="235.7" r="34.5" class="burst" style="animation-delay:3.85s"/>
+<circle cx="240.6" cy="235.7" r="3" class="ctx" style="opacity:.8"/>
+<circle cx="321.6" cy="80.8" r="28.5" class="burst" style="animation-delay:4.40s"/>
+<circle cx="321.6" cy="80.8" r="3" class="ctx" style="opacity:.8"/>
+<text x="200" y="345" class="code" text-anchor="middle">CAMPAIGN SHAPE · BURSTS THAT FADE</text>
+<line x1="440" y1="30" x2="440" y2="320" class="grd"/>
+<circle cx="660" cy="180" r="28" class="ring-line draw" pathLength="1" style="transition-delay:0.00s"/>
+<text x="686" y="156" class="code fade" style="transition-delay:0.40s">M1</text>
+<circle cx="660" cy="180" r="62" class="ring-line draw" pathLength="1" style="transition-delay:0.35s"/>
+<text x="710" y="132" class="code fade" style="transition-delay:0.75s">Q1</text>
+<circle cx="660" cy="180" r="100" class="ring-line draw" pathLength="1" style="transition-delay:0.70s"/>
+<text x="737" y="105" class="code fade" style="transition-delay:1.10s">Y1</text>
+<circle cx="660" cy="180" r="142" class="ring-line draw" pathLength="1" style="transition-delay:1.05s"/>
+<text x="767" y="75" class="code fade" style="transition-delay:1.45s">Y3</text>
+<circle cx="660" cy="180" r="7" class="sig"/>
+<text x="660" y="345" class="code" text-anchor="middle">INFRASTRUCTURE SHAPE · RINGS THAT COMPOUND</text>
+</svg></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 PROBLEM -->
+<section class="chap" id="c2">
+  <div class="wrap chap-grid">
+    <div class="chap-tag"><b>02</b>PROBLEM</div>
+    <div>
+      <h2 class="reveal">Why marketing rarely compounds.</h2>
+      <p class="lead reveal">The problem is not effort or talent. It is structure. Five patterns appear in almost every brand we meet.</p>
+      <div class="probs reveal">
+        <div class="prob"><span class="n">01</span><h3>Fragmented</h3><p>Media, creators, CRM and tech run by different partners, with no shared view.</p></div>
+        <div class="prob"><span class="n">02</span><h3>Unmeasured</h3><p>Reports describe activity. Few trace spend all the way to revenue.</p></div>
+        <div class="prob"><span class="n">03</span><h3>Rented</h3><p>Data and learning stay inside platforms and agencies, not inside the business.</p></div>
+        <div class="prob"><span class="n">04</span><h3>Short-lived</h3><p>Every campaign ends, and the next one starts from zero.</p></div>
+        <div class="prob"><span class="n">05</span><h3>Unaccountable</h3><p>Many partners, many metrics, no single line of accountability for growth.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 SIGNAL (scroll-linked) -->
+<section class="on-dark" id="c3">
+  <div class="sig-track">
+    <div class="sig-stick">
+      <div class="wrap">
+        <div class="sig-head">
+          <div><p class="eyebrow" style="color:#8A8A8A;margin-bottom:16px">03 · Signal</p><h2 style="font-family:"Be Vietnam Pro",sans-serif;font-weight:300;letter-spacing:-0.035em;line-height:1;font-size:clamp(32px,4vw,56px)">From noise to signal.</h2></div>
+          <div class="month" id="month">Month 1<small>SCROLL TO ADVANCE</small></div>
+        </div>
+        <svg class="viz" id="sigviz" viewBox="0 0 880 400" role="img" aria-label="Animated scatter: as months pass, scattered channel results converge into one clear rising revenue curve.">
+<line x1="40" x2="850" y1="20" y2="20" class="grd"/>
+<line x1="40" x2="850" y1="105" y2="105" class="grd"/>
+<line x1="40" x2="850" y1="190" y2="190" class="grd"/>
+<line x1="40" x2="850" y1="275" y2="275" class="grd"/>
+<line x1="40" x2="850" y1="360" y2="360" class="grd base"/>
+<circle cx="40" cy="131.9" r="4" class="ctx sdot" data-n="131.9" data-c="339.6"/>
+<circle cx="48.5" cy="196.4" r="4" class="ctx sdot" data-n="196.4" data-c="330"/>
+<circle cx="57.1" cy="100.5" r="4" class="ctx sdot" data-n="100.5" data-c="338.4"/>
+<circle cx="65.6" cy="186.2" r="4" class="ctx sdot" data-n="186.2" data-c="326.1"/>
+<circle cx="74.1" cy="270.8" r="4" class="ctx sdot" data-n="270.8" data-c="332.1"/>
+<circle cx="82.6" cy="229.5" r="4" class="ctx sdot" data-n="229.5" data-c="341.9"/>
+<circle cx="91.2" cy="321.8" r="4" class="ctx sdot" data-n="321.8" data-c="329.7"/>
+<circle cx="99.7" cy="271.9" r="4" class="ctx sdot" data-n="271.9" data-c="324.9"/>
+<circle cx="108.2" cy="330" r="4" class="ctx sdot" data-n="330" data-c="335.8"/>
+<circle cx="116.7" cy="117" r="4" class="ctx sdot" data-n="117" data-c="319.6"/>
+<circle cx="125.3" cy="154.5" r="4" class="ctx sdot" data-n="154.5" data-c="321.5"/>
+<circle cx="133.8" cy="242.3" r="4" class="ctx sdot" data-n="242.3" data-c="337.9"/>
+<circle cx="142.3" cy="307.6" r="4" class="ctx sdot" data-n="307.6" data-c="327.6"/>
+<circle cx="150.8" cy="230.3" r="4" class="ctx sdot" data-n="230.3" data-c="317.5"/>
+<circle cx="159.4" cy="92.8" r="4" class="ctx sdot" data-n="92.8" data-c="332.9"/>
+<circle cx="167.9" cy="59" r="4" class="ctx sdot" data-n="59" data-c="332.5"/>
+<circle cx="176.4" cy="174.1" r="4" class="ctx sdot" data-n="174.1" data-c="324.8"/>
+<circle cx="184.9" cy="194.7" r="4" class="ctx sdot" data-n="194.7" data-c="325.9"/>
+<circle cx="193.5" cy="331.6" r="4" class="ctx sdot" data-n="331.6" data-c="327.9"/>
+<circle cx="202" cy="271.1" r="4" class="ctx sdot" data-n="271.1" data-c="312.9"/>
+<circle cx="210.5" cy="279.2" r="4" class="ctx sdot" data-n="279.2" data-c="313.3"/>
+<circle cx="219.1" cy="69.4" r="4" class="ctx sdot" data-n="69.4" data-c="308.2"/>
+<circle cx="227.6" cy="109.6" r="4" class="ctx sdot" data-n="109.6" data-c="311.1"/>
+<circle cx="236.1" cy="119.7" r="4" class="ctx sdot" data-n="119.7" data-c="313.2"/>
+<circle cx="244.6" cy="197.2" r="4" class="ctx sdot" data-n="197.2" data-c="321.1"/>
+<circle cx="253.2" cy="281.5" r="4" class="ctx sdot" data-n="281.5" data-c="305.1"/>
+<circle cx="261.7" cy="71.4" r="4" class="ctx sdot" data-n="71.4" data-c="301.6"/>
+<circle cx="270.2" cy="231.2" r="4" class="ctx sdot" data-n="231.2" data-c="310.4"/>
+<circle cx="278.7" cy="225" r="4" class="ctx sdot" data-n="225" data-c="307.8"/>
+<circle cx="287.3" cy="224.7" r="4" class="ctx sdot" data-n="224.7" data-c="294.9"/>
+<circle cx="295.8" cy="314.5" r="4" class="ctx sdot" data-n="314.5" data-c="312.8"/>
+<circle cx="304.3" cy="39.2" r="4" class="ctx sdot" data-n="39.2" data-c="296.8"/>
+<circle cx="312.8" cy="192.6" r="4" class="ctx sdot" data-n="192.6" data-c="299.3"/>
+<circle cx="321.4" cy="114.1" r="4" class="ctx sdot" data-n="114.1" data-c="296.2"/>
+<circle cx="329.9" cy="156.7" r="4" class="ctx sdot" data-n="156.7" data-c="300.8"/>
+<circle cx="338.4" cy="152.5" r="4" class="ctx sdot" data-n="152.5" data-c="291.9"/>
+<circle cx="346.9" cy="291" r="4" class="ctx sdot" data-n="291" data-c="297.4"/>
+<circle cx="355.5" cy="59.3" r="4" class="ctx sdot" data-n="59.3" data-c="291.7"/>
+<circle cx="364" cy="160.2" r="4" class="ctx sdot" data-n="160.2" data-c="289.4"/>
+<circle cx="372.5" cy="311.4" r="4" class="ctx sdot" data-n="311.4" data-c="287.9"/>
+<circle cx="381.1" cy="94" r="4" class="ctx sdot" data-n="94" data-c="290.4"/>
+<circle cx="389.6" cy="228.3" r="4" class="ctx sdot" data-n="228.3" data-c="273.4"/>
+<circle cx="398.1" cy="136.2" r="4" class="ctx sdot" data-n="136.2" data-c="272.8"/>
+<circle cx="406.6" cy="49.8" r="4" class="ctx sdot" data-n="49.8" data-c="265.9"/>
+<circle cx="415.2" cy="40.3" r="4" class="ctx sdot" data-n="40.3" data-c="273.3"/>
+<circle cx="423.7" cy="162.3" r="4" class="ctx sdot" data-n="162.3" data-c="259.3"/>
+<circle cx="432.2" cy="192.8" r="4" class="ctx sdot" data-n="192.8" data-c="258.1"/>
+<circle cx="440.7" cy="267.4" r="4" class="ctx sdot" data-n="267.4" data-c="265.7"/>
+<circle cx="449.3" cy="293.3" r="4" class="ctx sdot" data-n="293.3" data-c="252.6"/>
+<circle cx="457.8" cy="96.6" r="4" class="ctx sdot" data-n="96.6" data-c="266.2"/>
+<circle cx="466.3" cy="195.1" r="4" class="ctx sdot" data-n="195.1" data-c="248.9"/>
+<circle cx="474.8" cy="327" r="4" class="ctx sdot" data-n="327" data-c="244.6"/>
+<circle cx="483.4" cy="254.3" r="4" class="ctx sdot" data-n="254.3" data-c="253.3"/>
+<circle cx="491.9" cy="290.8" r="4" class="ctx sdot" data-n="290.8" data-c="246.9"/>
+<circle cx="500.4" cy="239.5" r="4" class="ctx sdot" data-n="239.5" data-c="250.9"/>
+<circle cx="508.9" cy="42.1" r="4" class="ctx sdot" data-n="42.1" data-c="230.8"/>
+<circle cx="517.5" cy="196.4" r="4" class="ctx sdot" data-n="196.4" data-c="230.6"/>
+<circle cx="526" cy="49.6" r="4" class="ctx sdot" data-n="49.6" data-c="237.4"/>
+<circle cx="534.5" cy="120" r="4" class="ctx sdot" data-n="120" data-c="228.4"/>
+<circle cx="543.1" cy="278.1" r="4" class="ctx sdot" data-n="278.1" data-c="235.1"/>
+<circle cx="551.6" cy="99.7" r="4" class="ctx sdot" data-n="99.7" data-c="215.1"/>
+<circle cx="560.1" cy="159" r="4" class="ctx sdot" data-n="159" data-c="210.7"/>
+<circle cx="568.6" cy="165.2" r="4" class="ctx sdot" data-n="165.2" data-c="216.4"/>
+<circle cx="577.2" cy="248.8" r="4" class="ctx sdot" data-n="248.8" data-c="204.2"/>
+<circle cx="585.7" cy="258.5" r="4" class="ctx sdot" data-n="258.5" data-c="206.9"/>
+<circle cx="594.2" cy="339.9" r="4" class="ctx sdot" data-n="339.9" data-c="198.4"/>
+<circle cx="602.7" cy="51.1" r="4" class="ctx sdot" data-n="51.1" data-c="196.3"/>
+<circle cx="611.3" cy="161.3" r="4" class="ctx sdot" data-n="161.3" data-c="205.9"/>
+<circle cx="619.8" cy="82.4" r="4" class="ctx sdot" data-n="82.4" data-c="189.4"/>
+<circle cx="628.3" cy="264.3" r="4" class="ctx sdot" data-n="264.3" data-c="186.6"/>
+<circle cx="636.8" cy="49.6" r="4" class="ctx sdot" data-n="49.6" data-c="186.3"/>
+<circle cx="645.4" cy="302.1" r="4" class="ctx sdot" data-n="302.1" data-c="172"/>
+<circle cx="653.9" cy="314.3" r="4" class="ctx sdot" data-n="314.3" data-c="184.5"/>
+<circle cx="662.4" cy="206.3" r="4" class="ctx sdot" data-n="206.3" data-c="181.7"/>
+<circle cx="670.9" cy="77.6" r="4" class="ctx sdot" data-n="77.6" data-c="175.1"/>
+<circle cx="679.5" cy="304.3" r="4" class="ctx sdot" data-n="304.3" data-c="160.4"/>
+<circle cx="688" cy="243.8" r="4" class="ctx sdot" data-n="243.8" data-c="158.5"/>
+<circle cx="696.5" cy="275.8" r="4" class="ctx sdot" data-n="275.8" data-c="155"/>
+<circle cx="705.1" cy="286.7" r="4" class="ctx sdot" data-n="286.7" data-c="157.3"/>
+<circle cx="713.6" cy="125.7" r="4" class="ctx sdot" data-n="125.7" data-c="148.5"/>
+<circle cx="722.1" cy="328.9" r="4" class="ctx sdot" data-n="328.9" data-c="140.5"/>
+<circle cx="730.6" cy="75.6" r="4" class="ctx sdot" data-n="75.6" data-c="132.6"/>
+<circle cx="739.2" cy="101" r="4" class="ctx sdot" data-n="101" data-c="126.7"/>
+<circle cx="747.7" cy="201.1" r="4" class="ctx sdot" data-n="201.1" data-c="137.7"/>
+<circle cx="756.2" cy="109.2" r="4" class="ctx sdot" data-n="109.2" data-c="131.8"/>
+<circle cx="764.7" cy="125.3" r="4" class="ctx sdot" data-n="125.3" data-c="124.7"/>
+<circle cx="773.3" cy="129.8" r="4" class="ctx sdot" data-n="129.8" data-c="118.3"/>
+<circle cx="781.8" cy="330.2" r="4" class="ctx sdot" data-n="330.2" data-c="112.2"/>
+<circle cx="790.3" cy="248.3" r="4" class="ctx sdot" data-n="248.3" data-c="105.8"/>
+<circle cx="798.8" cy="252.7" r="4" class="ctx sdot" data-n="252.7" data-c="90.3"/>
+<circle cx="807.4" cy="174.9" r="4" class="ctx sdot" data-n="174.9" data-c="93.4"/>
+<circle cx="815.9" cy="312.8" r="4" class="ctx sdot" data-n="312.8" data-c="79.3"/>
+<circle cx="824.4" cy="187.5" r="4" class="ctx sdot" data-n="187.5" data-c="81.2"/>
+<circle cx="832.9" cy="47.1" r="4" class="ctx sdot" data-n="47.1" data-c="73.3"/>
+<circle cx="841.5" cy="129" r="4" class="ctx sdot" data-n="129" data-c="76.8"/>
+<circle cx="850" cy="171.4" r="4" class="ctx sdot" data-n="171.4" data-c="67.1"/>
+<polyline points="40,332.8 53.5,332.7 67,332.4 80.5,331.9 94,331.3 107.5,330.4 121,329.5 134.5,328.3 148,327 161.5,325.6 175,324 188.5,322.2 202,320.3 215.5,318.3 229,316.1 242.5,313.8 256,311.3 269.5,308.6 283,305.9 296.5,303 310,299.9 323.5,296.7 337,293.4 350.5,289.9 364,286.3 377.5,282.5 391,278.7 404.5,274.6 418,270.5 431.5,266.2 445,261.7 458.5,257.2 472,252.5 485.5,247.6 499,242.7 512.5,237.6 526,232.3 539.5,227 553,221.5 566.5,215.8 580,210.1 593.5,204.2 607,198.1 620.5,192 634,185.7 647.5,179.3 661,172.7 674.5,166 688,159.2 701.5,152.3 715,145.2 728.5,138.1 742,130.7 755.5,123.3 769,115.7 782.5,108 796,100.2 809.5,92.2 823,84.1 836.5,75.9 850,67.6" class="ln sig-s" id="sigline" style="opacity:0;stroke-width:2.5"/>
+<circle cx="850" cy="67.6" r="6" class="sig ring" id="sigend" style="opacity:0"/>
+</svg>
+        <div class="sig-steps"><i></i><i></i><i></i><i></i></div>
+        <p class="sig-state" id="sigstate"></p>
+        <p class="fig-cap">Each dot is one channel or segment result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ARCHITECTURE -->
+<section class="on-dark chap" id="c4">
+  <div class="wrap chap-grid">
+    <div class="chap-tag"><b>04</b>ARCHITECTURE</div>
+    <div>
+      <h2 class="reveal">Everything connects to one view of revenue.</h2>
+      <p class="lead reveal">Strategy, media, creators, commerce and technology stop operating as separate projects. Each one feeds a single source of truth, run on Bespoke Engine, so every decision is measured against the same outcome.</p>
+      <div class="fig"><svg class="viz" viewBox="0 0 880 600" role="img" aria-label="Hub-and-spoke diagram: strategy, media, creators, commerce, CRM, data, reporting and AI all feed one revenue view at the centre.">
+<circle cx="440" cy="300" r="220" class="ring-line draw" pathLength="1"/>
+<circle cx="440" cy="300" r="121" class="ring-line faint draw" pathLength="1" style="transition-delay:.3s"/>
+<path id="sp0" d="M440,80 L440,300" class="spoke draw" pathLength="1" style="transition-delay:0.50s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="0.00s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp0"/></animateMotion></circle>
+<circle cx="440" cy="80" r="8" class="node-o"/>
+<text x="440" y="62" class="lbl" text-anchor="middle">Strategy</text>
+<path id="sp1" d="M595.6,144.4 L440,300" class="spoke draw" pathLength="1" style="transition-delay:0.58s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="0.33s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp1"/></animateMotion></circle>
+<circle cx="595.6" cy="144.4" r="8" class="node-o"/>
+<text x="611.6" y="149.4" class="lbl" text-anchor="start">Media</text>
+<path id="sp2" d="M660,300 L440,300" class="spoke draw" pathLength="1" style="transition-delay:0.66s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="0.66s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp2"/></animateMotion></circle>
+<circle cx="660" cy="300" r="8" class="node-o"/>
+<text x="676" y="305" class="lbl" text-anchor="start">Creators</text>
+<path id="sp3" d="M595.6,455.6 L440,300" class="spoke draw" pathLength="1" style="transition-delay:0.74s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="0.99s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp3"/></animateMotion></circle>
+<circle cx="595.6" cy="455.6" r="8" class="node-o"/>
+<text x="611.6" y="460.6" class="lbl" text-anchor="start">Commerce</text>
+<path id="sp4" d="M440,520 L440,300" class="spoke draw" pathLength="1" style="transition-delay:0.82s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="1.32s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp4"/></animateMotion></circle>
+<circle cx="440" cy="520" r="8" class="node-o"/>
+<text x="440" y="548" class="lbl" text-anchor="middle">CRM</text>
+<path id="sp5" d="M284.4,455.6 L440,300" class="spoke draw" pathLength="1" style="transition-delay:0.90s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="1.65s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp5"/></animateMotion></circle>
+<circle cx="284.4" cy="455.6" r="8" class="node-o"/>
+<text x="268.4" y="460.6" class="lbl" text-anchor="end">Data</text>
+<path id="sp6" d="M220,300 L440,300" class="spoke draw" pathLength="1" style="transition-delay:0.98s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="1.98s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp6"/></animateMotion></circle>
+<circle cx="220" cy="300" r="8" class="node-o"/>
+<text x="204" y="305" class="lbl" text-anchor="end">Reporting</text>
+<path id="sp7" d="M284.4,144.4 L440,300" class="spoke draw" pathLength="1" style="transition-delay:1.06s"/>
+<circle r="3.5" class="sig pulse"><animateMotion dur="2.6s" begin="2.31s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="linear"><mpath href="#sp7"/></animateMotion></circle>
+<circle cx="284.4" cy="144.4" r="8" class="node-o"/>
+<text x="268.4" y="149.4" class="lbl" text-anchor="end">AI</text>
+<circle cx="440" cy="300" r="58" class="halo"/>
+<circle cx="440" cy="300" r="44" class="core"/>
+<text x="440" y="298" class="lbl" text-anchor="middle" style="fill:#0A0A0A;font-weight:600">Revenue</text>
+<text x="440" y="314" class="code" text-anchor="middle" style="fill:#3A3A3A">ONE VIEW</text>
+</svg></div>
+      <div class="arch-grid">
+        <div class="fig"><svg class="viz" viewBox="0 0 560 500" role="img" aria-label="Three overlapping circles: Intelligence, Systems and Demand. Their overlap is Revenue Infrastructure.">
+<circle cx="210" cy="190" r="130" class="vc draw" pathLength="1" style="transition-delay:0.00s"/>
+<text x="120" y="90" class="lbl" text-anchor="middle">Intelligence</text>
+<circle cx="350" cy="190" r="130" class="vc draw" pathLength="1" style="transition-delay:0.25s"/>
+<text x="440" y="90" class="lbl" text-anchor="middle">Systems</text>
+<circle cx="280" cy="310" r="130" class="vc draw" pathLength="1" style="transition-delay:0.50s"/>
+<text x="280" y="470" class="lbl" text-anchor="middle">Demand</text>
+<circle cx="280" cy="232" r="9" class="sig ring"/>
+<line x1="289" y1="232" x2="420" y2="300" class="leader"/>
+<text x="424" y="300" class="dl">Revenue</text><text x="424" y="316" class="dl mut">Infrastructure</text>
+</svg></div>
+        <div>
+          <p class="lead" style="margin-top:0">Three layers. Each works on its own. Where they overlap, marketing stops being a cost centre and becomes infrastructure.</p>
+        </div>
+      </div>
+      <div class="pillars reveal">
+        <div class="pillar"><span class="n">01</span><h3>Intelligence</h3><p>Data, measurement and quantitative insight that show where revenue is won and lost.</p></div>
+        <div class="pillar"><span class="n">02</span><h3>Systems</h3><p>Reporting, data and technology that connect every channel to one view of revenue.</p></div>
+        <div class="pillar"><span class="n">03</span><h3>Demand</h3><p>Media, content, creators and commerce that convert attention into revenue.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 METHOD -->
+<section class="chap" id="c5">
+  <div class="wrap chap-grid">
+    <div class="chap-tag"><b>05</b>METHOD</div>
+    <div>
+      <h2 class="reveal">Architect. Engineer. Operate.</h2>
+      <p class="lead reveal">One team from the first audit to the hundredth optimisation.</p>
+      <div class="rail">
+        <span class="rail-fill"></span>
+        <div class="rstep"><div class="dot"></div><h3>Architect</h3><p>Diagnose where revenue leaks and model the growth system the business can realistically scale.</p><div class="k">REVENUE AUDIT<br>GROWTH MODEL</div></div>
+        <div class="rstep"><div class="dot"></div><h3>Engineer</h3><p>Build the data and technology layer that makes every decision measurable and repeatable.</p><div class="k">TRACKING STACK<br>BESPOKE ENGINE</div></div>
+        <div class="rstep"><div class="dot"></div><h3>Operate</h3><p>Run demand across media, creators and commerce. Test fast, cut what fails, scale what works.</p><div class="k">30-DAY SPRINTS<br>QUARTERLY REVIEWS</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PROOF -->
+<section class="on-dark chap" id="c6">
+  <div class="wrap chap-grid">
+    <div class="chap-tag"><b>06</b>PROOF</div>
+    <div>
+      <h2 class="reveal">Infrastructure compounds.</h2>
+      <p class="lead reveal">Campaign-led growth resets every quarter. Infrastructure-led growth builds on itself.</p>
+      <figure class="exhibit" id="chart-draw" style="color:#fff"><figcaption class="ex-head"><span class="ex-n">Exhibit 01</span><span class="ex-t">Campaigns spike and fade. Infrastructure compounds.</span></figcaption><div class="legend"><span><i class="sw sig-bg"></i>Infrastructure-led</span><span><i class="sw ctx-bg"></i>Campaign-led</span></div><svg class="viz chart" viewBox="0 0 820 320" role="img" aria-label="Line chart, illustrative: campaign-led revenue spikes and decays four times over 24 months, while infrastructure-led revenue compounds steadily and finishes far higher.">
+<line x1="44" x2="690" y1="286" y2="286" class="grd base"/>
+<text x="34" y="290" class="tick" text-anchor="end">0</text>
+<line x1="44" x2="690" y1="218.5" y2="218.5" class="grd"/>
+<text x="34" y="222.5" class="tick" text-anchor="end">35</text>
+<line x1="44" x2="690" y1="151" y2="151" class="grd"/>
+<text x="34" y="155" class="tick" text-anchor="end">70</text>
+<line x1="44" x2="690" y1="83.5" y2="83.5" class="grd"/>
+<text x="34" y="87.5" class="tick" text-anchor="end">105</text>
+<line x1="44" x2="690" y1="16" y2="16" class="grd"/>
+<text x="34" y="20" class="tick" text-anchor="end">140</text>
+<text x="44" y="310" class="tick" text-anchor="middle">M0</text>
+<text x="205.5" y="310" class="tick" text-anchor="middle">M6</text>
+<text x="367" y="310" class="tick" text-anchor="middle">M12</text>
+<text x="528.5" y="310" class="tick" text-anchor="middle">M18</text>
+<text x="690" y="310" class="tick" text-anchor="middle">M24</text>
+<polyline points="44,274.4 70.9,247.4 97.8,174.1 124.8,241 151.7,263.3 178.6,270.7 205.5,273.2 232.4,247 259.3,174 286.2,241 313.2,263.3 340.1,270.7 367,273.2 393.9,247 420.8,174 447.8,241 474.7,263.3 501.6,270.7 528.5,273.2 555.4,247 582.3,174 609.2,241 636.2,263.3 663.1,270.7 690,273.2" class="ln ctx-s"/>
+<polyline points="44,270.6 70.9,268.8 97.8,266.9 124.8,264.8 151.7,262.4 178.6,259.8 205.5,256.8 232.4,253.6 259.3,249.9 286.2,245.9 313.2,241.4 340.1,236.4 367,230.8 393.9,224.7 420.8,217.8 447.8,210.2 474.7,201.7 501.6,192.2 528.5,181.7 555.4,170 582.3,157 609.2,142.6 636.2,126.5 663.1,108.7 690,88.8" class="ln sig-s"/>
+<circle cx="690" cy="88.8" r="5" class="sig ring"/>
+<text x="702" y="92.8" class="dl">Infrastructure</text>
+<circle cx="690" cy="273.2" r="5" class="ctx ring"/>
+<text x="702" y="277.2" class="dl">Campaigns</text>
+<line class="xhair" x1="0" x2="0" y1="16" y2="286" style="opacity:0"/>
+<rect x="30.5" y="16" width="26.9" height="270" class="hit" data-x="44" data-tip="Month 0|Infrastructure: 8|Campaigns: 6"/>
+<rect x="57.5" y="16" width="26.9" height="270" class="hit" data-x="70.9" data-tip="Month 1|Infrastructure: 9|Campaigns: 20"/>
+<rect x="84.4" y="16" width="26.9" height="270" class="hit" data-x="97.8" data-tip="Month 2|Infrastructure: 10|Campaigns: 58"/>
+<rect x="111.3" y="16" width="26.9" height="270" class="hit" data-x="124.8" data-tip="Month 3|Infrastructure: 11|Campaigns: 23"/>
+<rect x="138.2" y="16" width="26.9" height="270" class="hit" data-x="151.7" data-tip="Month 4|Infrastructure: 12|Campaigns: 12"/>
+<rect x="165.1" y="16" width="26.9" height="270" class="hit" data-x="178.6" data-tip="Month 5|Infrastructure: 14|Campaigns: 8"/>
+<rect x="192" y="16" width="26.9" height="270" class="hit" data-x="205.5" data-tip="Month 6|Infrastructure: 15|Campaigns: 7"/>
+<rect x="219" y="16" width="26.9" height="270" class="hit" data-x="232.4" data-tip="Month 7|Infrastructure: 17|Campaigns: 20"/>
+<rect x="245.9" y="16" width="26.9" height="270" class="hit" data-x="259.3" data-tip="Month 8|Infrastructure: 19|Campaigns: 58"/>
+<rect x="272.8" y="16" width="26.9" height="270" class="hit" data-x="286.2" data-tip="Month 9|Infrastructure: 21|Campaigns: 23"/>
+<rect x="299.7" y="16" width="26.9" height="270" class="hit" data-x="313.2" data-tip="Month 10|Infrastructure: 23|Campaigns: 12"/>
+<rect x="326.6" y="16" width="26.9" height="270" class="hit" data-x="340.1" data-tip="Month 11|Infrastructure: 26|Campaigns: 8"/>
+<rect x="353.5" y="16" width="26.9" height="270" class="hit" data-x="367" data-tip="Month 12|Infrastructure: 29|Campaigns: 7"/>
+<rect x="380.5" y="16" width="26.9" height="270" class="hit" data-x="393.9" data-tip="Month 13|Infrastructure: 32|Campaigns: 20"/>
+<rect x="407.4" y="16" width="26.9" height="270" class="hit" data-x="420.8" data-tip="Month 14|Infrastructure: 35|Campaigns: 58"/>
+<rect x="434.3" y="16" width="26.9" height="270" class="hit" data-x="447.8" data-tip="Month 15|Infrastructure: 39|Campaigns: 23"/>
+<rect x="461.2" y="16" width="26.9" height="270" class="hit" data-x="474.7" data-tip="Month 16|Infrastructure: 44|Campaigns: 12"/>
+<rect x="488.1" y="16" width="26.9" height="270" class="hit" data-x="501.6" data-tip="Month 17|Infrastructure: 49|Campaigns: 8"/>
+<rect x="515" y="16" width="26.9" height="270" class="hit" data-x="528.5" data-tip="Month 18|Infrastructure: 54|Campaigns: 7"/>
+<rect x="542" y="16" width="26.9" height="270" class="hit" data-x="555.4" data-tip="Month 19|Infrastructure: 60|Campaigns: 20"/>
+<rect x="568.9" y="16" width="26.9" height="270" class="hit" data-x="582.3" data-tip="Month 20|Infrastructure: 67|Campaigns: 58"/>
+<rect x="595.8" y="16" width="26.9" height="270" class="hit" data-x="609.2" data-tip="Month 21|Infrastructure: 74|Campaigns: 23"/>
+<rect x="622.7" y="16" width="26.9" height="270" class="hit" data-x="636.2" data-tip="Month 22|Infrastructure: 83|Campaigns: 12"/>
+<rect x="649.6" y="16" width="26.9" height="270" class="hit" data-x="663.1" data-tip="Month 23|Infrastructure: 92|Campaigns: 8"/>
+<rect x="676.5" y="16" width="26.9" height="270" class="hit" data-x="690" data-tip="Month 24|Infrastructure: 102|Campaigns: 7"/>
+</svg><p class="ex-note">Index of monthly revenue contribution, month 0 to month 24.</p></figure>
+      <div class="counters">
+        <div><b data-count="4">0</b><span>Markets</span></div>
+        <div><b>50+</b><span>Brands served</span></div>
+        <div><b>4+</b><span>Years operating</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--grey);margin-bottom:28px">Start a conversation</p>
+    <h2>Stop restarting every quarter. <em>Build what compounds.</em></h2>
+    <div class="cta-row">
+      <a href="mailto:partners@bespokemarketing.asia" class="btn btn-solid">Talk to us <span class="arrow">→</span></a>
+      <a href="index.html" class="btn btn-ghost">Back to homepage</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="index.html" class="brand" aria-label="Bespoke Marketing home"><svg class="brand-logo" role="img" aria-label="Bespoke Marketing" xmlns="http://www.w3.org/2000/svg" viewBox="26 13 228 58"><path fill="#fff" d="m82.96,26.77c3,.86,4.51,2.86,4.51,6.06,0,2.03-.65,3.65-1.93,4.85-1.41,1.27-3.41,1.93-5.99,1.93h-8.95V15.51h8.67c2.1,0,3.79.58,5.09,1.76,1.24,1.14,1.86,2.62,1.86,4.37,0,1.34-.38,2.51-1.1,3.48-.59.76-1.31,1.27-2.17,1.51v.14Zm-4.3-1.45c.93,0,1.65-.28,2.2-.79.59-.52.86-1.27.86-2.2,0-1.96-1.07-2.96-3.2-2.96h-3.34v5.96h3.48Zm.55,10.43c2.38,0,3.55-1.14,3.55-3.37,0-1.1-.34-1.96-1.03-2.62-.65-.65-1.51-.96-2.58-.96h-3.96v6.95h4.03Z"></path><path fill="#fff" d="m90.29,15.51h15.53v4.3h-10.95v5.27h8.26v4.27h-8.26v5.96h11.08v4.3h-15.66V15.51Z"></path><path fill="#fff" d="m112.5,32.35c.31,2.41,1.89,3.62,4.68,3.62,2.44,0,3.68-.96,3.68-2.89,0-1.14-.55-2-1.69-2.58l-3.75-1.24c-2.03-.65-3.55-1.41-4.51-2.24-1.48-1.27-2.24-2.99-2.24-5.16s.72-3.86,2.13-5.06c1.41-1.17,3.41-1.75,5.96-1.75,4.82,0,7.71,2.06,8.64,6.16l-4.37,1.21c-.52-2.17-1.93-3.24-4.3-3.24-2.24,0-3.37.86-3.37,2.62,0,1.03.48,1.83,1.48,2.41.59.31,1.86.79,3.82,1.38,2.1.62,3.68,1.34,4.68,2.2,1.48,1.24,2.2,3,2.2,5.23,0,4.72-2.79,7.06-8.33,7.06s-8.33-2.17-9.09-6.51l4.37-1.21Z"></path><path fill="#fff" d="m136.12,15.51c2.69,0,4.79.69,6.3,2.07,1.51,1.41,2.27,3.37,2.27,5.96s-.76,4.41-2.27,5.82c-1.55,1.41-3.65,2.13-6.3,2.13h-3.13v8.12h-4.58V15.51h7.71Zm0,11.91c2.65,0,3.99-1.27,3.99-3.82s-1.34-3.86-3.99-3.86h-3.13v7.68h3.13Z"></path><path fill="#fff" d="m149.86,18.3c2-2.17,4.68-3.27,8.06-3.27s6.06,1.1,8.09,3.27c2.07,2.24,3.1,5.34,3.1,9.26s-1.03,6.99-3.1,9.23c-2.03,2.17-4.72,3.27-8.09,3.27s-6.06-1.1-8.06-3.27c-2.1-2.24-3.13-5.3-3.13-9.23s1.03-7.02,3.13-9.26Zm3.3,15.35c1.17,1.38,2.75,2.07,4.75,2.07s3.58-.69,4.75-2.03c1.21-1.45,1.82-3.48,1.82-6.13s-.62-4.68-1.82-6.13c-1.17-1.34-2.75-2.03-4.75-2.03s-3.58.69-4.75,2.03c-1.21,1.41-1.82,3.44-1.82,6.09s.62,4.68,1.82,6.13Z"></path><path fill="#fff" d="m176.61,32.55v7.06h-4.58V15.51h4.58v11.15h.1c.24-.31,1.14-1.51,2.75-3.58l5.89-7.57h5.37l-7.71,9.74,8.12,14.35h-5.3l-6.16-10.81-3.06,3.75Z"></path><path fill="#fff" d="m193.61,15.51h15.53v4.3h-10.95v5.27h8.26v4.27h-8.26v5.96h11.08v4.3h-15.66V15.51Z"></path><path fill="#fff" d="m87.81,60.62c0-2.17,0-4.3.03-6.4l.04-2.51h-.07c.07-.07-.69,1.58-2.24,4.96l-2.72,5.75h-2.75l-2.65-5.68c-1.51-3.2-2.27-4.85-2.27-5.03h-.14l.03,2.51c.04,2.1.04,4.23.04,6.4v7.61h-4.51v-24.1h5.16l5.82,11.91h.1l5.75-11.91h4.96v24.1h-4.58v-7.61Z"></path><path fill="#fff" d="m101.14,63.4l-1.51,4.82h-4.75l8.12-24.1h5.58l8.12,24.1h-4.85l-1.55-4.82h-9.16Zm4.65-14.39h-.1l-3.24,10.19h6.54l-3.2-10.19Z"></path><path fill="#fff" d="m126.61,59.51l-2.89.03v8.67h-4.58v-24.1h7.88c2.72,0,4.82.72,6.37,2.13,1.48,1.41,2.24,3.3,2.24,5.71,0,3.37-1.48,5.58-4.41,6.64l5.06,9.6h-5.34l-4.34-8.71Zm.58-3.72c2.51,0,3.79-1.21,3.79-3.65s-1.31-3.79-3.89-3.79h-3.37v7.44h3.48Z"></path><path fill="#fff" d="m143.55,61.17v7.06h-4.58v-24.1h4.58v11.15h.1c.24-.31,1.14-1.51,2.75-3.58l5.89-7.57h5.37l-7.71,9.74,8.12,14.35h-5.3l-6.16-10.81-3.06,3.75Z"></path><path fill="#fff" d="m160.56,44.13h15.53v4.3h-10.95v5.27h8.26v4.27h-8.26v5.96h11.08v4.3h-15.66v-24.1Z"></path><path fill="#fff" d="m189.86,48.43v19.79h-4.54v-19.79h-6.78v-4.3h18.11v4.3h-6.78Z"></path><path fill="#fff" d="m199.54,44.13h4.58v24.1h-4.58v-24.1Z"></path><path fill="#fff" d="m212.55,52.35h-.1l.04,1.86c.03,1.48.03,2.82.03,4.06v9.95h-4.51v-24.1h4.68l9.98,15.87h.1l-.03-15.87h4.51v24.1h-4.68l-10.02-15.87Z"></path><path fill="#fff" d="m247.46,68.22l.03-2.13h-.07c-1.65,1.69-3.82,2.55-6.47,2.55-3.1,0-5.65-1.07-7.61-3.2-2.1-2.27-3.17-5.37-3.17-9.33s1.03-7.02,3.13-9.26c1.96-2.13,4.61-3.2,7.95-3.2,2.51,0,4.68.65,6.44,1.96,1.62,1.2,2.75,2.82,3.41,4.85l-4.48,1.21c-.96-2.44-2.82-3.65-5.58-3.65-1.96,0-3.48.69-4.58,2.07-1.14,1.41-1.69,3.41-1.69,5.96s.62,4.72,1.83,6.16c1.2,1.41,2.82,2.13,4.89,2.13,2.86,0,4.82-1,5.82-2.96v-2.31h-5.51v-4.3h9.78v13.46h-4.13Z"></path><path fill="#fff" d="m28.7,22.94c.06-.03.12-.06.17-.09h-.17v.09Z"></path><path fill="#fff" d="m28.7,36.32h7.87c2.1,0,3.74-.62,4.98-1.79,1.32-1.17,1.95-2.88,1.95-4.98,0-4.44-2.41-6.7-7.24-6.7h-7.38c-.06.03-.12.06-.17.09v13.38Z"></path><path fill="#fff" d="m51.21,35.85c-1.32,1.71-2.96,2.88-4.91,3.43v.31c6.09,1.75,9.47,5.59,10.09,11.61,1.55-2.91,2.44-6.23,2.44-9.76,0-5.23-1.94-10.01-5.14-13.66,0,.07,0,.14,0,.21,0,3.04-.86,5.69-2.49,7.87Z"></path><path fill="#fff" d="m45.83,52.28c0-2.49-.78-4.44-2.34-5.92-1.48-1.48-3.43-2.18-5.84-2.18h-8.96v15.73h9.11c5.37,0,8.02-2.57,8.02-7.63Z"></path></svg></a>
+        <p style="max-width:300px">Revenue Infrastructure for Asia's Market Leaders.</p><p style="max-width:300px;margin-top:10px;font-size:13px;color:#8A8A8A">Est. 2022 · Ho Chi Minh City · Singapore</p>
+      </div>
+      <div><h4>Infrastructure</h4><ul><li><a href="architecture.html">Architecture</a></li><li><a href="intelligence.html">Intelligence</a></li><li><a href="systems.html">Systems</a></li><li><a href="demand.html">Demand</a></li><li><a href="method.html">Quant method</a></li><li><a href="go-to-market.html">Go-to-market</a></li><li><a href="benchmarks.html">Media benchmarks</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="engine.html">Bespoke Engine</a></li><li><a href="work.html">Work</a></li><li><a href="insights.html">Insights</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><h4>Offices</h4><ul><li><span style="color:#8A8A8A;font-size:12px;letter-spacing:.08em">HEAD OFFICE</span><br>Fimexco Building, 231-244 Le Thanh Ton Street, Ben Thanh Ward, Ho Chi Minh City</li><li><span style="color:#8A8A8A;font-size:12px;letter-spacing:.08em">SINGAPORE</span><br>7 Straits View, #04-01, Marina One East Tower, Singapore 018936</li><li><a href="mailto:partners@bespokemarketing.asia">partners@bespokemarketing.asia</a></li><li><a href="https://zalo.me/2722835767291363986" target="_blank" rel="noopener">Chat on Zalo</a></li><li><a href="contact.html#book">Book a meeting</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Bespoke Marketing Co., Ltd. A Bespoke Holdings company.</span><span><a href="privacy.html">Privacy</a> · Revenue, engineered.</span></div>
+    <p class="foot-note">Charts on this site are modelled examples that explain our method. Client results are shared under NDA during a briefing.</p>
+  </div>
+</footer>
+<div id="tip" class="tip" role="tooltip"></div>
+<script>
+(function(){
+  var tip=document.getElementById('tip');
+  document.querySelectorAll('.viz .hit').forEach(function(h){
+    var svg=h.ownerSVGElement, xh=svg&&svg.querySelector('.xhair');
+    h.addEventListener('mouseenter',function(){
+      var p=h.getAttribute('data-tip').split('|');
+      tip.innerHTML='<b>'+p[0]+'</b>'+p.slice(1).map(function(s){return '<span>'+s+'</span>'}).join('');
+      tip.style.opacity=1;
+      var x=h.getAttribute('data-x');
+      if(xh&&x){xh.setAttribute('x1',x);xh.setAttribute('x2',x);xh.style.opacity=1;}
+    });
+    h.addEventListener('mousemove',function(e){
+      var w=tip.offsetWidth, left=e.clientX+16;
+      if(left+w>window.innerWidth-8) left=e.clientX-w-16;
+      tip.style.left=left+'px'; tip.style.top=(e.clientY+16)+'px';
+    });
+    h.addEventListener('mouseleave',function(){tip.style.opacity=0; if(xh) xh.style.opacity=0;});
+  });
+})();
+</script>
+
+<script>
+(function(){
+  // reveal + draw on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.25});
+  document.querySelectorAll('.reveal,.fig,.rail,#chart-draw,.counters').forEach(function(el){io.observe(el)});
+  // add pathLength to chart polylines for the draw effect
+  document.querySelectorAll('#chart-draw .ln').forEach(function(p){p.setAttribute('pathLength','1')});
+  // counters
+  document.querySelectorAll('[data-count]').forEach(function(el){
+    var target=+el.getAttribute('data-count'), done=false;
+    new IntersectionObserver(function(es){if(es[0].isIntersecting&&!done){done=true;var t0=performance.now();
+      (function step(t){var p=Math.min(1,(t-t0)/1400);el.textContent=Math.round(target*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)})(t0);}},{threshold:.5}).observe(el);
+  });
+  // scroll-linked signal from noise
+  var track=document.querySelector('.sig-track'); if(!track) return;
+  var dots=[].slice.call(document.querySelectorAll('.sdot')), line=document.getElementById('sigline'), end=document.getElementById('sigend');
+  var mEl=document.getElementById('month'), stEl=document.getElementById('sigstate'), steps=document.querySelectorAll('.sig-steps i');
+  var labels=[['1','Every channel reports on its own. No pattern.'],['3','Data connected. Clusters appear.'],['6','One view. The outlier becomes visible.'],['12','Signal. Revenue compounds on a clear curve.']];
+  function ease(x){return x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2}
+  function upd(){
+    var r=track.getBoundingClientRect(), total=r.height-window.innerHeight;
+    var p=Math.max(0,Math.min(1,-r.top/total)), e=ease(p);
+    dots.forEach(function(d){var n=+d.dataset.n,c=+d.dataset.c;d.setAttribute('cy',(n+(c-n)*e).toFixed(1));});
+    var on=p>.82; line.style.opacity=on?1:0; end.style.opacity=on?1:0;
+    dots.forEach(function(d){d.style.opacity=on?.45:.9});
+    var idx=Math.min(3,Math.floor(p*4)); mEl.firstChild.nodeValue='Month '+labels[idx][0]; stEl.textContent=labels[idx][1];
+    steps.forEach(function(s,i){s.classList.toggle('on',i<=idx)});
+  }
+  line.style.transition=end.style.transition='opacity .6s';
+  window.addEventListener('scroll',upd,{passive:true}); window.addEventListener('resize',upd); upd();
+})();
+</script>
+
+
+
+<script src="assets/fx.js" defer></script>
+</body>
+</html>

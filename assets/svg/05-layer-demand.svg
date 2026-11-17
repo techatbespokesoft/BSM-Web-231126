@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" preserveAspectRatio="none" aria-hidden="true"><style>.sig{fill:#0E8A63}
+.ctx{fill:#B0B0B0}
+.ring{stroke:#FFFFFF;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#0E8A63}
+.ctx-s{stroke:#B0B0B0}
+.grd{stroke:rgba(10,10,10,0.10);stroke-width:1}
+.grd.base{stroke:#6B6B6B;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#6B6B6B}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#0A0A0A}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#0A0A0A}
+.dl.mut{fill:#6B6B6B;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#6B6B6B;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#6B6B6B;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#0E8A63;stroke-width:1.5;opacity:.5}
+.leader{stroke:#6B6B6B;stroke-width:1}
+.area{fill:#0E8A63;opacity:.12}
+.edge{stroke:#6B6B6B;stroke-width:1.2;opacity:.55}
+.node{fill:#0A0A0A}
+.gdot{fill:#6B6B6B;opacity:.3}
+.arc{fill:none;stroke:#0E8A63;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#0A0A0A}
+.code{font:10px "JetBrains Mono",monospace;fill:#6B6B6B;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#0E8A63;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#0E8A63}
+</style>
+<path d="M0,120 V93.7 Q0,90.7 3,90.7 H20.2 Q23.2,90.7 23.2,93.7 V120 Z" class="ctx"/>
+<path d="M25.2,120 V87.2 Q25.2,84.2 28.2,84.2 H45.3 Q48.3,84.2 48.3,87.2 V120 Z" class="ctx"/>
+<path d="M50.3,120 V88.8 Q50.3,85.8 53.3,85.8 H70.5 Q73.5,85.8 73.5,88.8 V120 Z" class="ctx"/>
+<path d="M75.5,120 V79 Q75.5,76 78.5,76 H95.7 Q98.7,76 98.7,79 V120 Z" class="ctx"/>
+<path d="M100.7,120 V74.1 Q100.7,71.1 103.7,71.1 H120.8 Q123.8,71.1 123.8,74.1 V120 Z" class="ctx"/>
+<path d="M125.8,120 V75.8 Q125.8,72.8 128.8,72.8 H146 Q149,72.8 149,75.8 V120 Z" class="ctx"/>
+<path d="M151,120 V64.4 Q151,61.4 154,61.4 H171.2 Q174.2,61.4 174.2,64.4 V120 Z" class="ctx"/>
+<path d="M176.2,120 V56.2 Q176.2,53.2 179.2,53.2 H196.3 Q199.3,53.2 199.3,56.2 V120 Z" class="ctx"/>
+<path d="M201.3,120 V49.7 Q201.3,46.7 204.3,46.7 H221.5 Q224.5,46.7 224.5,49.7 V120 Z" class="ctx"/>
+<path d="M226.5,120 V38.3 Q226.5,35.3 229.5,35.3 H246.7 Q249.7,35.3 249.7,38.3 V120 Z" class="ctx"/>
+<path d="M251.7,120 V28.5 Q251.7,25.5 254.7,25.5 H271.8 Q274.8,25.5 274.8,28.5 V120 Z" class="ctx"/>
+<path d="M276.8,120 V9 Q276.8,6 279.8,6 H297 Q300,6 300,9 V120 Z" class="sig"/>
+</svg>

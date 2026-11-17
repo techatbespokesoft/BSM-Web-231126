@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 170" role="img" aria-label="Illustrative revenue trend rising over twelve months."><style>.sig{fill:#2AA880}
+.ctx{fill:#6A6A6A}
+.ring{stroke:#0A0A0A;stroke-width:2}
+.ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.sig-s{stroke:#2AA880}
+.ctx-s{stroke:#6A6A6A}
+.grd{stroke:rgba(255,255,255,0.10);stroke-width:1}
+.grd.base{stroke:#9A9A9A;opacity:.6}
+.tick{font:11px "JetBrains Mono",monospace;fill:#9A9A9A}
+.tick.ink{font:13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl{font:500 13px "Inter Tight",sans-serif;fill:#F2F2F2}
+.dl.mut{fill:#9A9A9A;font-weight:400}
+.hit{fill:transparent;cursor:crosshair}
+.xhair{stroke:#9A9A9A;stroke-dasharray:3 3;transition:opacity .1s}
+.trend{stroke:#9A9A9A;stroke-dasharray:4 4;stroke-width:1.5}
+.halo{fill:none;stroke:#2AA880;stroke-width:1.5;opacity:.5}
+.leader{stroke:#9A9A9A;stroke-width:1}
+.area{fill:#2AA880;opacity:.12}
+.edge{stroke:#9A9A9A;stroke-width:1.2;opacity:.55}
+.node{fill:#F2F2F2}
+.gdot{fill:#9A9A9A;opacity:.3}
+.arc{fill:none;stroke:#2AA880;stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
+.lbl{font:500 15px "Inter Tight",sans-serif;fill:#F2F2F2}
+.code{font:10px "JetBrains Mono",monospace;fill:#9A9A9A;letter-spacing:.1em}
+.face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
+.p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
+.side-l{fill:#121212;stroke:rgba(255,255,255,.18)}
+.side-r{fill:#1B1B1B;stroke:rgba(255,255,255,.18)}
+.pgrid{stroke:rgba(255,255,255,.08)}
+.sigline{fill:none;stroke:#2AA880;stroke-width:2.5;stroke-linecap:round}
+.sigdot{fill:#2AA880}
+</style>
+<line x1="0" x2="520" y1="115" y2="115" class="grd"/>
+<line x1="0" x2="520" y1="80" y2="80" class="grd"/>
+<line x1="0" x2="520" y1="45" y2="45" class="grd"/>
+<line x1="0" x2="520" y1="150" y2="150" class="grd base"/>
+<path d="M6,150 L6,91.2 L52.2,84.2 L98.4,87 L144.5,75.8 L190.7,78.6 L236.9,68.8 L283.1,63.2 L329.3,66 L375.5,54.8 L421.6,47.8 L467.8,39.4 L514,21.2 L514,150 Z" class="area"/>
+<polyline points="6,91.2 52.2,84.2 98.4,87 144.5,75.8 190.7,78.6 236.9,68.8 283.1,63.2 329.3,66 375.5,54.8 421.6,47.8 467.8,39.4 514,21.2" class="ln sig-s"/>
+<circle cx="514" cy="21.2" r="5" class="sig ring"/>
+<line class="xhair" x1="0" x2="0" y1="10" y2="150" style="opacity:0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</svg>
