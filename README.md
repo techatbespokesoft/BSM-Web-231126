@@ -20,7 +20,8 @@ Plain HTML, CSS and JavaScript. No build step, no framework, no dependencies.
   thumbs/               Article and case-study covers (SVG, 1200x630)
   logos/                Client and partner logos (index.json controls what loads)
   brand/, svg/          Brand marks and icons
-_redirects              301 redirects from old bespokemarketing.asia URLs
+_redirects              Legacy URL map (single source of truth for redirects)
+tools/build-redirects.py Generates redirect stubs from _redirects (needed on GitHub Pages)
 _headers                Security and cache headers (Cloudflare Pages)
 sitemap.xml, robots.txt SEO
 docs/DEV-NOTES.md       Version notes and implementation details
@@ -33,6 +34,15 @@ python3 -m http.server 8080
 ```
 
 Open http://localhost:8080.
+
+## Legacy URLs and redirects
+
+All legacy URLs live in `_redirects`. Cloudflare Pages and Netlify apply it as real 301s.
+GitHub Pages ignores it, so each entry also has a small generated stub at the legacy path
+(for example `ve-bsm/index.html`, `my-kingdom.html`) that forwards to the new page.
+
+To add or change a redirect: edit `_redirects`, then run `python3 tools/build-redirects.py`
+and commit the result. Do not edit stub files by hand.
 
 ## Deploy on Cloudflare Pages
 
