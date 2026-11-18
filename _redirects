@@ -39,7 +39,7 @@
 /knowledge /insights.html 301
 /knowledge/ceo-spotlight-en /insights.html#library 301
 /kb-about-bespoke.html /about.html 301
-/tuyen-dung /about.html 301
+/tuyen-dung /about.html#talent 301
 /solutions /architecture.html 301
 /solutions/bespoke-marketing-solution /architecture.html 301
 /solutions/performance-marketing-solution /architecture.html 301
@@ -78,16 +78,16 @@
 /facebook-messenger-ads-the-ultimate-tool-for-boosting-engagement-and-closing-sales.html /insights.html#library 301
 /messenger-marketing-vs-zalo-other-chat-platforms-which-channel-is-right-for-you.html /insights.html#library 301
 /building-a-marketing-team-should-smes-go-in-house-or-outsource-2.html /insights/marketing-as-a-portfolio.html 301
-# Internal knowledge base and job posts
+# Internal knowledge base and job posts (job posts go to the talent section)
 /gmail-and-official-communication-systems-at-bespoke.html /about.html 301
 /zalo-group-system-day-to-day-communication-channel-at-bsm.html /about.html 301
-/finance-manager-03-2025-2.html /about.html 301
-/e-commerce-specialist-01-2025.html /about.html 301
-/head-of-growth-01-2025.html /about.html 301
-/performance-manager-01-2025.html /about.html 301
-/graphic-design-01-2025.html /about.html 301
-/graphic-designer.html /about.html 301
-/business-development-executive-b2b-sales-01-2025.html /about.html 301
+/finance-manager-03-2025-2.html /about.html#talent 301
+/e-commerce-specialist-01-2025.html /about.html#talent 301
+/head-of-growth-01-2025.html /about.html#talent 301
+/performance-manager-01-2025.html /about.html#talent 301
+/graphic-design-01-2025.html /about.html#talent 301
+/graphic-designer.html /about.html#talent 301
+/business-development-executive-b2b-sales-01-2025.html /about.html#talent 301
 # Vietnamese legacy slugs (old WordPress menu); each stub serves /slug and /slug/
 /lien-he /contact.html 301
 /lien-he-voi-chung-toi /contact.html 301
@@ -117,3 +117,6 @@
 /imv-group.html /work/imv-group.html 301
 /my-kingdom-warehouse-sales-2024.html /work/my-kingdom.html 301
 /sixsents.html / 301
+# Recruitment (job board retired; routed to the talent section)
+/career /about.html#talent 301
+/careers /about.html#talent 301

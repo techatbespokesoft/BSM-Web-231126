@@ -558,6 +558,14 @@ P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():nu
     .mnav a.sub{font-size:20px;color:#BDBDBD;padding-left:18px}
     .mnav .btn{margin-top:28px;font-size:16px;justify-content:center;color:#0A0A0A;border-bottom:none}
   }
+/* Talent */
+.tal .prin{grid-template-columns:repeat(3,1fr)}
+.tal-cta{margin-top:56px;padding-top:28px;border-top:1px solid var(--line-light);display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap}
+.tal-cta p{font-size:15px;color:var(--grey-2);max-width:560px;line-height:1.6}
+.tal-cta a{font-size:15px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--signal);padding-bottom:3px;white-space:nowrap}
+.tal-cta a:hover{color:var(--signal)}
+.tal-cta .tal-w{border-bottom-color:var(--line-light);color:var(--grey-2)}
+@media (max-width:900px){.tal .prin{grid-template-columns:1fr}}
 </style>
 <header class="nav">
   <div class="wrap nav-inner">
@@ -655,6 +663,15 @@ P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():nu
       <div style="display:grid;grid-template-columns:80px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.08)"><span style="font:500 11px 'Be Vietnam Pro';letter-spacing:.14em;color:#8A8A8A">BSS</span><div><b style="font-weight:400">Bespoke Soft</b><p style="color:#9A9A9A;font-size:14px;margin-top:4px">Software, AI and healthcare technology.</p></div></div>
     </div>
   </div>
+</div></section>
+<section class="blk light tal" id="talent"><div class="wrap">
+  <div class="sec-head reveal"><div><p class="eyebrow">Talent and people</p><h2>A small team that owns the outcome.</h2></div><p>We hire for judgement and ownership, then build AI into how every person works.</p></div>
+  <div class="prin reveal">
+    <div><span>01</span><b>Analytical strategists</b><p>People who model a market before they plan a campaign, and defend every number in front of a board.</p></div>
+    <div><span>02</span><b>Creative technologists</b><p>Builders who turn ideas into systems, from creative engines to data pipelines and AI workflows.</p></div>
+    <div><span>03</span><b>Growth operators</b><p>Operators who run market entry and revenue programmes alongside enterprise leaders, week after week.</p></div>
+  </div>
+  <div class="tal-cta reveal"><p>We rarely advertise roles. If you are an exceptional builder who wants to solve hard market-entry and revenue problems, send your portfolio or CV directly.</p><div style="display:flex;gap:28px;flex-wrap:wrap"><a href="mailto:hr@bespokemarketing.asia">hr@bespokemarketing.asia</a><a class="tal-w" href="work.html">See our work</a></div></div>
 </div></section>
 <section class="press" id="press"><div class="wrap">
   <div class="pr-head reveal"><div><p class="eyebrow">In the press</p><h2>Coverage and listings.</h2></div><p>Selected coverage of Bespoke and our partnerships. More features will be added through 2027.</p></div>
