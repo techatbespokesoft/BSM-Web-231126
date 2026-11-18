@@ -88,3 +88,32 @@
 /graphic-design-01-2025.html /about.html 301
 /graphic-designer.html /about.html 301
 /business-development-executive-b2b-sales-01-2025.html /about.html 301
+# Vietnamese legacy slugs (old WordPress menu); each stub serves /slug and /slug/
+/lien-he /contact.html 301
+/lien-he-voi-chung-toi /contact.html 301
+/ve-chung-toi /about.html 301
+/gioi-thieu /about.html 301
+/cau-chuyen-cua-chung-toi /about.html 301
+/cong-ty /about.html 301
+/dich-vu /architecture.html 301
+/giai-phap /architecture.html 301
+/giai-phap/giai-phap-performance-marketing /architecture.html 301
+/giai-phap/giai-phap-media /architecture.html 301
+/giai-phap/giai-phap-marketing-cho-e-commerce /demand.html 301
+/he-sinh-thai-martech /engine.html 301
+/du-an /work.html 301
+/khach-hang /work.html 301
+/khach-hang-doi-tac /work.html 301
+/tin-tuc /insights.html 301
+/kien-thuc /insights.html 301
+/kien-thuc-bespoke-marketing /insights.html 301
+/tri-thuc /insights.html 301
+/tinh-hoa /insights.html 301
+/blog /insights.html 301
+# Additional indexed pages found in this pass
+/solutions/media-solution /architecture.html 301
+/sony-bsm-performance-campaign-vi.html /work/sony-vietnam.html 301
+/popmart-vietnam-bien-thach-thuc-thanh-co-hoi.html /work/pop-mart.html 301
+/imv-group.html /work/imv-group.html 301
+/my-kingdom-warehouse-sales-2024.html /work/my-kingdom.html 301
+/sixsents.html / 301
