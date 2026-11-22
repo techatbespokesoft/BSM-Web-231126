@@ -375,6 +375,7 @@
 <link rel="stylesheet" href="../assets/fx.css">
 <script>(function(){var P=window.CanvasRenderingContext2D&&CanvasRenderingContext2D.prototype;if(!P||P.__bspClamp)return;P.__bspClamp=1;var ft=P.fillText;
 P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():null;if(m&&!m.b&&!m.c&&m.a>0){var tw=this.measureText(t).width,al=this.textAlign,l=al=='center'?x-tw/2:(al=='right'||al=='end')?x-tw:x,L=m.a*l+m.e,R=m.a*(l+tw)+m.e,W=this.canvas.width,pad=3*m.a,dx=0;if(L<pad)dx=(pad-L)/m.a;else if(R>W-pad)dx=(W-pad-R)/m.a;if(tw*m.a<W-2*pad)x+=dx}}catch(e){}return ft.call(this,t,x,y,mw)}})();</script>
+<link rel="stylesheet" href="../assets/briefings.css">
 </head>
 <body data-root="../">
 
@@ -581,5 +582,6 @@ P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():nu
 
 <script src="../assets/viz.js" defer></script>
 <script src="../assets/fx.js" defer></script>
+<script src="../assets/briefings.js" data-page="article" defer></script>
 </body>
 </html>
