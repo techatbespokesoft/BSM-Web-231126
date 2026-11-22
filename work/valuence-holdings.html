@@ -389,6 +389,16 @@
 .rel-list b{font-weight:400;font-size:19px;line-height:1.25;letter-spacing:-.01em}
 .rel-list em{font-style:normal;margin-top:auto;font-size:13px;color:var(--grey-2)}
 @media (max-width:820px){.rel-list{grid-template-columns:1fr}.case-meta{grid-template-columns:1fr}}
+/* client logos: official files from assets/logos, rendered as a quiet monochrome row */
+.clogos{display:flex;align-items:center;gap:24px 56px;padding:0 0 48px;margin-bottom:56px;border-bottom:1px solid var(--line-light);flex-wrap:wrap}
+.clogos-l{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-2);flex:0 0 auto}
+.clogos ul{list-style:none;flex:1;display:flex;align-items:center;justify-content:space-between;gap:28px 40px;flex-wrap:wrap;margin:0;padding:0}
+.clogos li{display:flex;align-items:center;height:36px}
+.clogos a{display:flex;align-items:center;height:100%}
+.clogos img{display:block;width:auto;filter:brightness(0);opacity:.5;transition:opacity .25s}
+.clogos a:hover img,.clogos a:focus-visible img,.clogos .cur img{opacity:.88}
+.clogos .l-uniqlo{height:32px}.clogos .l-sony{height:15px}.clogos .l-hdbank{height:30px}.clogos .l-vinfast{height:15px}.clogos .l-valuence{height:30px}
+@media (max-width:720px){.clogos{flex-direction:column;align-items:flex-start;gap:20px;padding-bottom:36px;margin-bottom:36px}.clogos ul{width:100%;display:grid;grid-template-columns:repeat(3,auto);justify-content:space-between;gap:22px 16px}.clogos .l-uniqlo{height:28px}.clogos .l-hdbank,.clogos .l-valuence{height:26px}.clogos .l-sony{height:13px}.clogos .l-vinfast{height:13px}}
 
 /* ===== iOS / narrow-mobile fixes (iPhone Safari + Chrome, 375-430px) ===== */
 /* stop WebKit text autosizing ("font inflation") in portrait and landscape */
@@ -545,6 +555,16 @@ img,svg,video{max-width:100%}
 
 <section class="related">
   <div class="wrap">
+    <div class="clogos">
+      <p class="clogos-l">Clients in our work</p>
+      <ul>
+        <li><a href="uniqlo-vietnam.html"><img class="l-uniqlo" src="../assets/logos/uniqlo.svg" alt="UNIQLO" loading="lazy"></a></li>
+        <li><a href="sony-vietnam.html"><img class="l-sony" src="../assets/logos/sony.svg" alt="Sony" loading="lazy"></a></li>
+        <li><a href="hdbank-vcf.html"><img class="l-hdbank" src="../assets/logos/hdbank.png" alt="HDBank" loading="lazy"></a></li>
+        <li><a href="vinfast.html"><img class="l-vinfast" src="../assets/logos/vinfast.png" alt="VinFast" loading="lazy"></a></li>
+        <li class="cur"><a href="valuence-holdings.html" aria-current="page"><img class="l-valuence" src="../assets/logos/valuence.png" alt="Valuence Holdings" loading="lazy"></a></li>
+      </ul>
+    </div>
     <div class="sec-head"><div><p class="eyebrow">Continue reading</p><h2>More case studies.</h2></div></div>
     <div class="rel-list"><a href="uniqlo-vietnam.html"><span>UNIQLO</span><b>UNIQLO: an enterprise search overhaul for durable return on ad spend.</b><em>Retail · Fashion</em></a><a href="sony-vietnam.html"><span>Sony</span><b>Sony: one performance operating system across media, retail media and stores.</b><em>Consumer electronics</em></a><a href="central-group-dyson.html"><span>Central Group</span><b>Central Group: premium growth for Dyson in Vietnam, without discounting.</b><em>Premium consumer tech · Dyson via CMG</em></a></div>
   </div>
