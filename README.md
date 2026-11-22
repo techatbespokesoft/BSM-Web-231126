@@ -17,6 +17,8 @@ Plain HTML, CSS and JavaScript. No build step, no framework, no dependencies.
   viz.css, viz.js       Animated canvas charts (models) used across pages
   calc.js               Media benchmarks calculator (benchmarks.html)
   ex.css, ex.js         Article charts and calculators (figure.xb, div.xt)
+  briefings.css/.js     "Strategic Briefings" email capture (home, Work, Method, case studies,
+                        Insight articles). Posts to FormSubmit -> partners@bespokemarketing.asia
   thumbs/               Article and case-study covers (SVG, 1200x630)
   logos/                Client and partner logos (index.json controls what loads)
   brand/, svg/          Brand marks and icons
