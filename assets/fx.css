@@ -184,3 +184,15 @@ body:has(.art-head) .nav .nav-inner{max-width:1120px;height:60px;margin-top:12px
 .panel-bar{letter-spacing:.08em!important}
 /* v33: mobile menu primary button stays readable */
 @media (max-width:1024px){body .mnav .mn-cta .btn-solid{background:#fff!important;color:#0A0A0A!important;border-color:#fff!important}}
+
+/* v35: iOS Safari / Chrome robustness
+   - stop WebKit text autosizing (font inflation) on every page
+   - full-height sections use the small viewport unit so content is never hidden behind the iOS toolbar */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@supports (height:100svh){
+  .h3{height:100svh}
+  .h3.sub{height:76svh}
+  .mani-stick{height:100svh}
+  .sig-stick{height:calc(100svh - 72px)}
+  .models .model{min-height:calc(100svh - 110px)}
+}
