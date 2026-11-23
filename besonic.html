@@ -15,11 +15,11 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="BSM">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<title>Bespoke Engine | Bespoke</title>
-<link rel="canonical" href="https://bespokemarketing.asia/engine.html">
-<meta property="og:url" content="https://bespokemarketing.asia/engine.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Bespoke">
-<meta name="description" content="Bespoke Engine is the operating layer behind every engagement: one source of truth for spend, revenue and performance.">
-<meta property="og:title" content="Bespoke Engine | Bespoke"><meta property="og:description" content="Bespoke Engine is the operating layer behind every engagement: one source of truth for spend, revenue and performance.">
+<title>Besonic | Revenue infrastructure by Bespoke</title>
+<link rel="canonical" href="https://bespokemarketing.asia/besonic.html">
+<meta property="og:url" content="https://bespokemarketing.asia/besonic.html"><meta property="og:type" content="website"><meta property="og:site_name" content="Bespoke">
+<meta name="description" content="Besonic is the revenue infrastructure behind every Bespoke engagement: every channel in, one live revenue signal out.">
+<meta property="og:title" content="Besonic | Revenue infrastructure by Bespoke"><meta property="og:description" content="Besonic is the revenue infrastructure behind every Bespoke engagement: every channel in, one live revenue signal out.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>:root{--sig-d:#2AA880;--sig-l:#0E8A63;--sig-soft:#9ED9C3}
 
@@ -516,6 +516,7 @@
 </style>
 <link rel="stylesheet" href="assets/viz.css">
 <link rel="stylesheet" href="assets/fx.css">
+<link rel="stylesheet" href="assets/besonic.css">
 <script>(function(){var P=window.CanvasRenderingContext2D&&CanvasRenderingContext2D.prototype;if(!P||P.__bspClamp)return;P.__bspClamp=1;var ft=P.fillText;
 P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():null;if(m&&!m.b&&!m.c&&m.a>0){var tw=this.measureText(t).width,al=this.textAlign,l=al=='center'?x-tw/2:(al=='right'||al=='end')?x-tw:x,L=m.a*l+m.e,R=m.a*(l+tw)+m.e,W=this.canvas.width,pad=3*m.a,dx=0;if(L<pad)dx=(pad-L)/m.a;else if(R>W-pad)dx=(W-pad-R)/m.a;if(tw*m.a<W-2*pad)x+=dx}}catch(e){}return ft.call(this,t,x,y,mw)}})();</script>
 </head>
@@ -565,7 +566,7 @@ P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():nu
       <div class="dd dd-sm"><a href="about.html" class="cur">Company</a>
         <div class="dd-menu"><div class="dd-inner">
           <a href="about.html">About<small>Story, principles and governance</small></a>
-          <a href="engine.html" class="cur">Bespoke Engine<small>Our in-house measurement product</small></a>
+          <a href="besonic.html" class="cur">Besonic<small>Our revenue infrastructure platform</small></a>
           <a href="contact.html">Contact<small>Offices in Vietnam and Singapore</small></a>
         </div></div>
       </div>
@@ -582,52 +583,70 @@ P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():nu
   <a class="mi" href="benchmarks.html">Benchmarks</a>
   <a class="mi" href="work.html">Work</a>
   <a class="mi" href="insights.html">Insights</a>
-  <details class="mi" open><summary>Company<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mi-sub"><a href="about.html">About</a><a href="engine.html" class="cur">Bespoke Engine</a><a href="contact.html">Contact</a></div></details>
+  <details class="mi" open><summary>Company<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="mi-sub"><a href="about.html">About</a><a href="besonic.html" class="cur">Besonic</a><a href="contact.html">Contact</a></div></details>
 </div>
 <div class="mn-cta"><a href="contact.html#book" class="btn btn-solid">Book a meeting</a><a href="https://zalo.me/2722835767291363986" class="btn btn-line" target="_blank" rel="noopener">Chat on Zalo</a></div>
 </nav>
-<section class="h3 sub" id="hero">
-  <canvas id="field" aria-hidden="true"></canvas>
-  <div class="wrap h3-in">
-    <p class="crumb"><a href="index.html">Bespoke</a><span>/</span><span>Bespoke Engine</span></p>
-    <h1 id="h1">One source of truth <em>for revenue.</em></h1>
-    <p class="sub-line">The operating layer behind every Bespoke engagement. Built in-house, deployed for every client.</p>
+<section class="bs-hero bsx" id="hero">
+  <canvas data-bs="core" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="crumb bs-in"><a href="index.html">Bespoke</a><span>/</span><span>Besonic</span></p>
+    <h1 class="bs-wm bs-in" id="h1-bs"><svg class="bs-mk" viewBox="0 0 24 24" aria-hidden="true"><rect x="0" y="14" width="4.4" height="10" rx="1"/><rect x="6.5" y="9" width="4.4" height="15" rx="1"/><rect x="13" y="4" width="4.4" height="20" rx="1"/><rect x="19.5" y="0" width="4.4" height="24" rx="1"/></svg>besonic</h1>
+    <p class="bs-tag bs-in">Revenue infrastructure. <span>Live.</span></p>
+    <div class="bs-chips bs-in"><span class="bs-chip live"><i></i>Reporting</span><span class="bs-chip"><i></i>Attribution</span><span class="bs-chip"><i></i>AI alerts</span><span class="bs-chip"><i></i>Forecast</span></div>
+    <div class="ctas bs-in"><a href="contact.html#book" class="btn btn-solid">Book a briefing <span class="arrow">→</span></a><a href="#console" class="btn btn-ghost">See the console</a></div>
   </div>
+  <div class="bs-legend" aria-hidden="true"><span><i></i>Channel noise</span><span class="s"><i></i>Revenue signal</span></div>
 </section>
-<section class="eng3" style="border-top:none"><div class="wrap eng3-grid">
-  <div class="reveal"><p class="eyebrow" style="color:#8A8A8A">Proprietary technology</p><h2>Built for the people who sign off the budget.</h2><p class="lead">Bespoke Engine brings spend, revenue and performance from every channel into one view, and flags what matters before the quarter closes.</p></div>
-  <div class="panel reveal">
-      <div class="panel-bar"><span class="dots"><i></i><i></i><i></i></span><span>Bespoke Engine · Revenue overview</span><span class="live"><i></i>Live data</span></div>
-      <div class="kpis3">
-        <div><div class="l">REVENUE INDEX</div><div class="v" id="k1">100.0</div><div class="d" id="k1d">+0.0%</div></div>
-        <div><div class="l">ROAS</div><div class="v" id="k2">3.20x</div><div class="d" id="k2d">+0.00</div></div>
-        <div><div class="l">CAC INDEX</div><div class="v" id="k3">100.0</div><div class="d" id="k3d">-0.0%</div></div>
-      </div>
-      <canvas id="m-stream" aria-hidden="true" style="display:block;width:100%;height:260px"></canvas>
-      <div class="alert3" id="alert3"><b>AI INSIGHT</b><span>Outlier detected: one creator segment is returning well above average. Suggest moving budget from the lowest-performing segment.</span></div>
-      <div class="panel-foot"><span>Bespoke Engine</span><span>Revenue view</span></div>
-    </div>
+<section class="bs-spec bsx"><div class="wrap">
+  <div><b>08</b><span>Sources in</span></div>
+  <div><b>01</b><span>Revenue model</span></div>
+  <div><b>02</b><span>Views: Bespoke · Client</span></div>
+  <div><b>24/7</b><span>Signal watch</span></div>
 </div></section>
-<section class="blk dark" style="padding-top:0"><div class="wrap">
-  <div class="sec-head reveal"><div><p class="eyebrow">Capabilities</p><h2>What the Engine does today, and what comes next.</h2></div><p>We publish the status of every capability. What is live is in use with clients today.</p></div>
-  <div class="cap-grid reveal">
-    <div class="cap"><span class="st live">LIVE</span><h3>Unified revenue reporting</h3><p>Spend and performance from every platform in one dashboard, refreshed automatically.</p></div>
-    <div class="cap"><span class="st">IN BUILD</span><h3>Cross-channel attribution</h3><p>A consistent view of which channels and creators contribute to revenue.</p></div>
-    <div class="cap"><span class="st">IN BUILD</span><h3>AI insight and outlier alerts</h3><p>Automatic detection of segments performing far above or below the average, with a suggested action.</p></div>
+<section class="bs-sec bsx" id="console"><div class="wrap">
+  <div class="bs-h reveal"><div><p class="k">Console</p><h2 style="margin-top:16px">One screen.<br>Every signal.</h2></div></div>
+  <div class="bs-con panel reveal">
+    <div class="bs-con-bar"><span class="bs-wm"><svg class="bs-mk" viewBox="0 0 24 24" aria-hidden="true"><rect x="0" y="14" width="4.4" height="10" rx="1"/><rect x="6.5" y="9" width="4.4" height="15" rx="1"/><rect x="13" y="4" width="4.4" height="20" rx="1"/><rect x="19.5" y="0" width="4.4" height="24" rx="1"/></svg>besonic</span><span class="tabs"><span class="on">Today</span><span>Revenue</span><span>Channels</span><span>Creators</span></span><span class="live"><i></i>Live</span></div>
+    <div class="bs-con-grid">
+      <div class="bs-dials">
+        <div class="bs-dial" data-bs-dial data-v="78" data-max="100"><svg viewBox="0 0 150 150"><circle class="trk" cx="75" cy="75" r="52"/><circle class="val" cx="75" cy="75" r="52" transform="rotate(-90 75 75)"/><text class="num" x="75" y="84" text-anchor="middle">0</text><text class="sub" x="75" y="104" text-anchor="middle">/ 100</text></svg><span>Revenue health</span></div>
+        <div class="bs-dial" data-bs-dial data-v="12.4" data-max="21" data-d="1"><svg viewBox="0 0 150 150"><circle class="trk" cx="75" cy="75" r="52"/><circle class="val w" cx="75" cy="75" r="52" transform="rotate(-90 75 75)"/><text class="num" x="75" y="84" text-anchor="middle">0</text><text class="sub" x="75" y="104" text-anchor="middle">/ 21</text></svg><span>Media strain</span></div>
+      </div>
+      <div class="bs-mid">
+        <div class="kpis3">
+          <div><div class="l">REVENUE INDEX</div><div class="v" id="k1">100.0</div><div class="d" id="k1d">+0.0%</div></div>
+          <div><div class="l">ROAS</div><div class="v" id="k2">3.20x</div><div class="d" id="k2d">+0.00</div></div>
+          <div><div class="l">CAC INDEX</div><div class="v" id="k3">100.0</div><div class="d" id="k3d">-0.0%</div></div>
+        </div>
+        <canvas id="m-stream" aria-hidden="true"></canvas>
+        <div class="alert3" id="alert3"></div>
+      </div>
+      <div class="bs-feed"><div class="bs-feed-h"><span>SIGNALS</span><b>AI</b></div><ul data-bs-feed></ul></div>
+    </div>
   </div>
 </div></section>
-<section class="blk light"><div class="wrap">
-  <div class="sec-head reveal"><div><p class="eyebrow">How it works</p><h2>Connect. Unify. Decide.</h2></div></div>
-  <div class="svx reveal" data-dur="6">
-  <div class="svx-list" role="tablist"><button class="svx-item" role="tab" data-k="en-0" data-file="Engine · Connect" data-cap="Sources connected to the Engine"><span class="n">01</span><h3>Connect</h3><div class="svx-more"><div><p>Ad platforms, analytics, commerce and CRM are connected once, with tracking checked end to end.</p></div></div><span class="bar"></span></button><button class="svx-item" role="tab" data-k="en-1" data-file="Engine · Unify" data-cap="Data modelled into one revenue view"><span class="n">02</span><h3>Unify</h3><div class="svx-more"><div><p>Data is cleaned and modelled into one revenue view shared by marketing, finance and leadership.</p></div></div><span class="bar"></span></button><button class="svx-item" role="tab" data-k="en-2" data-file="Engine · Decide" data-cap="Dashboards, alerts and budget decisions"><span class="n">03</span><h3>Decide</h3><div class="svx-more"><div><p>Weekly digests and alerts turn the view into decisions on budget, creative and channel.</p></div></div><span class="bar"></span></button><button class="svx-item" role="tab" data-k="en-3" data-file="Engine · Compound" data-cap="Context stored quarter by quarter"><span class="n">04</span><h3>Compound</h3><div class="svx-more"><div><p>Every decision and result is stored, so each quarter starts with more context than the last.</p></div></div><span class="bar"></span></button></div>
-  <div class="svx-stage"><div class="svx-top"><span class="svx-file"></span><span class="lv"><i></i>Exhibit</span></div><canvas aria-hidden="true"></canvas><div class="svx-bot"><span class="svx-cap"></span><span class="svx-ctl"></span></div></div>
-</div>
+<section class="bs-sec alt bsx"><div class="wrap">
+  <div class="bs-h reveal"><div><p class="k">Pipeline</p><h2 style="margin-top:16px">Every source in.<br>One truth out.</h2></div></div>
+  <div class="bs-pipe reveal">
+    <canvas data-bs="pipe" aria-hidden="true"></canvas>
+    <div class="bs-steps" data-bs-steps><div><small>01</small>Connect</div><div><small>02</small>Unify</div><div><small>03</small>Decide</div><div><small>04</small>Compound</div></div>
+  </div>
+</div></section>
+<section class="bs-sec bsx"><div class="wrap">
+  <div class="bs-h reveal"><div><p class="k">Modules</p><h2 style="margin-top:16px">Live today.<br>Shipping next.</h2></div></div>
+  <div class="bs-mods reveal">
+    <div class="bs-mod"><canvas data-bs="rep" aria-hidden="true"></canvas><div class="bs-mod-b"><span class="bs-chip live"><i></i>Live</span><h3>Revenue reporting</h3></div></div>
+    <div class="bs-mod"><canvas data-bs="attr" aria-hidden="true"></canvas><div class="bs-mod-b"><span class="bs-chip"><i></i>In build</span><h3>Attribution</h3></div></div>
+    <div class="bs-mod"><canvas data-bs="out" aria-hidden="true"></canvas><div class="bs-mod-b"><span class="bs-chip"><i></i>In build</span><h3>Outlier alerts</h3></div></div>
+    <div class="bs-mod"><canvas data-bs="fc" aria-hidden="true"></canvas><div class="bs-mod-b"><span class="bs-chip"><i></i>In build</span><h3>Forecast</h3></div></div>
+  </div>
 </div></section>
 <section class="cta3" id="contact">
   <canvas id="field2" aria-hidden="true"></canvas>
   <div class="wrap">
     <p class="eyebrow" style="color:#8A8A8A;margin-bottom:28px">Request a briefing</p>
-    <h2>Let's build the infrastructure behind your <em>next stage of growth.</em></h2>
+    <h2>See your revenue <em>as one signal.</em></h2>
     <p>A senior partner will respond within one business day.</p>
     <div class="cta-row" style="margin-top:40px;display:flex;gap:14px;flex-wrap:wrap">
       <a href="contact.html#book" class="btn btn-solid">Book a meeting <span class="arrow">→</span></a>
@@ -643,7 +662,7 @@ P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():nu
         <p style="max-width:300px">Revenue Infrastructure for Asia's Market Leaders.</p><p style="max-width:300px;margin-top:10px;font-size:13px;color:#8A8A8A">Est. 2022 · Ho Chi Minh City · Singapore</p>
       </div>
       <div><h4>Infrastructure</h4><ul><li><a href="architecture.html">Architecture</a></li><li><a href="intelligence.html">Intelligence</a></li><li><a href="systems.html">Systems</a></li><li><a href="demand.html">Demand</a></li><li><a href="method.html">Quant method</a></li><li><a href="go-to-market.html">Go-to-market</a></li><li><a href="benchmarks.html">Media benchmarks</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="engine.html">Bespoke Engine</a></li><li><a href="work.html">Work</a></li><li><a href="insights.html">Insights</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="besonic.html">Besonic</a></li><li><a href="work.html">Work</a></li><li><a href="insights.html">Insights</a></li><li><a href="about.html">About</a></li></ul></div>
       <div><h4>Offices</h4><ul><li><span style="color:#8A8A8A;font-size:12px;letter-spacing:.08em">HEAD OFFICE</span><br>Fimexco Building, 231-244 Le Thanh Ton Street, Ben Thanh Ward, Ho Chi Minh City</li><li><span style="color:#8A8A8A;font-size:12px;letter-spacing:.08em">SINGAPORE</span><br>7 Straits View, #04-01, Marina One East Tower, Singapore 018936</li><li><a href="mailto:partners@bespokemarketing.asia">partners@bespokemarketing.asia</a></li><li><a href="https://zalo.me/2722835767291363986" target="_blank" rel="noopener">Chat on Zalo</a></li><li><a href="contact.html#book">Book a meeting</a></li></ul></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Bespoke Marketing Co., Ltd. A Bespoke Holdings company.</span><span><a href="privacy.html">Privacy</a> · Revenue, engineered.</span></div>
@@ -793,8 +812,8 @@ field('field2',{cx:.5,hz:.30});
     // engine
     ctx.fillStyle='#0C0C0C';ctx.strokeStyle=rgba(SIG,.4+glow*.5);ctx.lineWidth=1.2;ctx.beginPath();ctx.rect(ex-ew/2,cy-eh/2,ew,eh);ctx.fill();ctx.stroke();
     var gg=ctx.createRadialGradient(ex,cy,0,ex,cy,ew);gg.addColorStop(0,rgba(SIG,.10+glow*.12));gg.addColorStop(1,rgba(SIG,0));ctx.fillStyle=gg;ctx.fillRect(ex-ew,cy-ew,ew*2,ew*2);
-    ctx.textAlign='center';ctx.font='10px "Be Vietnam Pro",sans-serif';ctx.fillStyle='#9A9A9A';ctx.fillText('BESPOKE',ex,cy-6);
-    ctx.font='500 14px "Be Vietnam Pro",sans-serif';ctx.fillStyle='#F2F2F2';ctx.fillText('Engine',ex,cy+12);
+    ctx.textAlign='center';ctx.font='10px "Be Vietnam Pro",sans-serif';ctx.fillStyle='#9A9A9A';ctx.fillText('CORE',ex,cy-6);
+    ctx.font='500 14px "Be Vietnam Pro",sans-serif';ctx.fillStyle='#F2F2F2';ctx.fillText('besonic',ex,cy+12);
     // nodes + labels
     ctx.textAlign='right';ctx.font=fs+'px "Be Vietnam Pro",sans-serif';
     S.forEach(function(p,i){ctx.fillStyle='#0C0C0C';ctx.strokeStyle='rgba(255,255,255,.5)';ctx.beginPath();ctx.arc(p[0],p[1],5,0,6.3);ctx.fill();ctx.stroke();ctx.fillStyle='#DADADA';ctx.fillText(src[i],p[0]-14,p[1]+4);});
@@ -871,5 +890,6 @@ document.querySelectorAll('.reveal,#chart-draw').forEach(function(el){io.observe
 
 <script src="assets/viz.js" defer></script>
 <script src="assets/fx.js" defer></script>
+<script src="assets/besonic.js" defer></script>
 </body>
 </html>

@@ -93,7 +93,7 @@ This folder is the complete website. It is static HTML/CSS/JS: no build step, no
 
 **v20:** Home hero is minimal again (no subline). On mobile (<=720px) the "Bespoke in one minute" cards (`.gl-c`) are full-screen sticky panels that stack over each other, with a large outline number (`.gl-big`); desktop keeps the 4-column grid.
 
-**v19:** Compact nav (Harvey-style): desktop = Infrastructure ▾ / Benchmarks / Work / Insights / Company ▾ (About, Bespoke Engine, Contact; `.dd-sm` single column). Mobile menu = large-text accordion using `<details class="mi">` plus two bottom buttons (`.mn-cta`). Styles at the end of `assets/fx.css`; Company glyphs in fx.js. Home: hero subline + new "Bespoke in one minute" section (`#glance`) right after the hero. About: Leadership section removed. Addresses now read "Ho Chi Minh City, Vietnam" and "Singapore"; contact page shows VNO Building, 124 Dien Bien Phu Street, Dakao Ward (confirm before launch).
+**v19:** Compact nav (Harvey-style): desktop = Infrastructure ▾ / Benchmarks / Work / Insights / Company ▾ (About, Besonic, Contact; `.dd-sm` single column). Mobile menu = large-text accordion using `<details class="mi">` plus two bottom buttons (`.mn-cta`). Styles at the end of `assets/fx.css`; Company glyphs in fx.js. Home: hero subline + new "Bespoke in one minute" section (`#glance`) right after the hero. About: Leadership section removed. Addresses now read "Ho Chi Minh City, Vietnam" and "Singapore"; contact page shows VNO Building, 124 Dien Bien Phu Street, Dakao Ward (confirm before launch).
 
 **v17:** scroll-driven tools: the budget simulator and the benchmark calculator pin on screen and play through scenarios as the visitor scrolls (`window.bspScrolly` in viz.js; calculator tour in calc.js, enabled by `data-tour`); any tap or slider move hands control to the visitor. The per-format breakdown sits below the pinned calculator. Insights use an editorial (NYT-style) layout and open in a reader sheet (iframe of the article with `?embed=1`, which hides site chrome); "Open full page" and the URL update keep articles shareable.
 
@@ -187,7 +187,7 @@ Dải "Trusted by" trên trang chủ đang hiển thị tên khách hàng dạng
 | 01 Intelligence | intelligence.html | Layer 1: audit, analysis, attribution, growth model |
 | 02 Systems | systems.html | Layer 2: tracking, reporting, CRM, Zalo OA, web, AI |
 | 03 Demand | demand.html | Layer 3: media, KOC, e-commerce, SEO, social |
-| Bespoke Engine | engine.html | Proof of tech (LIVE / IN BUILD) |
+| Besonic | besonic.html | Proof of tech (LIVE / IN BUILD) |
 | Work | work.html | Proof of results (anonymised, NDA) |
 | Insights | insights.html + insights/*.html | Thought leadership |
 | About | about.html | Story, principles, leadership, Holdings, Trust |
