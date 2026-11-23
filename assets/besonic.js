@@ -5,7 +5,7 @@ function sig(){return (getComputedStyle(document.documentElement).getPropertyVal
 var J=sig();
 function rgba(h,a){var n=parseInt(h.slice(1),16);return 'rgba('+(n>>16)+','+((n>>8)&255)+','+(n&255)+','+a+')'}
 function rnd(a,b){return a+Math.random()*(b-a)}
-var FONT='"Geist","Be Vietnam Pro",sans-serif';
+var FONT='"Switzer",sans-serif';
 function mount(cv,draw){
   var ctx=cv.getContext('2d'),S={w:0,h:0},vis=false,t0=performance.now(),last=t0;
   function size(){var W=cv.clientWidth,H=cv.clientHeight,d=Math.min(window.devicePixelRatio||1,2);if(!W||!H)return;cv.width=Math.round(W*d);cv.height=Math.round(H*d);ctx.setTransform(d,0,0,d,0,0);S.w=W;S.h=H;}
@@ -19,7 +19,7 @@ var mouse={x:-1e4,y:-1e4};addEventListener('mousemove',function(e){mouse.x=e.cli
 /* ---------- 1. SONIC CORE: noise in, one revenue signal out ---------- */
 var D={};
 D.core=function(cv){
-  var src=['META','TIKTOK','GOOGLE','SHOPEE','GA4','CRM','ZALO','SHEETS'],P=[],spawn=0,pulses=[],pspawn=0;
+  var src=['META','TIKTOK','GOOGLE','COMMERCE','CRM','P&L','PROJECTS','TEAM'],P=[],spawn=0,pulses=[],pspawn=0;
   mount(cv,function(c,w,h,t,dt){
     c.clearRect(0,0,w,h);
     var mob=w<720,cx=mob?w*.5:w*.74,cy=mob?Math.min(h*.22,210):h*.5,R=Math.min(mob?w*.31:h*.28,320),r0=R*.2;
@@ -75,8 +75,8 @@ D.core=function(cv){
 
 /* ---------- 2. PIPELINE: connect, unify, decide, compound ---------- */
 D.pipe=function(cv){
-  var src=['Meta Ads','TikTok Ads','Google Ads','Shopee · Lazada','GA4','CRM · Zalo OA','Bookings','Finance · P&L'],
-      out=['CEO view','CMO view','Client portal','Alerts','Forecast'],P=[],spawn=0,glow=0,steps=document.querySelectorAll('[data-bs-steps] div');
+  var src=['Meta Ads','TikTok Ads','Google Ads','Commerce','CRM · Zalo OA','Projects','Team time','Finance · P&L'],
+      out=['CEO view','Team view','Client portal','Alerts','Forecast'],P=[],spawn=0,glow=0,steps=document.querySelectorAll('[data-bs-steps] div');
   mount(cv,function(c,w,h,t,dt){
     c.clearRect(0,0,w,h);
     var mob=w<720,fs=mob?10:12;c.font=fs+'px '+FONT;
@@ -160,9 +160,9 @@ D.wf=function(cv){var S=[['Revenue',100,'t'],['Media',-38],['Creators',-17],['Pr
       var x=L+i*bw+bw*.16,ww=bw*.68,y1=Y(top),y0=Y(bot),hh=(y0-y1)*u;
       var yy=s[2]?y0-hh:y1;c.fillStyle=s[2]?P.j:P.neg;c.fillRect(x,yy,ww,hh);
       if(i<n-1&&u>.98){c.setLineDash([3,3]);c.strokeStyle=P.dim;c.beginPath();var yl=s[2]?Y(top):Y(bot);c.moveTo(x+ww,yl);c.lineTo(x+bw,yl);c.stroke();c.setLineDash([]);}
-      c.globalAlpha=Math.max(0,Math.min(1,(k-i*.35-.5)/.4));c.textAlign='center';c.font='500 '+(mob?10:12)+'px Geist,sans-serif';c.fillStyle=s[2]?P.j:P.ink;
+      c.globalAlpha=Math.max(0,Math.min(1,(k-i*.35-.5)/.4));c.textAlign='center';c.font='500 '+(mob?10:12)+'px Switzer,sans-serif';c.fillStyle=s[2]?P.j:P.ink;
       c.fillText((s[1]>0&&!s[2]?'+':'')+s[1]+(s[2]&&i?'%':''),x+ww/2,(s[2]?y0-hh:y1)-8);c.globalAlpha=1;
-      c.font=(mob?9:10)+'px "Geist Mono",monospace';c.fillStyle=P.mut;c.fillText(s[0].toUpperCase(),x+ww/2,h-12);});
+      c.font=(mob?9:10)+'px "Geist Mono",monospace';c.fillStyle=P.mut;c.fillText((w<600?['REV','MEDIA','KOC','PROD','TEAM','OPEX','EBITDA'][i]:s[0].toUpperCase()),x+ww/2,h-12);});
     c.textAlign='start';});};
 // Sankey: spend -> outcome -> revenue
 D.sk=function(cv){var A=[['Meta',34],['TikTok',28],['Creators',20],['Google',18]],M=[['Leads',42],['Orders',36],['Bookings',22]],
@@ -179,14 +179,14 @@ D.sk=function(cv){var A=[['Meta',34],['TikTok',28],['Creators',20],['Google',18]
     for(var j=pts.length-1;j>=0;j--){var q=pts[j];q.u+=dt*.45;if(q.u>1){pts.splice(j,1);continue;}var p=paths[q.i],u=q.u,v=1-u,mx=(p[0]+p[2])/2;
       var x=v*v*v*p[0]+3*v*v*u*mx+3*v*u*u*mx+u*u*u*p[2],yA=p[1]+p[4]*q.o,yB=p[3]+p[4]*q.o,y=v*v*v*yA+3*v*v*u*yA+3*v*u*u*yB+u*u*u*yB;
       c.fillStyle=p[5]?P.j:P.dim;c.fillRect(x-1,y-1,2,2);}
-    c.font=(mob?10:12)+'px Geist,sans-serif';
+    c.font=(mob?10:12)+'px Switzer,sans-serif';
     A.forEach(function(n,i){c.fillStyle=P.ink;c.fillRect(x0,a[i][0],nw,a[i][1]);c.textAlign='right';c.fillText(n[0],x0-8,a[i][0]+a[i][1]/2+4);});
     M.forEach(function(n,i){c.fillStyle=P.ink;c.fillRect(x1,m[i][0],nw,m[i][1]);c.textAlign='center';c.fillStyle=P.bg;c.fillRect(x1+nw+4,m[i][0]+m[i][1]/2-9,c.measureText(n[0]).width+10,18);c.fillStyle=P.ink;c.textAlign='left';c.fillText(n[0],x1+nw+9,m[i][0]+m[i][1]/2+4);});
-    c.fillStyle=P.j;c.fillRect(x2,R[0],nw+2,R[1]);c.textAlign='left';c.font='500 '+(mob?11:13)+'px Geist,sans-serif';c.fillText('Revenue',x2+16,R[0]+R[1]/2);if(!mob){c.font='10px "Geist Mono",monospace';c.fillStyle=P.mut;c.fillText('3.24× SPEND',x2+16,R[0]+R[1]/2+16);}c.textAlign='start';});};
+    c.fillStyle=P.j;c.fillRect(x2,R[0],nw+2,R[1]);c.textAlign='left';c.font='500 '+(mob?11:13)+'px Switzer,sans-serif';c.fillText('Revenue',x2+16,R[0]+R[1]/2);if(!mob){c.font='10px "Geist Mono",monospace';c.fillStyle=P.mut;c.fillText('3.24× SPEND',x2+16,R[0]+R[1]/2+16);}c.textAlign='start';});};
 // team load heatmap (26 weeks)
 D.hm=function(cv){var rows=['Strategy','Media','Creators','Content','Tech','Finance'],W=26,v=[];for(var r=0;r<rows.length;r++){var a=[],b=rnd(.45,.75);for(var k=0;k<W;k++){b=Math.max(.15,Math.min(1.05,b+rnd(-.12,.13)));a.push(b)}v.push(a)}
   mount(cv,function(c,w,h,t){var P=pal(cv);c.clearRect(0,0,w,h);var mob=w<520,L=mob?64:86,T=24,R=12,B=28,cw=(w-L-R)/W,ch=(h-T-B)/rows.length,now=Math.floor((t*2.2)%W);
-    c.font=(mob?10:12)+'px Geist,sans-serif';
+    c.font=(mob?10:12)+'px Switzer,sans-serif';
     rows.forEach(function(r,i){c.fillStyle=P.mut;c.textAlign='right';c.fillText(r,L-10,T+i*ch+ch/2+4);
       for(var k=0;k<W;k++){var x=L+k*cw,y=T+i*ch,val=v[i][k],over=val>.95,rev=k<=now?1:.35;
         c.fillStyle=over?(P.l?'#0A0A0A':'#F2F2F2'):rgba(P.j,(0.08+val*.8)*rev);c.globalAlpha=over?rev:1;
@@ -203,7 +203,7 @@ D.bb=function(cv){var pr=[];for(var i=0;i<14;i++){pr.push({x:rnd(.08,.92),y:rnd(
     pr.forEach(function(p){var x=X(p.x)+Math.sin(t*.6+p.ph)*3,y=Y(p.y)+Math.cos(t*.5+p.ph)*3,rr=(mob?6:8)+p.r*(mob?14:20),ab=p.y>=tg;
       c.beginPath();c.arc(x,y,rr,0,6.284);c.fillStyle=ab?rgba(P.j,p.hero?.85:.28):(P.l?'rgba(10,10,10,.08)':'rgba(255,255,255,.08)');c.fill();c.strokeStyle=ab?P.j:P.dim;c.lineWidth=1;c.stroke();
       if(p.hero||p.low){var k=(t*.7)%1;c.strokeStyle=rgba(p.hero?P.j:(P.l?'#0A0A0A':'#F2F2F2'),(1-k)*.6);c.beginPath();c.arc(x,y,rr+4+k*16,0,6.284);c.stroke();
-        c.font='500 '+(mob?10:12)+'px Geist,sans-serif';c.fillStyle=P.ink;c.fillText(p.hero?'Retail always-on · 44%':'Launch event · 3%',x+rr+8,y+4);}});
+        c.font='500 '+(mob?10:12)+'px Switzer,sans-serif';c.fillStyle=P.ink;c.fillText(p.hero?'Retail always-on · 44%':'Launch event · 3%',x+rr+8,y+4);}});
     c.font='10px "Geist Mono",monospace';c.fillStyle=P.mut;c.textAlign='right';c.fillText('PROJECT REVENUE →',L+pw,h-10);c.textAlign='start';});};
 // cash runway with monte carlo paths
 D.cash=function(cv){var N=40,paths=[];for(var p=0;p<N;p++){var v=.42,a=[v];for(var k=1;k<24;k++){v+=rnd(-.05,.055)+.012;a.push(v)}paths.push(a)}
@@ -218,6 +218,13 @@ D.cash=function(cv){var N=40,paths=[];for(var p=0;p<N;p++){var v=.42,a=[v];for(v
     c.strokeStyle=P.dim;c.setLineDash([3,3]);c.beginPath();c.moveTo(X(k0),T);c.lineTo(X(k0),T+ph);c.stroke();c.setLineDash([]);
     c.font='10px "Geist Mono",monospace';c.fillStyle=P.mut;c.fillText('TODAY',X(k0)+6,T+10);c.textAlign='right';c.fillText('+18 MONTHS',L+pw,h-10);c.textAlign='left';c.fillText('CASH · 40 SIMULATED PATHS',L,h-10);c.textAlign='start';});};
 
+// team data input: rows land, get checked or flagged
+D.inp=function(cv){var R=[['COST','Retail','48.5M',1],['HOURS','Media','16h',1],['REVENUE','Invoice 0142','310M',1],['COST','Studio','32M',0],['COST','Creator','7.5M',1],['HOURS','Content','12h',1],['COST','New vendor','21M',0]],k=0,rows=[],acc=1;
+  mount(cv,function(c,w,h,t,dt){c.clearRect(0,0,w,h);acc+=dt;if(acc>1.3){acc=0;rows.unshift({r:R[k++%R.length],a:0});if(rows.length>6)rows.pop();}
+    var rh=(h-24)/5;rows.forEach(function(o,i){o.a=Math.min(1,o.a+dt*2.5);var y=12+i*rh-(1-o.a)*rh*.6;c.globalAlpha=o.a*(1-i*.14);
+      c.strokeStyle='rgba(255,255,255,.08)';c.strokeRect(16,y+4,w-32,rh-8);c.font='10px "Geist Mono",monospace';c.fillStyle='#7A7A7A';c.fillText(o.r[0],28,y+rh/2+3);
+      c.font='13px Switzer,sans-serif';c.fillStyle='#DADADA';c.fillText(o.r[1],96,y+rh/2+4);c.textAlign='right';c.fillStyle='#F2F2F2';c.fillText(o.r[2],w-64,y+rh/2+4);c.textAlign='start';
+      var ok=o.r[3],cx=w-40,cy=y+rh/2;if(o.a>.9){c.fillStyle=ok?J:'#5E5E5E';c.beginPath();c.arc(cx,cy,7,0,6.284);c.fill();c.strokeStyle=ok?'#050505':'#F2F2F2';c.lineWidth=1.6;c.beginPath();if(ok){c.moveTo(cx-3,cy);c.lineTo(cx-1,cy+2.5);c.lineTo(cx+3.5,cy-2.5)}else{c.moveTo(cx,cy-3.5);c.lineTo(cx,cy+1);c.moveTo(cx,cy+3);c.lineTo(cx,cy+3.6)}c.stroke();c.lineWidth=1;}});c.globalAlpha=1;});};
 function init(){
   J=sig();
   document.querySelectorAll('canvas[data-bs]').forEach(function(cv){var f=D[cv.getAttribute('data-bs')];if(f)f(cv)});

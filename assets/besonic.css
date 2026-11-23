@@ -1,16 +1,16 @@
 /* ===== BESONIC: product visual system ===== */
 .bsx{--j:var(--sig-d,#2AA880);--j2:#9ED9C3}
 /* wordmark */
-.bs-wm{display:inline-flex;align-items:center;gap:.2em;font-family:"Be Vietnam Pro",sans-serif;font-weight:500;letter-spacing:-.055em;line-height:1;color:#F2F2F2;white-space:nowrap}
+.bs-wm{display:inline-flex;align-items:center;gap:.2em;font-family:"Switzer",sans-serif;font-weight:500;letter-spacing:-.055em;line-height:1;color:#F2F2F2;white-space:nowrap}
 .bs-wm .bs-mk{width:.6em;height:.6em;flex:none;overflow:visible}
 .bs-mk rect{fill:var(--sig-d,#2AA880);transform-box:fill-box;transform-origin:50% 100%;animation:bsq 1.6s cubic-bezier(.5,0,.5,1) infinite}
 .bs-mk rect:nth-child(2){animation-delay:-.25s}.bs-mk rect:nth-child(3){animation-delay:-.5s}.bs-mk rect:nth-child(4){animation-delay:-.75s}
 @keyframes bsq{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.55)}}
-.bs-by{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A7A7A}
+.bs-by{font:500 11px "Switzer",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A7A7A}
 .bs-by b{color:#BDBDBD;font-weight:500}
 /* chips */
 .bs-chips{display:flex;flex-wrap:wrap;gap:8px}
-.bs-chip{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,255,255,.14);font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#BDBDBD;white-space:nowrap}
+.bs-chip{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,255,255,.14);font:500 11px "Switzer",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#BDBDBD;white-space:nowrap}
 .bs-chip i{width:6px;height:6px;border-radius:50%;background:#5E5E5E;flex:none}
 .bs-chip.live{border-color:color-mix(in srgb,var(--sig-d) 55%,transparent);color:#F2F2F2}
 .bs-chip.live i{background:var(--sig-d);animation:svxp 1.6s infinite}
@@ -28,7 +28,7 @@
 .bs-in{opacity:0;transform:translateY(18px);filter:blur(6px);transition:opacity 1.1s,transform 1.2s cubic-bezier(.2,.7,.2,1),filter 1.1s}
 .bs-go .bs-in{opacity:1;transform:none;filter:none}
 .bs-go .bs-in:nth-child(2){transition-delay:.15s}.bs-go .bs-in:nth-child(3){transition-delay:.35s}.bs-go .bs-in:nth-child(4){transition-delay:.55s}.bs-go .bs-in:nth-child(5){transition-delay:.75s}
-.bs-legend{position:absolute;z-index:2;right:var(--pad);bottom:28px;display:flex;gap:22px;font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:#6E6E6E;text-transform:uppercase}
+.bs-legend{position:absolute;z-index:2;right:var(--pad);bottom:28px;display:flex;gap:22px;font:500 10px "Switzer",sans-serif;letter-spacing:.16em;color:#6E6E6E;text-transform:uppercase}
 .bs-legend i{display:inline-block;width:18px;height:1px;vertical-align:middle;margin-right:8px;background:#6E6E6E}
 .bs-legend .s i{background:var(--sig-d);height:2px}
 
@@ -38,7 +38,7 @@
 .bs-spec .wrap>div{padding:30px 20px 30px 0}
 .bs-spec .wrap>div+div{padding-left:22px;border-left:1px solid rgba(255,255,255,.08)}
 .bs-spec b{display:block;font-weight:200;font-size:clamp(40px,4.6vw,72px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
-.bs-spec span{display:block;margin-top:12px;font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A7A7A}
+.bs-spec span{display:block;margin-top:12px;font:500 11px "Switzer",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A7A7A}
 
 /* ---------- SECTION HEAD (short) ---------- */
 .bs-sec{background:#050505;color:#fff;padding:clamp(90px,11vw,160px) 0}
@@ -46,11 +46,11 @@
 .bs-h{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
 .bs-h h2{font-weight:300;font-size:clamp(36px,5vw,76px);letter-spacing:-.05em!important;line-height:.98}
 .bs-h .eyebrow{color:#7A7A7A;margin-bottom:18px}
-.bs-h .k{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:var(--sig-d);text-transform:uppercase}
+.bs-h .k{font:500 11px "Switzer",sans-serif;letter-spacing:.16em;color:var(--sig-d);text-transform:uppercase}
 
 /* ---------- CONSOLE ---------- */
 .bs-con{border:1px solid rgba(255,255,255,.1);background:#0A0A0A;box-shadow:0 40px 120px -40px color-mix(in srgb,var(--sig-d) 30%,transparent)}
-.bs-con-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08);font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.1em;color:#7A7A7A;text-transform:uppercase}
+.bs-con-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.08);font:500 11px "Switzer",sans-serif;letter-spacing:.1em;color:#7A7A7A;text-transform:uppercase}
 .bs-con-bar .bs-wm{font-size:17px;text-transform:none;letter-spacing:-.04em}
 .bs-con-bar .tabs{display:flex;gap:4px}
 .bs-con-bar .tabs span{padding:5px 10px;border:1px solid transparent}
@@ -64,20 +64,20 @@
 .bs-dial .trk{fill:none;stroke:rgba(255,255,255,.08);stroke-width:8}
 .bs-dial .val{fill:none;stroke:var(--sig-d);stroke-width:8;stroke-linecap:round;transition:stroke-dashoffset 2.2s cubic-bezier(.2,.7,.2,1)}
 .bs-dial .val.w{stroke:#E6E6E6}
-.bs-dial .num{font:200 40px "Be Vietnam Pro",sans-serif;fill:#F2F2F2;letter-spacing:-.04em}
-.bs-dial .sub{font:500 9px "Be Vietnam Pro",sans-serif;fill:#7A7A7A;letter-spacing:.16em}
-.bs-dial>span{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:#9A9A9A;text-transform:uppercase}
+.bs-dial .num{font:200 40px "Switzer",sans-serif;fill:#F2F2F2;letter-spacing:-.04em}
+.bs-dial .sub{font:500 9px "Switzer",sans-serif;fill:#7A7A7A;letter-spacing:.16em}
+.bs-dial>span{font:500 11px "Switzer",sans-serif;letter-spacing:.16em;color:#9A9A9A;text-transform:uppercase}
 .bs-mid{display:flex;flex-direction:column}
 .bs-mid .kpis3 .v{font-weight:200}
 .bs-mid canvas{display:block;width:100%;height:300px;flex:1}
 .bs-feed{border-left:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column}
-.bs-feed-h{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.08);font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:#7A7A7A;display:flex;justify-content:space-between}
+.bs-feed-h{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.08);font:500 10px "Switzer",sans-serif;letter-spacing:.16em;color:#7A7A7A;display:flex;justify-content:space-between}
 .bs-feed-h b{color:var(--sig-d);font-weight:500}
 .bs-feed ul{list-style:none;margin:0;padding:0;position:relative;flex:1;overflow:hidden;min-height:300px}
 .bs-feed li{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.06);display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline;animation:bsin .7s cubic-bezier(.2,.7,.2,1) both}
 .bs-feed li i{grid-row:1/3;width:7px;height:7px;border-radius:50%;background:#5E5E5E;margin-top:4px}
 .bs-feed li.hot i{background:var(--sig-d);box-shadow:0 0 12px var(--sig-d)}
-.bs-feed li b{font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:#9A9A9A;text-transform:uppercase}
+.bs-feed li b{font:500 10px "Switzer",sans-serif;letter-spacing:.16em;color:#9A9A9A;text-transform:uppercase}
 .bs-feed li.hot b{color:var(--sig-d)}
 .bs-feed li span{font-size:13.5px;line-height:1.45;color:#DADADA}
 @keyframes bsin{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
@@ -89,11 +89,11 @@
 .bs-steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(255,255,255,.08)}
 .bs-steps div{padding:18px 20px;font-weight:300;font-size:clamp(20px,1.8vw,26px);letter-spacing:-.03em;color:#6E6E6E;transition:color .5s}
 .bs-steps div+div{border-left:1px solid rgba(255,255,255,.08)}
-.bs-steps div small{display:block;font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:#4E4E4E;margin-bottom:6px;transition:color .5s}
+.bs-steps div small{display:block;font:500 10px "Switzer",sans-serif;letter-spacing:.16em;color:#4E4E4E;margin-bottom:6px;transition:color .5s}
 .bs-steps div.on{color:#F2F2F2}.bs-steps div.on small{color:var(--sig-d)}
 
 /* ---------- MODULES ---------- */
-.bs-mods{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08)}
+.bs-mods{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08)}
 .bs-mod{background:#0A0A0A;display:flex;flex-direction:column;transition:background .4s}
 .bs-mod:hover{background:#0E0E0E}
 .bs-mod canvas{display:block;width:100%;height:240px;flex:none}
@@ -130,8 +130,8 @@
 h1.bs-wm,h2.bs-wm{font-weight:500!important;letter-spacing:-.055em!important}
 .bs-home h2.bs-wm{line-height:1!important}
 
-/* ===== v2: Besonic type (Geist) ===== */
-.bsx,.bsx *{font-family:"Geist","Be Vietnam Pro",sans-serif!important}
+/* ===== v2: Besonic type (Switzer + Geist Mono) ===== */
+.bsx,.bsx *{font-family:"Switzer",sans-serif!important}
 .bsx :is(.k,.bs-chip,.bs-spec span,.bs-feed li b,.bs-feed-h,.kpis3 .l,.bs-con-bar,.crumb,.bs-legend,.bs-steps small,.bs-dial>span,.bs-op-h,.bs-tg,.eyebrow,.panel-bar,.panel-foot){font-family:"Geist Mono",monospace!important;letter-spacing:.06em!important}
 .bsx .bs-wm{font-weight:600!important;letter-spacing:-.06em!important}
 .bsx h2{font-weight:300!important;letter-spacing:-.045em!important}

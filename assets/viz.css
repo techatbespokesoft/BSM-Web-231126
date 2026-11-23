@@ -4,8 +4,8 @@
 .svx-item:last-child{border-bottom:none}
 .svx-item:hover{background:#101010}
 .svx-item:focus-visible{outline:1px solid var(--sig-d);outline-offset:-1px}
-.svx-item .n{font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:#5E5E5E;transition:color .3s;text-transform:uppercase}
-.svx-item h3{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(19px,1.6vw,23px);letter-spacing:-.02em;color:#8A8A8A;margin:6px 0 0;transition:color .3s;line-height:1.25}
+.svx-item .n{font:500 10px "Switzer",sans-serif;letter-spacing:.16em;color:#5E5E5E;transition:color .3s;text-transform:uppercase}
+.svx-item h3{font-family:"Switzer",sans-serif;font-weight:300;font-size:clamp(19px,1.6vw,23px);letter-spacing:-.02em;color:#8A8A8A;margin:6px 0 0;transition:color .3s;line-height:1.25}
 .svx-item.on .n{color:var(--sig-d)}
 .svx-item.on h3{color:#fff}
 .svx-more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
@@ -16,7 +16,7 @@
 .svx-more li{font-size:11.5px;padding:4px 8px;border:1px solid rgba(255,255,255,.14);color:#BDBDBD}
 .svx-item .bar{position:absolute;left:0;bottom:-1px;height:1px;width:0;background:var(--sig-d)}
 .svx-stage{display:flex;flex-direction:column;min-width:0}
-.svx-top,.svx-bot{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;font:11px "Be Vietnam Pro",sans-serif;color:#7A7A7A;letter-spacing:.06em}
+.svx-top,.svx-bot{display:flex;justify-content:space-between;gap:12px;padding:12px 16px;font:11px "Switzer",sans-serif;color:#7A7A7A;letter-spacing:.06em}
 .svx-top{border-bottom:1px solid rgba(255,255,255,.08)}
 .svx-bot{border-top:1px solid rgba(255,255,255,.08)}
 .svx-top .lv{color:var(--sig-d);white-space:nowrap}
@@ -36,13 +36,13 @@
 .svx.solo .svx-list{display:none}
 .svx.solo .svx-stage canvas{min-height:360px}
 .mq-wrap{padding:30px 0 34px;display:grid;gap:18px}
-.mq-l{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
+.mq-l{font:500 11px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
 .mq{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent);mask-image:linear-gradient(90deg,transparent,#000 9%,#000 91%,transparent)}
 .mq-track{display:flex;width:max-content;animation:mq 46s linear infinite}
 .mq.rev .mq-track{animation-direction:reverse;animation-duration:58s}
 .mq:hover .mq-track{animation-play-state:paused}
 .mq-set{display:flex;align-items:center;flex:none}
-.mq [data-logo]{flex:none;display:flex;align-items:center;height:44px;margin-right:clamp(40px,5vw,76px);font:500 clamp(18px,1.7vw,23px) "Be Vietnam Pro",sans-serif;letter-spacing:-.01em;color:#9A9A9A;white-space:nowrap;transition:color .3s,opacity .3s}
+.mq [data-logo]{flex:none;display:flex;align-items:center;height:44px;margin-right:clamp(40px,5vw,76px);font:500 clamp(18px,1.7vw,23px) "Switzer",sans-serif;letter-spacing:-.01em;color:#9A9A9A;white-space:nowrap;transition:color .3s,opacity .3s}
 .mq.sm [data-logo]{font-size:clamp(14px,1.2vw,16px);font-weight:400;color:#6E6E6E;height:32px}
 .mq [data-logo]:hover{color:#fff}
 .mq [data-logo] img{height:28px;width:auto;max-width:150px;object-fit:contain;filter:brightness(0) invert(1);opacity:.72;transition:opacity .3s}
@@ -63,7 +63,7 @@
 .sim-out{display:flex;flex-direction:column;min-width:0}
 .sim-kpi{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid rgba(255,255,255,.08)}
 .sim-kpi div{padding:18px 20px}.sim-kpi div+div{border-left:1px solid rgba(255,255,255,.08)}
-.sim-kpi span{display:block;font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
+.sim-kpi span{display:block;font:500 10px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
 .sim-kpi b{display:block;font-weight:300;font-size:clamp(24px,2.6vw,36px);letter-spacing:-.03em;margin-top:8px;font-variant-numeric:tabular-nums}
 .sim-kpi #sim-gap{color:var(--sig-d)}
 .sim-out canvas{flex:1;width:100%;min-height:340px;display:block}
@@ -82,9 +82,9 @@
 .svx-ctl button:hover,.svx-ctl button:focus-visible{color:#fff;border-color:var(--sig-d)}
 .svx-ctl .sc-n{min-width:42px;text-align:center;color:#9A9A9A;font-variant-numeric:tabular-nums}
 .svx-ctl .sc-play{margin-left:8px}
-.svx-adj{display:none;align-items:center;gap:14px;padding:12px 16px;border-top:1px solid rgba(255,255,255,.08);font:12px "Be Vietnam Pro",sans-serif;color:#9A9A9A}
+.svx-adj{display:none;align-items:center;gap:14px;padding:12px 16px;border-top:1px solid rgba(255,255,255,.08);font:12px "Switzer",sans-serif;color:#9A9A9A}
 .svx-adj.on{display:flex}
-.svx-adj .sa-l{font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sig-d);white-space:nowrap}
+.svx-adj .sa-l{font:500 10px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sig-d);white-space:nowrap}
 .svx-adj input{flex:1;min-width:80px;-webkit-appearance:none;appearance:none;height:2px;background:#3A3A3A;outline:none}
 .svx-adj input::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid #0A0A0A;box-shadow:0 0 0 1px #fff;cursor:pointer}
 .svx-adj input::-moz-range-thumb{width:10px;height:10px;border-radius:50%;background:#fff;border:4px solid #0A0A0A;box-shadow:0 0 0 1px #fff;cursor:pointer}
@@ -101,12 +101,12 @@
 .gtm-p{font-size:17px;line-height:1.6;color:#3A3A3A;max-width:520px;margin-bottom:28px}
 .gtm-steps{list-style:none;padding:0;margin:0;border-top:1px solid var(--ink)}
 .gtm-steps li{display:grid;grid-template-columns:44px 110px 1fr;gap:12px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line-light);font-size:15px;color:#4A4A4A}
-.gtm-steps span{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;color:var(--signal)}
+.gtm-steps span{font:500 11px "Switzer",sans-serif;letter-spacing:.14em;color:var(--signal)}
 .gtm-steps b{font-weight:400;font-size:20px;letter-spacing:-.02em;color:#0A0A0A}
 .evo{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.2)}
 .evo>div{padding:28px 26px 30px 0;position:relative}
 .evo>div+div{padding-left:26px;border-left:1px solid rgba(255,255,255,.08)}
-.evo span{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
+.evo span{font:500 11px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
 .evo b{display:block;font-weight:300;font-size:clamp(22px,2.2vw,30px);letter-spacing:-.03em;margin:14px 0 10px;color:#BDBDBD}
 .evo p{font-size:15px;line-height:1.6;color:#9A9A9A}
 .evo .now span{color:var(--sig-d)}.evo .now b{color:#fff}.evo .now p{color:#BDBDBD}
@@ -128,7 +128,7 @@
 .who article:hover{transform:translateY(-4px);border-color:rgba(42,168,128,.45)}
 .who canvas{display:block;width:100%;height:230px;border-bottom:1px solid rgba(255,255,255,.08)}
 .who article>div{padding:24px 26px 30px}
-.who span{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sig-d)}
+.who span{font:500 11px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--sig-d)}
 .who h3{font-weight:300;font-size:clamp(22px,2vw,28px);letter-spacing:-.025em;line-height:1.15;margin:12px 0 10px}
 .who p{font-size:15px;line-height:1.6;color:#A8A8A8}
 @media (max-width:820px){.who{grid-template-columns:1fr}.who canvas{height:200px}}
@@ -149,11 +149,11 @@
 /* benchmark calculator */
 .calc{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);background:#0A0A0A;border:1px solid rgba(255,255,255,.1);color:#F2F2F2}
 .c-in{padding:28px;border-right:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:22px}
-.c-in label.c-t{font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A;display:block;margin-bottom:10px}
+.c-in label.c-t{font:500 10px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A;display:block;margin-bottom:10px}
 .c-bud{display:flex;align-items:center;border:1px solid rgba(255,255,255,.18);padding:0 14px;transition:border-color .3s}
 .c-bud:focus-within{border-color:var(--sig-d)}
 .c-bud span{color:#7A7A7A;font-size:14px}
-.c-bud input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:300 clamp(26px,2.6vw,34px) "Be Vietnam Pro",sans-serif;letter-spacing:-.03em;padding:12px 10px;font-variant-numeric:tabular-nums}
+.c-bud input{flex:1;min-width:0;background:none;border:0;outline:0;color:#fff;font:300 clamp(26px,2.6vw,34px) "Switzer",sans-serif;letter-spacing:-.03em;padding:12px 10px;font-variant-numeric:tabular-nums}
 .c-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
 .c-chips button{all:unset;cursor:pointer;font-size:12px;padding:6px 11px;border:1px solid rgba(255,255,255,.14);color:#BDBDBD;border-radius:999px}
 .c-chips button:hover{border-color:var(--sig-d);color:#fff}
@@ -166,7 +166,7 @@
 .c-out{min-width:0;display:flex;flex-direction:column}
 .c-kpi{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid rgba(255,255,255,.08)}
 .c-kpi div{padding:20px 22px}.c-kpi div+div{border-left:1px solid rgba(255,255,255,.08)}
-.c-kpi span{display:block;font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
+.c-kpi span{display:block;font:500 10px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}
 .c-kpi b{display:block;font-weight:300;font-size:clamp(22px,2.3vw,32px);letter-spacing:-.03em;margin-top:8px;font-variant-numeric:tabular-nums;white-space:nowrap}
 .c-kpi div:nth-child(2) b{color:var(--sig-d)}
 .c-ch{padding:18px 22px 8px;border-bottom:1px solid rgba(255,255,255,.06)}
@@ -179,7 +179,7 @@
 @media (max-width:900px){.calc{grid-template-columns:1fr}.c-in{border-right:0;border-bottom:1px solid rgba(255,255,255,.08)}.c-row{grid-template-columns:1fr 1fr}.c-u{display:none}.c-v{text-align:left}.c-kpi b{font-size:20px}.c-kpi div{padding:14px}}
 .cm{display:grid;grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
 .cm-box{background:#0A0A0A;color:#F2F2F2;border:1px solid rgba(255,255,255,.1);padding:26px}
-.cm-top{display:flex;justify-content:space-between;align-items:baseline}.cm-top span{font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}.cm-b{font-weight:300;font-size:28px;letter-spacing:-.03em}
+.cm-top{display:flex;justify-content:space-between;align-items:baseline}.cm-top span{font:500 10px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A}.cm-b{font-weight:300;font-size:28px;letter-spacing:-.03em}
 .cm-out{display:grid;grid-template-columns:repeat(3,1fr);margin-top:14px;border-top:1px solid rgba(255,255,255,.08)}
 .cm-out div{padding:16px 12px 0 0}.cm-out span{display:block;font-size:11px;color:#7A7A7A}.cm-out b{display:block;font-weight:300;font-size:clamp(18px,1.7vw,24px);margin-top:6px;white-space:nowrap}
 .cm-out div:nth-child(2) b{color:var(--sig-d)}
@@ -188,7 +188,7 @@
 .calc>*,.c-in>*,.c-kpi>*,.c-row>*{min-width:0}
 @media (max-width:600px){.c-kpi{grid-template-columns:1fr}.c-kpi div{display:flex;justify-content:space-between;align-items:baseline;gap:12px}.c-kpi div+div{border-left:0;border-top:1px solid rgba(255,255,255,.08)}.c-kpi b{margin-top:0}.c-in{padding:22px 18px}.c-ch{padding:16px 18px 6px}.c-row{grid-template-columns:1fr;gap:4px}.c-c{color:#BDBDBD}}
 /* calculator v2 */
-.c-t{font:500 10px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A;display:block;margin-bottom:10px}
+.c-t{font:500 10px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#7A7A7A;display:block;margin-bottom:10px}
 .c-pre{display:flex;flex-wrap:wrap;gap:6px}
 .c-pre button,.c-chips button{all:unset;cursor:pointer;font-size:12.5px;padding:7px 12px;border:1px solid rgba(255,255,255,.14);color:#BDBDBD;border-radius:999px;transition:all .2s}
 .c-pre button:hover,.c-chips button:hover{border-color:var(--sig-d);color:#fff}
@@ -201,7 +201,7 @@
 .c-ch h4 em{font-style:normal;font-size:12px;color:#6A6A6A;margin-right:auto}
 .c-row{grid-template-columns:minmax(0,1.3fr) minmax(0,1.4fr) auto minmax(0,1fr)}
 .c-l small,.c-c small{display:block;font-weight:400;color:#6A6A6A;font-size:11px;letter-spacing:0;margin-top:3px;line-height:1.35}
-.c-tag{font:500 9.5px "Be Vietnam Pro",sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border:1px solid rgba(255,255,255,.14);color:#8A8A8A;white-space:nowrap;align-self:start;border-radius:4px}
+.c-tag{font:500 9.5px "Switzer",sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:3px 7px;border:1px solid rgba(255,255,255,.14);color:#8A8A8A;white-space:nowrap;align-self:start;border-radius:4px}
 .c-tag.act{border-color:rgba(42,168,128,.5);color:var(--sig-d)}
 .c-empty{padding:30px 22px;color:#7A7A7A}
 .c-chs{max-height:none}
@@ -233,7 +233,7 @@
 .bn{display:flex;align-items:baseline;gap:12px;margin-bottom:20px}
 .bn b{font-weight:200;font-size:clamp(64px,7vw,104px);letter-spacing:-.06em;line-height:.9;font-variant-numeric:tabular-nums;color:#0A0A0A}
 .beat.now .bn b{color:var(--signal)}
-.bn span{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-2)}
+.bn span{font:500 11px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-2)}
 .beat h3{font-weight:400;font-size:22px;letter-spacing:-.02em;margin-bottom:10px}
 .beat p{font-size:16px;line-height:1.65;color:#4A4A4A;max-width:360px}
 @media (max-width:860px){.beats{grid-template-columns:1fr}.beat,.beat+.beat{padding:28px 0 22px;border-left:0}}
@@ -242,7 +242,7 @@
 .scrolly{position:relative}
 .scrolly>.pinned{position:sticky}
 .c-tour,.sim-tour{padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:1fr auto;gap:8px 16px;align-items:center}
-.c-tour span,.sim-tour span{font:500 10.5px "Be Vietnam Pro",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--sig-d)}
+.c-tour span,.sim-tour span{font:500 10.5px "Switzer",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--sig-d)}
 .c-tour.man span{color:#BDBDBD}
 .c-tour i,.sim-tour i{grid-column:1 / -1;display:block;height:2px;background:#222;position:relative;overflow:hidden}
 .c-tour i b,.sim-tour i b{position:absolute;left:0;top:0;bottom:0;background:var(--sig-d);transition:width .15s linear}
@@ -268,7 +268,7 @@
 }
 /* editorial insights (NYT-style) */
 .ed{color:#0A0A0A}
-.ed-mast{display:flex;align-items:center;gap:18px;padding:14px 0;border-top:3px double #0A0A0A;border-bottom:1px solid #0A0A0A;margin-bottom:34px;font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.ed-mast{display:flex;align-items:center;gap:18px;padding:14px 0;border-top:3px double #0A0A0A;border-bottom:1px solid #0A0A0A;margin-bottom:34px;font:500 11px "Switzer",sans-serif;letter-spacing:.16em;text-transform:uppercase}
 .ed-mast i{flex:1;height:1px;background:rgba(0,0,0,.15)}
 .ed-grid{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(0,1fr);gap:0}
 .ed-lead{padding-right:36px;border-right:1px solid rgba(0,0,0,.15)}
@@ -280,7 +280,7 @@
 .ed-media .thumb svg{width:100%;height:auto}
 .ed a:hover .thumb{transform:scale(1.04)}
 .ed-txt{padding-top:24px}
-.ed-k{display:block;font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin-bottom:12px}
+.ed-k{display:block;font:500 11px "Switzer",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--signal);margin-bottom:12px}
 .ed-lead h3{font-weight:400;font-size:clamp(30px,3.6vw,52px);line-height:1.04;letter-spacing:-.035em;margin:0 0 16px;transition:color .3s}
 .ed-lead p{font-size:18px;line-height:1.6;color:#3A3A3A;max-width:640px}
 .ed-by{display:flex;justify-content:space-between;gap:12px;margin-top:22px;padding-top:14px;border-top:1px solid rgba(0,0,0,.12);font-size:13px;color:#6A6A6A}
@@ -304,9 +304,9 @@
 .bts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14)}
 .bt{position:relative;padding:26px 24px 24px 0;border-bottom:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
 .bt:not(:nth-child(3n+1)){padding-left:24px;border-left:1px solid rgba(255,255,255,.08)}
-.bt-ch{font-size:14px;color:#BDBDBD}.bt b{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.14em;color:var(--sig-d);text-align:right}
+.bt-ch{font-size:14px;color:#BDBDBD}.bt b{font:500 11px "Switzer",sans-serif;letter-spacing:.14em;color:var(--sig-d);text-align:right}
 .bt strong{grid-column:1 / -1;font-weight:300;font-size:clamp(24px,2.4vw,34px);letter-spacing:-.03em;color:#fff;margin-top:10px;font-variant-numeric:tabular-nums}
-.bt small{font-size:12.5px;color:#7A7A7A}.bt em{font-style:normal;font:500 9.5px "Be Vietnam Pro",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8A8A8A;text-align:right}.bt em.act{color:var(--sig-d)}
+.bt small{font-size:12.5px;color:#7A7A7A}.bt em{font-style:normal;font:500 9.5px "Switzer",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#8A8A8A;text-align:right}.bt em.act{color:var(--sig-d)}
 .bt-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px}.bt-cta span{font-size:13px;color:#7A7A7A}
 @media (max-width:900px){.bts{grid-template-columns:1fr 1fr}.bt:not(:nth-child(3n+1)){padding-left:0;border-left:0}.bt:nth-child(even){padding-left:16px;border-left:1px solid rgba(255,255,255,.08)}.bt{padding:18px 12px 16px 0}.bt strong{font-size:21px}.bt em{grid-column:1 / -1;text-align:left;margin-top:4px}}
 /* home: go-to-market band, compact */
@@ -324,7 +324,7 @@
 .fsc-in{height:100%;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);border-radius:22px;overflow:hidden;background:#0D0D0D;border:1px solid rgba(255,255,255,.1);box-shadow:0 -24px 60px rgba(0,0,0,.5)}
 .fsc:nth-child(2) .fsc-in{background:#0F1512}.fsc:nth-child(3) .fsc-in{background:#111}
 .fsc-txt{padding:clamp(28px,4vw,64px);display:flex;flex-direction:column;justify-content:flex-end;gap:14px}
-.fsc-n{font:500 11px "Be Vietnam Pro",sans-serif;letter-spacing:.16em;color:#6A6A6A;margin-bottom:auto}
+.fsc-n{font:500 11px "Switzer",sans-serif;letter-spacing:.16em;color:#6A6A6A;margin-bottom:auto}
 .fsc .ed-k{color:var(--sig-d);margin:0}
 .fsc h3{font-weight:300;font-size:clamp(34px,4.2vw,64px);line-height:1.02;letter-spacing:-.045em;margin:0}
 .fsc p{font-size:clamp(16px,1.3vw,19px);line-height:1.55;color:#A8A8A8;max-width:520px}

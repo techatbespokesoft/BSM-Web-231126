@@ -10,7 +10,7 @@ This folder is the complete website. It is static HTML/CSS/JS: no build step, no
 4. Add an Open Graph share image (1200x630) and reference it with `<meta property="og:image">` on every page.
 5. After deploy: open every page on desktop and mobile, submit the form once, check `sitemap.xml` and `robots.txt` resolve.
 
-**Do not change without asking Steven:** copy, client names, figures, colours (Jade `#2AA880`), font (Be Vietnam Pro). Chart figures are modelled examples; the footer of every page says so. Replace them with BSM data only from approved exports.
+**Do not change without asking Steven:** copy, client names, figures, colours (Jade `#2AA880`), font (Switzer). Chart figures are modelled examples; the footer of every page says so. Replace them with BSM data only from approved exports.
 
 **Navigation (v13):** floating pill navbar that shrinks on scroll, hides on scroll down and returns on scroll up, with a sliding hover highlight, a scroll progress line, a two-column mega menu with icons, and a full-screen mobile menu. Pattern after Aceternity UI Resizable Navbar and Floating Navbar, rebuilt in `assets/fx.js` / `fx.css`. **Page transitions:** cross-document View Transitions (`@view-transition`) with a fade fallback; the first section of every page rises in on arrival.
 
@@ -164,7 +164,7 @@ Dải "Trusted by" trên trang chủ đang hiển thị tên khách hàng dạng
 ## 4. Quy tắc khi chỉnh sửa
 
 - **Màu chủ đạo (Jade):** đổi duy nhất ở `:root{--sig-d:#2AA880;--sig-l:#0E8A63;--sig-soft:#9ED9C3}` đầu mỗi file. Canvas tự đọc lại biến `--sig-d`.
-- **Font:** chỉ dùng Be Vietnam Pro (Google Fonts). Không thêm font khác.
+- **Font:** chỉ dùng Switzer (Google Fonts). Không thêm font khác.
 - **Nội dung:** chỉ hiển thị tên/logo khách hàng đã đồng ý công khai (6 thương hiệu ở dải "Trusted by"). Case study vẫn ẩn danh. Không thêm số liệu chưa kiểm chứng. Mọi chart minh họa phải giữ nhãn "Illustrative data".
 - **Văn phong:** tiếng Anh kiểu Anh (British English), không dùng dấu gạch ngang dài (em dash).
 - **Bài Insights mới:** nhân bản `insights/spot-the-outlier.html`, đổi tiêu đề, meta description, nội dung, chart. Thêm URL mới vào `sitemap.xml` và thêm thẻ bài ở mục Insights trên trang chủ.

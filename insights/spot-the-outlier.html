@@ -22,7 +22,7 @@
 <meta name="description" content="How outlier analysis reveals the channels, regions and segments that quietly decide growth.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@200,300,400,500,600,700&amp;display=swap" rel="stylesheet">
 <style>:root{--sig-d:#2AA880;--sig-l:#0E8A63;--sig-soft:#9ED9C3}
 
   /* ===== DESIGN TOKENS ===== */
@@ -36,9 +36,9 @@
     --grey-2:#6B6B6B;
     --line-dark:rgba(255,255,255,0.12);
     --line-light:rgba(10,10,10,0.12);
-    --serif:"Be Vietnam Pro",sans-serif;
-    --sans:"Be Vietnam Pro",sans-serif;
-    --mono:"Be Vietnam Pro",sans-serif;
+    --serif:"Switzer",sans-serif;
+    --sans:"Switzer",sans-serif;
+    --mono:"Switzer",sans-serif;
     --max:1280px;
     --pad:clamp(20px,5vw,64px);
   }
@@ -232,9 +232,9 @@
   .viz .ln{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
   .viz .sig-s{stroke:var(--signal)} .viz .ctx-s{stroke:var(--ctx)}
   .viz .grd{stroke:var(--vgrid);stroke-width:1} .viz .grd.base{stroke:var(--vmut);opacity:.6}
-  .viz .tick{font:11px "Be Vietnam Pro",sans-serif;fill:var(--vmut)}
-  .viz .tick.ink{font:13px "Be Vietnam Pro",sans-serif;fill:var(--vink)}
-  .viz .dl{font:500 13px "Be Vietnam Pro",sans-serif;fill:var(--vink)} .viz .dl.mut{fill:var(--vmut);font-weight:400}
+  .viz .tick{font:11px "Switzer",sans-serif;fill:var(--vmut)}
+  .viz .tick.ink{font:13px "Switzer",sans-serif;fill:var(--vink)}
+  .viz .dl{font:500 13px "Switzer",sans-serif;fill:var(--vink)} .viz .dl.mut{fill:var(--vmut);font-weight:400}
   .viz .hit{fill:transparent;cursor:crosshair}
   .viz .xhair{stroke:var(--vmut);stroke-dasharray:3 3;transition:opacity .1s}
   .viz .trend{stroke:var(--vmut);stroke-dasharray:4 4;stroke-width:1.5}
@@ -245,8 +245,8 @@
   .viz .node{fill:var(--vink)}
   .viz .gdot{fill:var(--vmut);opacity:.3}
   .viz .arc{fill:none;stroke:var(--signal);stroke-width:1.5;stroke-dasharray:4 4;opacity:.85}
-  .viz .lbl{font:500 15px "Be Vietnam Pro",sans-serif;fill:var(--vink)}
-  .viz .code{font:10px "Be Vietnam Pro",sans-serif;fill:var(--vmut);letter-spacing:.1em}
+  .viz .lbl{font:500 15px "Switzer",sans-serif;fill:var(--vink)}
+  .viz .code{font:10px "Switzer",sans-serif;fill:var(--vmut);letter-spacing:.1em}
   /* hero plates */
   .viz .face{fill:#0F0F0F;stroke:rgba(255,255,255,.32);stroke-width:1}
   .viz .p2 .face{fill:#161616;stroke:rgba(255,255,255,.65)}
@@ -257,14 +257,14 @@
   /* exhibit: the signature figure frame, reused on every page */
   .exhibit{margin:56px 0 0;border-top:1px solid currentColor;padding-top:18px}
   .ex-head{display:flex;gap:16px;align-items:baseline;margin-bottom:20px;flex-wrap:wrap}
-  .ex-n{font:12px "Be Vietnam Pro",sans-serif;color:var(--signal);letter-spacing:.12em;text-transform:uppercase}
-  .ex-t{font-family:"Be Vietnam Pro",sans-serif;font-size:22px;letter-spacing:-0.01em}
-  .ex-note{font:11px "Be Vietnam Pro",sans-serif;color:var(--vmut);margin-top:14px;letter-spacing:.02em}
+  .ex-n{font:12px "Switzer",sans-serif;color:var(--signal);letter-spacing:.12em;text-transform:uppercase}
+  .ex-t{font-family:"Switzer",sans-serif;font-size:22px;letter-spacing:-0.01em}
+  .ex-note{font:11px "Switzer",sans-serif;color:var(--vmut);margin-top:14px;letter-spacing:.02em}
   .legend{display:flex;gap:22px;font-size:13px;margin-bottom:14px;flex-wrap:wrap}
   .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:8px;vertical-align:-1px}
   .sig-bg{background:var(--signal)} .ctx-bg{background:var(--ctx)}
   /* tooltip */
-  .tip{position:fixed;pointer-events:none;opacity:0;background:#0A0A0A;color:#fff;border:1px solid rgba(255,255,255,.22);padding:10px 12px;font:12px "Be Vietnam Pro",sans-serif;display:flex;flex-direction:column;gap:3px;z-index:200;transition:opacity .12s;min-width:150px}
+  .tip{position:fixed;pointer-events:none;opacity:0;background:#0A0A0A;color:#fff;border:1px solid rgba(255,255,255,.22);padding:10px 12px;font:12px "Switzer",sans-serif;display:flex;flex-direction:column;gap:3px;z-index:200;transition:opacity .12s;min-width:150px}
   .tip b{font-weight:600;font-size:12.5px} .tip span{color:#BDBDBD}
   /* photo slot */
   .photo{position:relative;background:#0D0D0D;overflow:hidden;color:#fff}
@@ -273,8 +273,8 @@
      repeating-linear-gradient(115deg,rgba(255,255,255,.035) 0 1px,transparent 1px 22px),
      linear-gradient(180deg,#151515,#070707);display:flex;align-items:flex-end}
   .photo-inner{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;width:100%;padding-bottom:40px;flex-wrap:wrap}
-  .photo-line{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(32px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;max-width:700px}
-  .photo-brief{font:11px "Be Vietnam Pro",sans-serif;color:#9A9A9A;max-width:330px;line-height:1.7;border-left:1px solid var(--signal);padding-left:14px}
+  .photo-line{font-family:"Switzer",sans-serif;font-weight:300;font-size:clamp(32px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;max-width:700px}
+  .photo-brief{font:11px "Switzer",sans-serif;color:#9A9A9A;max-width:330px;line-height:1.7;border-left:1px solid var(--signal);padding-left:14px}
   /* in-card visuals */
   .lviz{height:120px;margin:4px 0 6px;display:flex;align-items:flex-end}
   .lviz .viz{height:100%}
@@ -284,16 +284,16 @@
   .thumb{background:var(--ink);color:var(--paper);padding:18px 18px 14px;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:6px}
   .thumb .ex-n{font-size:10px}
   .thumb{aspect-ratio:auto;height:210px} .thumb .viz{height:140px;width:100%}
-  .statement .exhibit p.ex-note{font:11px "Be Vietnam Pro",sans-serif;letter-spacing:.02em;line-height:1.5;color:var(--vmut);max-width:none}
+  .statement .exhibit p.ex-note{font:11px "Switzer",sans-serif;letter-spacing:.02em;line-height:1.5;color:var(--vmut);max-width:none}
   /* footprint */
   .footprint{padding:clamp(80px,10vw,140px) 0;background:var(--paper)}
   .fp-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
-  .fp-grid h2{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;margin:20px 0 24px}
+  .fp-grid h2{font-family:"Switzer",sans-serif;font-weight:300;font-size:clamp(34px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;margin:20px 0 24px}
   .fp-grid p.lead{font-size:17px;color:var(--grey-2);line-height:1.6;max-width:440px}
   .fp-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:40px;border-top:1px solid var(--ink)}
   .fp-stats div{padding:18px 16px 0 0} .fp-stats div + div{padding-left:16px;border-left:1px solid var(--line-light)}
-  .fp-stats b{display:block;font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em}
-  .fp-stats span{font:11px "Be Vietnam Pro",sans-serif;color:var(--grey-2);text-transform:uppercase;letter-spacing:.08em}
+  .fp-stats b{display:block;font-family:"Switzer",sans-serif;font-weight:300;font-size:40px;letter-spacing:-0.02em}
+  .fp-stats span{font:11px "Switzer",sans-serif;color:var(--grey-2);text-transform:uppercase;letter-spacing:.08em}
   @media (max-width:1024px){.fp-grid{grid-template-columns:1fr}}
 
   /* ===== RESPONSIVE ===== */
@@ -321,46 +321,46 @@
 
   /* ===== ARTICLE ===== */
   .art-head{padding:clamp(56px,8vw,110px) 0 48px;background:var(--paper)}
-  .crumbs{font:12px "Be Vietnam Pro",sans-serif;color:var(--grey-2);letter-spacing:.08em;text-transform:uppercase;display:flex;gap:10px;flex-wrap:wrap}
+  .crumbs{font:12px "Switzer",sans-serif;color:var(--grey-2);letter-spacing:.08em;text-transform:uppercase;display:flex;gap:10px;flex-wrap:wrap}
   .crumbs .sig-t{color:var(--signal)}
-  .art-head h1{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(40px,6vw,82px);line-height:1;letter-spacing:-0.035em;max-width:1000px;margin:28px 0 28px}
-  .standfirst{font-family:"Be Vietnam Pro",sans-serif;font-size:clamp(20px,1.8vw,25px);line-height:1.45;color:#3A3A3A;max-width:760px;font-weight:300}
-  .meta-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid var(--line-light);font:12px "Be Vietnam Pro",sans-serif;color:var(--grey-2);text-transform:uppercase;letter-spacing:.06em}
+  .art-head h1{font-family:"Switzer",sans-serif;font-weight:300;font-size:clamp(40px,6vw,82px);line-height:1;letter-spacing:-0.035em;max-width:1000px;margin:28px 0 28px}
+  .standfirst{font-family:"Switzer",sans-serif;font-size:clamp(20px,1.8vw,25px);line-height:1.45;color:#3A3A3A;max-width:760px;font-weight:300}
+  .meta-row{display:flex;gap:28px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid var(--line-light);font:12px "Switzer",sans-serif;color:var(--grey-2);text-transform:uppercase;letter-spacing:.06em}
   .meta-row b{color:var(--ink);font-weight:500}
   .cover{background:var(--ink);color:var(--paper);padding:56px 0 48px}
   .cover-grid{display:grid;grid-template-columns:1fr 2.2fr;gap:56px;align-items:end}
   .cover-cap .ex-n{display:block;margin-bottom:14px}
-  .cover-cap p{font-family:"Be Vietnam Pro",sans-serif;font-size:26px;line-height:1.2;font-weight:300}
-  .cover-cap small{display:block;margin-top:18px;font:11px "Be Vietnam Pro",sans-serif;color:#9A9A9A}
+  .cover-cap p{font-family:"Switzer",sans-serif;font-size:26px;line-height:1.2;font-weight:300}
+  .cover-cap small{display:block;margin-top:18px;font:11px "Switzer",sans-serif;color:#9A9A9A}
   .art-body{display:grid;grid-template-columns:220px minmax(0,720px);gap:64px;padding:72px 0 40px;justify-content:center}
   .toc{position:sticky;top:96px;align-self:start;font-size:13px}
-  .toc h4{font:11px "Be Vietnam Pro",sans-serif;color:var(--grey-2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;font-weight:400}
+  .toc h4{font:11px "Switzer",sans-serif;color:var(--grey-2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px;font-weight:400}
   .toc ol{list-style:none;display:flex;flex-direction:column;gap:10px;border-left:1px solid var(--line-light)}
   .toc li{padding-left:14px;color:var(--grey-2)} .toc li.on{color:var(--ink);border-left:2px solid var(--signal);margin-left:-1px;padding-left:13px}
   .prose{font-size:18px;line-height:1.72;color:#1E1E1E}
-  .prose p{margin:0 0 22px} .prose h2{font-family:"Be Vietnam Pro",sans-serif;font-weight:400;font-size:34px;letter-spacing:-0.02em;line-height:1.1;margin:56px 0 20px}
+  .prose p{margin:0 0 22px} .prose h2{font-family:"Switzer",sans-serif;font-weight:400;font-size:34px;letter-spacing:-0.02em;line-height:1.1;margin:56px 0 20px}
   .prose ol{margin:0 0 22px 22px} .prose li{margin-bottom:10px}
   .prose .exhibit{color:var(--ink)}
   .stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);margin:48px 0}
   .stats div{padding:20px 18px 0 0} .stats div + div{padding-left:18px;border-left:1px solid var(--line-light)}
-  .stats b{display:block;font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:54px;letter-spacing:-0.03em;line-height:1}
+  .stats b{display:block;font-family:"Switzer",sans-serif;font-weight:300;font-size:54px;letter-spacing:-0.03em;line-height:1}
   .stats b.sig-t{color:var(--signal)}
   .stats span{display:block;margin-top:10px;font-size:14px;color:var(--grey-2);line-height:1.45}
   .takeaways{background:var(--paper-2);padding:28px 30px;margin:44px 0;border-top:2px solid var(--signal)}
-  .takeaways h4{font:12px "Be Vietnam Pro",sans-serif;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;font-weight:500}
+  .takeaways h4{font:12px "Switzer",sans-serif;text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;font-weight:500}
   .takeaways ol{margin:0 0 0 20px;font-size:16.5px} .takeaways li{margin-bottom:8px}
   .pull{margin:52px 0;padding-left:28px;border-left:2px solid var(--signal)}
-  .pull p{font-family:"Be Vietnam Pro",sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1.15;letter-spacing:-0.02em;color:var(--ink);margin:0}
+  .pull p{font-family:"Switzer",sans-serif;font-weight:300;font-size:clamp(28px,3vw,38px);line-height:1.15;letter-spacing:-0.02em;color:var(--ink);margin:0}
   .notes{border-top:1px solid var(--line-light);margin-top:56px;padding-top:20px;font-size:13px;color:var(--grey-2)}
-  .notes h4{font:11px "Be Vietnam Pro",sans-serif;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;font-weight:400}
-  .tpl-tag{display:inline-block;font:10px "Be Vietnam Pro",sans-serif;padding:4px 8px;border:1px solid var(--signal);color:var(--signal);letter-spacing:.1em;margin-bottom:18px}
+  .notes h4{font:11px "Switzer",sans-serif;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px;font-weight:400}
+  .tpl-tag{display:inline-block;font:10px "Switzer",sans-serif;padding:4px 8px;border:1px solid var(--signal);color:var(--signal);letter-spacing:.1em;margin-bottom:18px}
   .related{background:var(--paper-2);padding:clamp(64px,8vw,110px) 0}
   @media (max-width:1024px){.art-body{grid-template-columns:1fr}.toc{display:none}.cover-grid{grid-template-columns:1fr}}
   @media (max-width:720px){.stats{grid-template-columns:1fr}.stats div + div{padding-left:0;border-left:none;border-top:1px solid var(--line-light);margin-top:18px}}
 
   /* ===== TYPE SYSTEM v2: single neo-grotesque family ===== */
-  :root{--serif:"Be Vietnam Pro",Helvetica,Arial,sans-serif;--sans:"Be Vietnam Pro",Helvetica,Arial,sans-serif;--mono:"Be Vietnam Pro",Helvetica,Arial,sans-serif}
-  body{font-family:"Be Vietnam Pro",Helvetica,Arial,sans-serif;font-feature-settings:"tnum" 0}
+  :root{--serif:"Switzer",Helvetica,Arial,sans-serif;--sans:"Switzer",Helvetica,Arial,sans-serif;--mono:"Switzer",Helvetica,Arial,sans-serif}
+  body{font-family:"Switzer",Helvetica,Arial,sans-serif;font-feature-settings:"tnum" 0}
   h1,h2,h3{font-weight:300!important}
   h1 em,h2 em,h3 em{font-style:normal!important}
   .h3 h1{font-size:clamp(40px,6.4vw,96px)!important;letter-spacing:-0.05em!important;line-height:1!important}
@@ -421,7 +421,7 @@
       <div class="dd dd-sm"><a href="../about.html">Company</a>
         <div class="dd-menu"><div class="dd-inner">
           <a href="../about.html">About<small>Story, principles and governance</small></a>
-          <a href="../besonic.html">Besonic<small>Our revenue infrastructure platform</small></a>
+          <a href="../besonic.html">Besonic<small>The operating brain of Bespoke</small></a>
           <a href="../contact.html">Contact<small>Offices in Vietnam and Singapore</small></a>
         </div></div>
       </div>

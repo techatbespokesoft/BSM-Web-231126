@@ -6,7 +6,7 @@ P.fillText=function(t,x,y,mw){try{var m=this.getTransform?this.getTransform():nu
 var root=getComputedStyle(document.documentElement);
 var SIG=(root.getPropertyValue('--sig-d')||'').trim()||'#2AA880';
 var W='#F2F2F2',T='#9A9A9A',M='#6A6A6A',G='rgba(255,255,255,.07)';
-var F='"Be Vietnam Pro",system-ui,sans-serif';
+var F='"Switzer",system-ui,sans-serif';
 var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 function cl(x){return x<0?0:x>1?1:x}
 function e(t,d,s){var x=cl((t-(s||0))/(d||1));return 1-Math.pow(1-x,3)}
@@ -577,7 +577,7 @@ V['g-newline']=function(c,w,h,t){var B=box(w,h,{t:24,b:30,l:20,r:20}),n=30,X=fun
 
 /* ---------------- v21: "Bespoke in one minute" card visuals ---------------- */
 function glow(c,x,y,r,a){var g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,A(SIG,a));g.addColorStop(1,A(SIG,0));c.fillStyle=g;c.beginPath();c.arc(x,y,r,0,7);c.fill()}
-function lbl(c,txt,x,y,al,col){c.font='500 10px "Be Vietnam Pro",sans-serif';c.textAlign=al||'left';c.fillStyle=col||'rgba(255,255,255,.45)';if(c.letterSpacing!==undefined)c.letterSpacing='1.5px';c.fillText(txt,x,y);if(c.letterSpacing!==undefined)c.letterSpacing='0px'}
+function lbl(c,txt,x,y,al,col){c.font='500 10px "Switzer",sans-serif';c.textAlign=al||'left';c.fillStyle=col||'rgba(255,255,255,.45)';if(c.letterSpacing!==undefined)c.letterSpacing='1.5px';c.fillText(txt,x,y);if(c.letterSpacing!==undefined)c.letterSpacing='0px'}
 /* 01 spend in, revenue out: particles pass through the engine core and stack into rising bars */
 V['gl-what']=function(c,w,h,t){var cy=h*.52,cx=w*.44,R=Math.min(w*.13,h*.26),nar=w<320,i,k;
   lbl(c,'SPEND',12,18);lbl(c,'REVENUE',w-12,18,'right',A(SIG,.95));
@@ -625,10 +625,10 @@ V['gl-who']=(function(){
       if(pr>.98){var tq=(t*.4+k*.21)%1,a2=1-tq;c.fillStyle=SIG;c.beginPath();c.arc(a2*a2*hx+2*a2*tq*mx+tq*tq*x,a2*a2*hy+2*a2*tq*my+tq*tq*y,2.2,0,7);c.fill()}
       var pu=(t*1.2+k)%2;c.strokeStyle='rgba(255,255,255,'+(.4*Math.max(0,1-pu))+')';c.beginPath();c.arc(x,y,3+pu*6,0,7);c.stroke();
       c.fillStyle='#fff';c.beginPath();c.arc(x,y,2.6*pr,0,7);c.fill();
-      if(pr>.9){var nm=nar?{BANGKOK:'BKK','KUALA LUMPUR':'KL',SINGAPORE:'SG',JAKARTA:'JKT',MANILA:'MNL'}[p[0]]:p[0];c.font='500 10px "Be Vietnam Pro",sans-serif';var side=p[3];if(side=='l'&&x-8-c.measureText(nm).width*1.15<4)side='r';lbl(c,nm,side=='l'?x-8:x+8,y+3.5,side=='l'?'right':'left','rgba(255,255,255,.62)')}});
+      if(pr>.9){var nm=nar?{BANGKOK:'BKK','KUALA LUMPUR':'KL',SINGAPORE:'SG',JAKARTA:'JKT',MANILA:'MNL'}[p[0]]:p[0];c.font='500 10px "Switzer",sans-serif';var side=p[3];if(side=='l'&&x-8-c.measureText(nm).width*1.15<4)side='r';lbl(c,nm,side=='l'?x-8:x+8,y+3.5,side=='l'?'right':'left','rgba(255,255,255,.62)')}});
     for(var i=0;i<3;i++){var r=((t*.55+i/3)%1);c.strokeStyle=A(SIG,.7*(1-r));c.lineWidth=1.2;c.beginPath();c.arc(hx,hy,5+r*sc*4,0,7);c.stroke()}
     glow(c,hx,hy,26,.55);c.fillStyle=SIG;c.beginPath();c.arc(hx,hy,4.5,0,7);c.fill();c.strokeStyle='#fff';c.lineWidth=1.2;c.beginPath();c.arc(hx,hy,7,0,7);c.stroke();
-    var hl=nar?'HCMC':HUB[0];c.font='600 10.5px "Be Vietnam Pro",sans-serif';var tw=c.measureText(hl).width+16;c.fillStyle='rgba(10,10,10,.85)';c.strokeStyle=A(SIG,.6);c.lineWidth=1;
+    var hl=nar?'HCMC':HUB[0];c.font='600 10.5px "Switzer",sans-serif';var tw=c.measureText(hl).width+16;c.fillStyle='rgba(10,10,10,.85)';c.strokeStyle=A(SIG,.6);c.lineWidth=1;
     var bx=hx+12,by=hy+12;if(bx+tw>w-4)bx=hx-12-tw;c.beginPath();if(c.roundRect)c.roundRect(bx,by,tw,20,10);else c.rect(bx,by,tw,20);c.fill();c.stroke();lbl(c,hl,bx+8,by+13.5,'left',A(SIG,1))}})();
 
 /* 03 three layers: isometric plates with data pulses rising through them */
