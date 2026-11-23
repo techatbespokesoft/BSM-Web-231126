@@ -19,10 +19,10 @@ var mouse={x:-1e4,y:-1e4};addEventListener('mousemove',function(e){mouse.x=e.cli
 /* ---------- 1. SONIC CORE: noise in, one revenue signal out ---------- */
 var D={};
 D.core=function(cv){
-  var src=['META','TIKTOK','GOOGLE','COMMERCE','CRM','P&L','PROJECTS','TEAM'],P=[],spawn=0,pulses=[],pspawn=0;
+  var src=['ADS','SEARCH','SOCIAL','COMMERCE','CRM','FINANCE','PROJECTS','TEAM'],P=[],spawn=0,pulses=[],pspawn=0;
   mount(cv,function(c,w,h,t,dt){
     c.clearRect(0,0,w,h);
-    var mob=w<720,cx=mob?w*.5:w*.74,cy=mob?Math.min(h*.22,210):h*.5,R=Math.min(mob?w*.31:h*.28,320),r0=R*.2;
+    var mob=w<1100,R=Math.min(mob?Math.min(w*.31,180):h*.28,320),cx=mob?w*.5:w*.74,cy=mob?96+R*1.25:h*.5,r0=R*.2;
     var r=cv.getBoundingClientRect(),mx=mouse.x-r.left,my=mouse.y-r.top,md=Math.hypot(mx-cx,my-cy),near=Math.max(0,1-md/(R*2.2));
     // faint polar grid
     c.strokeStyle='rgba(255,255,255,.045)';c.lineWidth=1;
@@ -134,7 +134,7 @@ D.out=function(cv){var pts=[];for(var i=0;i<46;i++){var x=Math.random();pts.push
     c.setLineDash([3,4]);c.strokeStyle='rgba(255,255,255,.25)';c.beginPath();c.moveTo(X(0),Y(.12));c.lineTo(X(1),Y(.72));c.stroke();c.setLineDash([]);
     pts.forEach(function(p){var n=Math.abs(p[0]-sc)<.04;c.fillStyle=n?'#fff':'rgba(150,150,150,.6)';c.beginPath();c.arc(X(p[0]),Y(p[1]),n?3.2:2.4,0,6.284);c.fill();});
     var hit=sc>O[0],ox=X(O[0]),oy=Y(O[1]);c.fillStyle=hit?J:'rgba(150,150,150,.6)';c.beginPath();c.arc(ox,oy,hit?5:2.4,0,6.284);c.fill();
-    if(hit){var k=(t*.8)%1;c.strokeStyle=rgba(J,1-k);c.lineWidth=1.4;c.beginPath();c.arc(ox,oy,6+k*22,0,6.284);c.stroke();c.font='500 10px '+FONT;c.fillStyle=J;c.fillText('4.2× AVG',ox+12,oy+4);}
+    if(hit){var k=(t*.8)%1;c.strokeStyle=rgba(J,1-k);c.lineWidth=1.4;c.beginPath();c.arc(ox,oy,6+k*22,0,6.284);c.stroke();c.font='500 10px '+FONT;c.fillStyle=J;var tw=c.measureText('4.2× AVG').width;c.fillText('4.2× AVG',ox+12+tw>w-6?ox-12-tw:ox+12,oy+4);}
     if(sc<=1){var sx=X(sc);c.strokeStyle=rgba(J,.8);c.lineWidth=1;c.beginPath();c.moveTo(sx,T);c.lineTo(sx,T+ph);c.stroke();}});};
 D.fc=function(cv){var hist=[],v=.22;for(var i=0;i<26;i++){v+=rnd(-.025,.035);hist.push(Math.min(.55,v))}
   mount(cv,function(c,w,h,t){c.clearRect(0,0,w,h);frame(c,w,h);var n=40,L=14,pw=w-28,T=14,ph=h-28;
@@ -200,10 +200,10 @@ D.bb=function(cv){var pr=[];for(var i=0;i<14;i++){pr.push({x:rnd(.08,.92),y:rnd(
     function X(v){return L+pw*v}function Y(v){return T+ph*(1-v/.5)}
     c.strokeStyle=P.grid;c.lineWidth=1;[0,.1,.2,.3,.4,.5].forEach(function(g){c.beginPath();c.moveTo(L,Y(g));c.lineTo(L+pw,Y(g));c.stroke();c.font='10px "Geist Mono",monospace';c.fillStyle=P.mut;c.textAlign='right';c.fillText(Math.round(g*100)+'%',L-6,Y(g)+3)});
     c.setLineDash([5,4]);c.strokeStyle=P.j;c.beginPath();c.moveTo(L,Y(tg));c.lineTo(L+pw,Y(tg));c.stroke();c.setLineDash([]);c.textAlign='left';c.fillStyle=P.j;c.fillText('TARGET 25%',L+6,Y(tg)-6);
-    pr.forEach(function(p){var x=X(p.x)+Math.sin(t*.6+p.ph)*3,y=Y(p.y)+Math.cos(t*.5+p.ph)*3,rr=(mob?6:8)+p.r*(mob?14:20),ab=p.y>=tg;
+    pr.forEach(function(p){var rr=(mob?6:8)+p.r*(mob?14:20),x=Math.max(L+rr+2,Math.min(L+pw-rr-2,X(p.x)+Math.sin(t*.6+p.ph)*3)),y=Math.max(T+rr,Math.min(T+ph-rr,Y(p.y)+Math.cos(t*.5+p.ph)*3)),ab=p.y>=tg;
       c.beginPath();c.arc(x,y,rr,0,6.284);c.fillStyle=ab?rgba(P.j,p.hero?.85:.28):(P.l?'rgba(10,10,10,.08)':'rgba(255,255,255,.08)');c.fill();c.strokeStyle=ab?P.j:P.dim;c.lineWidth=1;c.stroke();
       if(p.hero||p.low){var k=(t*.7)%1;c.strokeStyle=rgba(p.hero?P.j:(P.l?'#0A0A0A':'#F2F2F2'),(1-k)*.6);c.beginPath();c.arc(x,y,rr+4+k*16,0,6.284);c.stroke();
-        c.font='500 '+(mob?10:12)+'px Switzer,sans-serif';c.fillStyle=P.ink;c.fillText(p.hero?'Retail always-on · 44%':'Launch event · 3%',x+rr+8,y+4);}});
+        c.font='500 '+(mob?10:12)+'px Switzer,sans-serif';c.fillStyle=P.ink;var lb=p.hero?'Retail always-on · 44%':'Launch event · 3%',tw=c.measureText(lb).width,right=x+rr+8+tw<w-R;c.textAlign=right?'left':'right';c.fillText(lb,right?x+rr+8:x-rr-8,y+4);c.textAlign='left';}});
     c.font='10px "Geist Mono",monospace';c.fillStyle=P.mut;c.textAlign='right';c.fillText('PROJECT REVENUE →',L+pw,h-10);c.textAlign='start';});};
 // cash runway with monte carlo paths
 D.cash=function(cv){var N=40,paths=[];for(var p=0;p<N;p++){var v=.42,a=[v];for(var k=1;k<24;k++){v+=rnd(-.05,.055)+.012;a.push(v)}paths.push(a)}
