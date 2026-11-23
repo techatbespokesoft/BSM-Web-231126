@@ -776,6 +776,7 @@
 <link rel="stylesheet" href="assets/viz.css">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Bespoke Marketing","url":"https://bespokemarketing.asia/","slogan":"Revenue, engineered.","description":"Revenue Infrastructure for Asia's Market Leaders.","email":"partners@bespokemarketing.asia","address":[{"@type":"PostalAddress","addressLocality":"Ho Chi Minh City","addressCountry":"VN"},{"@type":"PostalAddress","addressCountry":"SG"}],"parentOrganization":{"@type":"Organization","name":"Bespoke Holdings"}}</script>
 <link rel="stylesheet" href="assets/fx.css">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@200;300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/besonic.css">
 <style>
 .press{background:#060606;color:#F2F2F2;padding:clamp(72px,8vw,112px) 0;border-top:1px solid rgba(255,255,255,.06)}
@@ -1032,7 +1033,7 @@ addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(u)}},
       <div class="bs-chips"><span class="bs-chip live"><i></i>Reporting</span><span class="bs-chip"><i></i>Attribution</span><span class="bs-chip"><i></i>AI alerts</span></div>
       <a href="besonic.html" class="btn btn-solid">Explore Besonic <span class="arrow">→</span></a>
     </div>
-    <div class="panel reveal">
+    <div class="panel reveal light">
       <div class="panel-bar"><span class="dots"><i></i><i></i><i></i></span><span class="bs-wm" style="font-size:15px;letter-spacing:-.04em;text-transform:none"><svg class="bs-mk" viewBox="0 0 24 24" aria-hidden="true"><rect x="0" y="14" width="4.4" height="10" rx="1"/><rect x="6.5" y="9" width="4.4" height="15" rx="1"/><rect x="13" y="4" width="4.4" height="20" rx="1"/><rect x="19.5" y="0" width="4.4" height="24" rx="1"/></svg>besonic</span><span class="live"><i></i>Live data</span></div>
       <div class="kpis3">
         <div><div class="l">REVENUE INDEX</div><div class="v" id="k1">100.0</div><div class="d" id="k1d">+0.0%</div></div>
@@ -2033,12 +2034,12 @@ field('field2',{cx:.5,hz:.30});
 (function(){
   var data=[],v=50;for(var i=0;i<120;i++){v+=rand(-1.2,1.6);data.push(v)}
   var acc=0,kt=0,alertShown=false,base=[100,3.2,100];
-  run('m-stream',function(ctx,w,h,t,dt){
+  run('m-stream',function(ctx,w,h,t,dt){var _lt=ctx.canvas.closest('.light'),_S=SIG;if(_lt)SIG='#0E8A63';
     acc+=dt;while(acc>.12){acc-=.12;v+=rand(-1.3,1.9);if(v>90)v-=8;data.push(v);data.shift();}
     ctx.clearRect(0,0,w,h);var L=12,R=12,T=16,B=18,pw=w-L-R,ph=h-T-B;
     var mn=Math.min.apply(null,data)-4,mx=Math.max.apply(null,data)+4;
     function X(i){return L+pw*i/(data.length-1)} function Y(y){return T+ph*(1-(y-mn)/(mx-mn))}
-    ctx.strokeStyle='rgba(255,255,255,.06)';for(var g=1;g<4;g++){ctx.beginPath();ctx.moveTo(L,T+ph*g/4);ctx.lineTo(L+pw,T+ph*g/4);ctx.stroke();}
+    ctx.strokeStyle=_lt?'rgba(10,10,10,.07)':'rgba(255,255,255,.06)';for(var g=1;g<4;g++){ctx.beginPath();ctx.moveTo(L,T+ph*g/4);ctx.lineTo(L+pw,T+ph*g/4);ctx.stroke();}
     var gr=ctx.createLinearGradient(0,T,0,T+ph);gr.addColorStop(0,rgba(SIG,.22));gr.addColorStop(1,rgba(SIG,0));
     ctx.beginPath();ctx.moveTo(X(0),T+ph);data.forEach(function(d,i){ctx.lineTo(X(i),Y(d))});ctx.lineTo(X(data.length-1),T+ph);ctx.closePath();ctx.fillStyle=gr;ctx.fill();
     ctx.beginPath();data.forEach(function(d,i){i?ctx.lineTo(X(i),Y(d)):ctx.moveTo(X(i),Y(d))});ctx.strokeStyle=SIG;ctx.lineWidth=2;ctx.stroke();
@@ -2049,7 +2050,7 @@ field('field2',{cx:.5,hz:.30});
       document.getElementById('k1').textContent=r.toFixed(1);document.getElementById('k1d').textContent=(r>=100?'+':'')+(r-100).toFixed(1)+'%';
       document.getElementById('k2').textContent=ro.toFixed(2)+'x';document.getElementById('k2d').textContent=(ro>=3.2?'+':'')+(ro-3.2).toFixed(2);
       document.getElementById('k3').textContent=c.toFixed(1);document.getElementById('k3d').textContent=(c<=100?'-':'+')+Math.abs(c-100).toFixed(1)+'%';}
-    if(t>4&&!alertShown){alertShown=true;document.getElementById('alert3').classList.add('on');}
+    if(t>4&&!alertShown){alertShown=true;document.getElementById('alert3').classList.add('on');}SIG=_S;
   });
 })();
 

@@ -129,3 +129,59 @@
 @media (prefers-reduced-motion:reduce){.bs-mk rect,.bs-chip.live i{animation:none}.bs-in{opacity:1;transform:none;filter:none}}
 h1.bs-wm,h2.bs-wm{font-weight:500!important;letter-spacing:-.055em!important}
 .bs-home h2.bs-wm{line-height:1!important}
+
+/* ===== v2: Besonic type (Geist) ===== */
+.bsx,.bsx *{font-family:"Geist","Be Vietnam Pro",sans-serif!important}
+.bsx :is(.k,.bs-chip,.bs-spec span,.bs-feed li b,.bs-feed-h,.kpis3 .l,.bs-con-bar,.crumb,.bs-legend,.bs-steps small,.bs-dial>span,.bs-op-h,.bs-tg,.eyebrow,.panel-bar,.panel-foot){font-family:"Geist Mono",monospace!important;letter-spacing:.06em!important}
+.bsx .bs-wm{font-weight:600!important;letter-spacing:-.06em!important}
+.bsx h2{font-weight:300!important;letter-spacing:-.045em!important}
+.bsx .kpis3 .v,.bsx .bs-spec b{font-weight:300!important;letter-spacing:-.04em!important}
+.bs-hero .bs-tag,.bs-home .bs-tag{letter-spacing:-.03em}
+
+/* ===== v2: light product view ===== */
+.bs-sec.light{background:#F4F3F0;color:#0A0A0A}
+.bs-sec.light .bs-h .k{color:#0E8A63}
+.bs-tg{display:inline-flex;border:1px solid rgba(255,255,255,.16);padding:2px;gap:2px}
+.bs-tg button{all:unset;cursor:pointer;padding:5px 10px;font-size:10px;letter-spacing:.12em;color:#7A7A7A;text-transform:uppercase}
+.bs-tg button.on{background:#F2F2F2;color:#0A0A0A}
+.bs-con{transition:background .5s,border-color .5s,box-shadow .5s}
+.bs-con.light{background:#FFFFFF;color:#0A0A0A;border-color:rgba(10,10,10,.1);box-shadow:0 40px 100px -50px rgba(10,10,10,.35)}
+.bs-con.light :is(.bs-con-bar,.bs-dials,.bs-dial+.bs-dial,.bs-feed,.bs-feed-h,.bs-feed li,.kpis3,.kpis3>div+div){border-color:rgba(10,10,10,.08)!important}
+.bs-con.light .bs-con-bar{color:#6B6B6B}
+.bs-con.light .bs-wm{color:#0A0A0A}
+.bs-con.light .bs-mk rect{fill:#0E8A63}
+.bs-con.light .tabs span.on{border-color:rgba(10,10,10,.16);color:#0A0A0A}
+.bs-con.light .bs-tg{border-color:rgba(10,10,10,.14)}
+.bs-con.light .bs-tg button.on{background:#0A0A0A;color:#fff}
+.bs-con.light .live{color:#0E8A63}.bs-con.light .live i{background:#0E8A63}
+.bs-con.light .kpis3 .l{color:#6B6B6B}.bs-con.light .kpis3 .v{color:#0A0A0A}.bs-con.light .kpis3 .d{color:#0E8A63}
+.bs-con.light .bs-dial .trk{stroke:rgba(10,10,10,.07)}.bs-con.light .bs-dial .val{stroke:#0E8A63}.bs-con.light .bs-dial .val.w{stroke:#0A0A0A}
+.bs-con.light .bs-dial .num{fill:#0A0A0A}.bs-con.light .bs-dial>span{color:#6B6B6B}
+.bs-con.light .bs-feed-h{color:#6B6B6B}.bs-con.light .bs-feed-h b{color:#0E8A63}
+.bs-con.light .bs-feed li span{color:#2A2A2A}.bs-con.light .bs-feed li b{color:#6B6B6B}
+.bs-con.light .bs-feed li.hot b{color:#0E8A63}.bs-con.light .bs-feed li.hot i{background:#0E8A63;box-shadow:0 0 0 4px rgba(14,138,99,.12)}
+.bs-con.light .bs-feed li i{background:#C9C9C9}
+.bs-cap-l{margin-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:"Geist Mono",monospace!important;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6B6B6B}
+
+/* ===== v2: OPERATE (company cockpit) ===== */
+.bs-op{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.bs-op>.c{background:#fff;border:1px solid rgba(10,10,10,.08);display:flex;flex-direction:column;min-width:0}
+.bs-op>.c.s7{grid-column:span 7}.bs-op>.c.s5{grid-column:span 5}.bs-op>.c.s6{grid-column:span 6}.bs-op>.c.s12{grid-column:span 12}
+.bs-op-h{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid rgba(10,10,10,.07);font-size:11px;text-transform:uppercase;color:#6B6B6B}
+.bs-op-h b{color:#0A0A0A;font-weight:500}
+.bs-op-h i{font-style:normal;color:#0E8A63}
+.bs-op canvas{display:block;width:100%;height:320px}
+.bs-op .c.s12 canvas{height:260px}
+
+/* homepage: show the light product on a dark page */
+.bs-home .panel.light{background:#fff;border-color:#fff;color:#0A0A0A;box-shadow:0 50px 120px -40px rgba(42,168,128,.35)}
+.bs-home .panel.light :is(.panel-bar,.panel-foot,.kpis3,.kpis3>div+div){border-color:rgba(10,10,10,.08)!important}
+.bs-home .panel.light .panel-bar,.bs-home .panel.light .panel-foot{color:#6B6B6B}
+.bs-home .panel.light .bs-wm{color:#0A0A0A}.bs-home .panel.light .bs-mk rect{fill:#0E8A63}
+.bs-home .panel.light .live{color:#0E8A63}.bs-home .panel.light .live i{background:#0E8A63}
+.bs-home .panel.light .kpis3 .l{color:#6B6B6B}.bs-home .panel.light .kpis3 .v{color:#0A0A0A}.bs-home .panel.light .kpis3 .d{color:#0E8A63}
+.bs-home .panel.light .alert3{border-color:rgba(14,138,99,.35);color:#2A2A2A;background:rgba(14,138,99,.05)}
+.bs-home .panel.light .alert3 b{color:#0E8A63}
+
+@media (max-width:1100px){.bs-op>.c.s7,.bs-op>.c.s5,.bs-op>.c.s6{grid-column:span 12}}
+@media (max-width:720px){.bs-op canvas{height:280px}.bs-op .c.s12 canvas{height:300px}.bs-tg button{padding:5px 8px}}
