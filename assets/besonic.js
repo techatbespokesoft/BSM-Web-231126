@@ -19,7 +19,7 @@ var mouse={x:-1e4,y:-1e4};addEventListener('mousemove',function(e){mouse.x=e.cli
 /* ---------- 1. SONIC CORE: noise in, one revenue signal out ---------- */
 var D={};
 D.core=function(cv){
-  var src=['ADS','SEARCH','SOCIAL','COMMERCE','CRM','FINANCE','PROJECTS','TEAM'],P=[],spawn=0,pulses=[],pspawn=0;
+  var src=['ADS','SEARCH','SOCIAL','OOH','COMMERCE','CRM','FINANCE','PROJECTS','TEAM'],P=[],spawn=0,pulses=[],pspawn=0;
   mount(cv,function(c,w,h,t,dt){
     c.clearRect(0,0,w,h);
     var mob=w<1100,R=Math.min(mob?Math.min(w*.31,180):h*.28,320),cx=mob?w*.5:w*.74,cy=mob?96+R*1.25:h*.5,r0=R*.2;
@@ -67,15 +67,15 @@ D.core=function(cv){
     c.font='500 10px '+FONT;
     nodes.forEach(function(nd){
       if(nd[0]<-20||nd[0]>w+20||nd[1]<-20||nd[1]>h+20)return;
-      c.fillStyle='#050505';c.strokeStyle='rgba(255,255,255,.45)';c.lineWidth=1;c.beginPath();c.arc(nd[0],nd[1],4.5,0,6.284);c.fill();c.stroke();
-      var left=nd[0]<cx,tw=c.measureText(nd[3]).width,lx=nd[0]+(left?-12:12);if((left&&lx-tw<6)||(!left&&lx+tw>w-6))return;c.textAlign=left?'right':'left';c.fillStyle='#8A8A8A';c.fillText(nd[3],lx,nd[1]+3.5);});
+      var fn=mob?1:Math.max(0,Math.min(1,(nd[0]-w*.58)/(w*.05)));if(fn<=0)return;c.globalAlpha=fn;c.fillStyle='#050505';c.strokeStyle='rgba(255,255,255,.45)';c.lineWidth=1;c.beginPath();c.arc(nd[0],nd[1],4.5,0,6.284);c.fill();c.stroke();c.globalAlpha=1;
+      var left=nd[0]<cx,tw=c.measureText(nd[3]).width,lx=nd[0]+(left?-12:12);if((left&&lx-tw<6)||(!left&&lx+tw>w-6))return;var fa=mob?1:Math.max(0,Math.min(1,((left?lx-tw:lx)-w*.56)/(w*.05)));if(fa<=0)return;c.globalAlpha=fa;c.textAlign=left?'right':'left';c.fillStyle='#8A8A8A';c.fillText(nd[3],lx,nd[1]+3.5);c.globalAlpha=1;});
     c.textAlign='start';
   });
 };
 
 /* ---------- 2. PIPELINE: connect, unify, decide, compound ---------- */
 D.pipe=function(cv){
-  var src=['Meta Ads','TikTok Ads','Google Ads','Commerce','CRM · Zalo OA','Projects','Team time','Finance · P&L'],
+  var src=['Meta Ads','TikTok Ads','Google Ads','OOH · DOOH','Commerce','CRM · Zalo OA','Projects','Team time','Finance · P&L'],
       out=['CEO view','Team view','Client portal','Alerts','Forecast'],P=[],spawn=0,glow=0,steps=document.querySelectorAll('[data-bs-steps] div');
   mount(cv,function(c,w,h,t,dt){
     c.clearRect(0,0,w,h);
@@ -236,7 +236,7 @@ function init(){
   document.querySelectorAll('[data-bs-dial]').forEach(function(d){var v=d.querySelector('.val'),C=2*Math.PI*52;v.style.strokeDasharray=C;v.style.strokeDashoffset=C;io.observe(d)});
   // feed
   document.querySelectorAll('[data-bs-feed]').forEach(function(ul){
-    var F=[['hot','Outlier','Creator segment C returning 4.2× the average'],['','Pacing','TikTok budget 12% ahead of plan, day 18 of 30'],['hot','Forecast','Quarter revenue tracking at P50, on target'],['','Saturation','Meta frequency 3.8, rotate creative this week'],['hot','Budget','Move 15% from search to creators'],['','Data','8 of 8 sources synced']],k=0;
+    var F=[['hot','Outlier','Creator segment C returning 4.2× the average'],['','Pacing','TikTok budget 12% ahead of plan, day 18 of 30'],['hot','Forecast','Quarter revenue tracking at P50, on target'],['','Saturation','Meta frequency 3.8, rotate creative this week'],['hot','Budget','Move 15% from search to creators'],['','Data','9 of 9 sources synced']],k=0;
     function add(){var f=F[k++%F.length],li=document.createElement('li');li.className=f[0];li.innerHTML='<i></i><b>'+f[1]+'</b><span>'+f[2]+'</span>';ul.insertBefore(li,ul.firstChild);while(ul.children.length>5)ul.removeChild(ul.lastChild);}
     add();add();add();if(!RM)setInterval(add,2800);});
   // light / dark toggle on the product console
