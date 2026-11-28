@@ -604,7 +604,7 @@ V['gl-what']=function(c,w,h,t){var cy=h*.52,cx=w*.44,R=Math.min(w*.13,h*.26),nar
 
 /* 02 Southeast Asia: dot-matrix region, HCMC hub with arcs to the markets we serve */
 V['gl-who']=(function(){
-  // Who it is for: the leaders who share one P&L, not a place on a map
+  // Who it is for: leaders who own the P&L, served by one partner that pairs service and technology
   var ROLES=[['CEO',-90],['CFO',-18],['CMO',54],['COUNTRY HEAD',126],['BOARD',198]];
   return function(c,w,h,t){var cx=w/2,cy=h/2+4,R=Math.min(w*.36,h*.36),nar=w<320,st=Math.max(10,R*.13);
     for(var py=cy-R*1.5;py<cy+R*1.5;py+=st)for(var px=cx-R*1.9;px<cx+R*1.9;px+=st){var dd=Math.hypot(px-cx,py-cy),wave=Math.max(0,1-Math.abs(dd-((t*50)%(R*2)))/18),fade=Math.max(0,1-dd/(R*1.7));if(fade<=0)continue;c.fillStyle='rgba(255,255,255,'+((.08+.3*wave)*fade+.02)+')';c.fillRect(px-.8,py-.8,1.6,1.6)}
@@ -618,7 +618,7 @@ V['gl-who']=(function(){
       if(pr>.9){var nm=r[0];if(nar&&nm=='COUNTRY HEAD')nm='GM';c.font='500 10px "Switzer",sans-serif';var right=Math.cos(an)>=0,tw=c.measureText(nm).width*1.15,lx=right?x+9:x-9;if(right&&lx+tw>w-4){right=false;lx=x-9}if(!right&&lx-tw<4){right=true;lx=x+9}lbl(c,nm,lx,y+3.5,right?'left':'right','rgba(255,255,255,.62)')}});
     for(var i=0;i<3;i++){var rr=((t*.55+i/3)%1);c.strokeStyle=A(SIG,.7*(1-rr));c.lineWidth=1.2;c.beginPath();c.arc(cx,cy,6+rr*R*.55,0,7);c.stroke()}
     glow(c,cx,cy,26,.55);c.fillStyle=SIG;c.beginPath();c.arc(cx,cy,4.5,0,7);c.fill();c.strokeStyle='#fff';c.lineWidth=1.2;c.beginPath();c.arc(cx,cy,7,0,7);c.stroke();
-    var hl='ONE P&L';c.font='600 10.5px "Switzer",sans-serif';var tw=c.measureText(hl).width*1.15+16,bx=cx-tw/2,by=cy+14;c.fillStyle='rgba(10,10,10,.85)';c.strokeStyle=A(SIG,.6);c.lineWidth=1;c.beginPath();if(c.roundRect)c.roundRect(bx,by,tw,20,10);else c.rect(bx,by,tw,20);c.fill();c.stroke();lbl(c,hl,cx,by+13.5,'center',A(SIG,1))}})();
+    var hl='SERVICE + TECHNOLOGY';if(nar)hl='SERVICE + TECH';c.font='600 10.5px "Switzer",sans-serif';var tw=c.measureText(hl).width*1.15+16,bx=cx-tw/2,by=cy+14;c.fillStyle='rgba(10,10,10,.85)';c.strokeStyle=A(SIG,.6);c.lineWidth=1;c.beginPath();if(c.roundRect)c.roundRect(bx,by,tw,20,10);else c.rect(bx,by,tw,20);c.fill();c.stroke();lbl(c,hl,cx,by+13.5,'center',A(SIG,1))}})();
 
 /* 03 three layers: isometric plates with data pulses rising through them */
 V['gl-how']=function(c,w,h,t){var nar=w<340,cx=w*(nar?.33:.4),pw=Math.min(w*(nar?.25:.28),h*.6),ph=pw*.36,L=[['DEMAND',.78],['SYSTEMS',.52],['INTELLIGENCE',.26]],i;
