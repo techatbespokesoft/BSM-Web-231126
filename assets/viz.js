@@ -604,32 +604,21 @@ V['gl-what']=function(c,w,h,t){var cy=h*.52,cx=w*.44,R=Math.min(w*.13,h*.26),nar
 
 /* 02 Southeast Asia: dot-matrix region, HCMC hub with arcs to the markets we serve */
 V['gl-who']=(function(){
-  var LAND=[[[97.5,21],[102,21.5],[106,22.4],[108,21.5],[107,20],[105.8,19],[106.5,17.5],[108.8,15.5],[109.3,12],[108.7,11],[106.7,10.3],[104.8,8.6],[104.8,10.2],[103,11],[102.3,12.2],[100.8,12.7],[100,13.5],[99.2,11],[99.5,9],[100.3,6.5],[101,6.8],[102.1,6.2],[103.4,4.5],[103.5,2.8],[104.2,1.4],[103.5,1.3],[101.3,2.8],[100.4,4.5],[100.3,5.8],[98.7,8],[98.3,10],[98.6,13],[98,15.5],[97.5,17],[96,19.5],[97.5,21]],
-   [[95.3,5.6],[97.5,5.2],[100,2.5],[104,-1],[106,-3],[105.8,-5.9],[104.5,-5.8],[102,-4],[100,-1],[98.5,1.5],[95.3,5.6]],
-   [[109,1.5],[110,-1],[110.5,-3],[114.5,-4],[116.5,-3.5],[118,-1],[119,1],[119.3,5],[117,7],[116,6.5],[115,5],[113,3.2],[111,1.8],[109,1.5]],
-   [[105.2,-6.8],[106,-5.9],[108.3,-6.3],[111,-6.5],[114.5,-7.7],[114.4,-8.7],[111,-8.3],[108,-7.8],[105.4,-7],[105.2,-6.8]],
-   [[120,18.5],[122.2,18.5],[122,16],[121.6,14.2],[124,13],[123.5,12.7],[120.6,13.8],[120.6,15.5],[119.8,16.3],[120,18.5]],
-   [[122,8],[123.5,7.5],[126.5,7],[126,9.5],[125.5,11.5],[124,12],[122.5,11],[123,9.5],[122,8]],
-   [[119.5,0.5],[120,-2],[119.5,-5.5],[120.5,-5.5],[121.5,-3],[123,-1],[121.5,1],[124.8,1.5],[120.5,1],[119.5,0.5]]];
-  function inP(x,y,P){var c=false;for(var i=0,j=P.length-1;i<P.length;j=i++){if((P[i][1]>y)!=(P[j][1]>y)&&x<(P[j][0]-P[i][0])*(y-P[i][1])/(P[j][1]-P[i][1])+P[i][0])c=!c}return c}
-  var CITIES=[['BANGKOK',100.5,13.75,'l'],['KUALA LUMPUR',101.7,3.1,'l'],['SINGAPORE',103.8,1.35,'r'],['JAKARTA',106.8,-6.2,'r'],['MANILA',121,14.6,'r']],HUB=['HO CHI MINH CITY',106.7,10.8];
-  var cache={};
-  return function(c,w,h,t){var L0=94,L1=127,B0=-10,B1=22.5,pad=10,sc=Math.min((w-pad*2)/(L1-L0),(h-pad*2-14)/(B1-B0)),ox=(w-(L1-L0)*sc)/2,oy=(h-(B1-B0)*sc)/2+6,nar=w<320;
-    function X(lon){return ox+(lon-L0)*sc}function Y(lat){return oy+(B1-lat)*sc}
-    var key=w+'x'+h;if(!cache[key]){var dots=[],st=Math.max(5,sc*.62);for(var py=oy;py<oy+(B1-B0)*sc;py+=st)for(var px=ox;px<ox+(L1-L0)*sc;px+=st){var lon=L0+(px-ox)/sc,lat=B1-(py-oy)/sc;for(var q=0;q<LAND.length;q++)if(inP(lon,lat,LAND[q])){dots.push([px,py]);break}}cache={};cache[key]=dots}
-    var D=cache[key],hx=X(HUB[1]),hy=Y(HUB[2]);
-    D.forEach(function(d){var dd=Math.hypot(d[0]-hx,d[1]-hy),wave=Math.max(0,1-Math.abs(dd-((t*60)%(w*.7)))/22);c.fillStyle='rgba(255,255,255,'+(.13+.35*wave)+')';c.fillRect(d[0]-.8,d[1]-.8,1.7,1.7)});
-    CITIES.forEach(function(p,k){var x=X(p[1]),y=Y(p[2]),pr=e(t,1.2,.2+k*.22),mx=(hx+x)/2,my=Math.min(hy,y)-Math.abs(x-hx)*.25-12;
-      c.strokeStyle=A(SIG,.5);c.lineWidth=1.1;c.setLineDash([3,4]);c.lineDashOffset=-t*14;c.beginPath();c.moveTo(hx,hy);
-      for(var q=0;q<=pr+1e-6;q+=.02){var a=1-q;c.lineTo(a*a*hx+2*a*q*mx+q*q*x,a*a*hy+2*a*q*my+q*q*y)}c.stroke();c.setLineDash([]);
-      if(pr>.98){var tq=(t*.4+k*.21)%1,a2=1-tq;c.fillStyle=SIG;c.beginPath();c.arc(a2*a2*hx+2*a2*tq*mx+tq*tq*x,a2*a2*hy+2*a2*tq*my+tq*tq*y,2.2,0,7);c.fill()}
+  // Who it is for: the leaders who share one P&L, not a place on a map
+  var ROLES=[['CEO',-90],['CFO',-18],['CMO',54],['COUNTRY HEAD',126],['BOARD',198]];
+  return function(c,w,h,t){var cx=w/2,cy=h/2+4,R=Math.min(w*.36,h*.36),nar=w<320,st=Math.max(10,R*.13);
+    for(var py=cy-R*1.5;py<cy+R*1.5;py+=st)for(var px=cx-R*1.9;px<cx+R*1.9;px+=st){var dd=Math.hypot(px-cx,py-cy),wave=Math.max(0,1-Math.abs(dd-((t*50)%(R*2)))/18),fade=Math.max(0,1-dd/(R*1.7));if(fade<=0)continue;c.fillStyle='rgba(255,255,255,'+((.08+.3*wave)*fade+.02)+')';c.fillRect(px-.8,py-.8,1.6,1.6)}
+    c.strokeStyle='rgba(255,255,255,.08)';c.lineWidth=1;c.beginPath();c.arc(cx,cy,R,0,7);c.stroke();
+    var rot=t*.06;
+    ROLES.forEach(function(r,k){var an=(r[1]*Math.PI/180)+rot,x=cx+Math.cos(an)*R,y=cy+Math.sin(an)*R,pr=e(t,1.2,.2+k*.2);
+      c.strokeStyle=A(SIG,.5);c.lineWidth=1.1;c.setLineDash([3,4]);c.lineDashOffset=t*14;c.beginPath();c.moveTo(x,y);c.lineTo(x+(cx-x)*pr,y+(cy-y)*pr);c.stroke();c.setLineDash([]);
+      if(pr>.98){var q=(t*.45+k*.2)%1;c.fillStyle=SIG;c.beginPath();c.arc(x+(cx-x)*q,y+(cy-y)*q,2.2,0,7);c.fill()}
       var pu=(t*1.2+k)%2;c.strokeStyle='rgba(255,255,255,'+(.4*Math.max(0,1-pu))+')';c.beginPath();c.arc(x,y,3+pu*6,0,7);c.stroke();
       c.fillStyle='#fff';c.beginPath();c.arc(x,y,2.6*pr,0,7);c.fill();
-      if(pr>.9){var nm=nar?{BANGKOK:'BKK','KUALA LUMPUR':'KL',SINGAPORE:'SG',JAKARTA:'JKT',MANILA:'MNL'}[p[0]]:p[0];c.font='500 10px "Switzer",sans-serif';var side=p[3];if(side=='l'&&x-8-c.measureText(nm).width*1.15<4)side='r';lbl(c,nm,side=='l'?x-8:x+8,y+3.5,side=='l'?'right':'left','rgba(255,255,255,.62)')}});
-    for(var i=0;i<3;i++){var r=((t*.55+i/3)%1);c.strokeStyle=A(SIG,.7*(1-r));c.lineWidth=1.2;c.beginPath();c.arc(hx,hy,5+r*sc*4,0,7);c.stroke()}
-    glow(c,hx,hy,26,.55);c.fillStyle=SIG;c.beginPath();c.arc(hx,hy,4.5,0,7);c.fill();c.strokeStyle='#fff';c.lineWidth=1.2;c.beginPath();c.arc(hx,hy,7,0,7);c.stroke();
-    var hl=nar?'HCMC':HUB[0];c.font='600 10.5px "Switzer",sans-serif';var tw=c.measureText(hl).width+16;c.fillStyle='rgba(10,10,10,.85)';c.strokeStyle=A(SIG,.6);c.lineWidth=1;
-    var bx=hx+12,by=hy+12;if(bx+tw>w-4)bx=hx-12-tw;c.beginPath();if(c.roundRect)c.roundRect(bx,by,tw,20,10);else c.rect(bx,by,tw,20);c.fill();c.stroke();lbl(c,hl,bx+8,by+13.5,'left',A(SIG,1))}})();
+      if(pr>.9){var nm=r[0];if(nar&&nm=='COUNTRY HEAD')nm='GM';c.font='500 10px "Switzer",sans-serif';var right=Math.cos(an)>=0,tw=c.measureText(nm).width*1.15,lx=right?x+9:x-9;if(right&&lx+tw>w-4){right=false;lx=x-9}if(!right&&lx-tw<4){right=true;lx=x+9}lbl(c,nm,lx,y+3.5,right?'left':'right','rgba(255,255,255,.62)')}});
+    for(var i=0;i<3;i++){var rr=((t*.55+i/3)%1);c.strokeStyle=A(SIG,.7*(1-rr));c.lineWidth=1.2;c.beginPath();c.arc(cx,cy,6+rr*R*.55,0,7);c.stroke()}
+    glow(c,cx,cy,26,.55);c.fillStyle=SIG;c.beginPath();c.arc(cx,cy,4.5,0,7);c.fill();c.strokeStyle='#fff';c.lineWidth=1.2;c.beginPath();c.arc(cx,cy,7,0,7);c.stroke();
+    var hl='ONE P&L';c.font='600 10.5px "Switzer",sans-serif';var tw=c.measureText(hl).width*1.15+16,bx=cx-tw/2,by=cy+14;c.fillStyle='rgba(10,10,10,.85)';c.strokeStyle=A(SIG,.6);c.lineWidth=1;c.beginPath();if(c.roundRect)c.roundRect(bx,by,tw,20,10);else c.rect(bx,by,tw,20);c.fill();c.stroke();lbl(c,hl,cx,by+13.5,'center',A(SIG,1))}})();
 
 /* 03 three layers: isometric plates with data pulses rising through them */
 V['gl-how']=function(c,w,h,t){var nar=w<340,cx=w*(nar?.33:.4),pw=Math.min(w*(nar?.25:.28),h*.6),ph=pw*.36,L=[['DEMAND',.78],['SYSTEMS',.52],['INTELLIGENCE',.26]],i;
