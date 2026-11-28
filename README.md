@@ -79,3 +79,7 @@ Other static hosting works too (upload the repository root as the web root). On 
 ## Content rules
 
 English (British) only. No em dashes. Do not publish client names or results without written consent.
+
+## Cache busting
+
+After changing anything in `/assets`, run `python3 tools/bump-assets.py` before committing. It stamps CSS/JS links with `?v=<timestamp>` so visitors get the new files straight after deploy instead of a cached copy.
