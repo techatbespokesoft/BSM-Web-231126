@@ -22,7 +22,7 @@ ICON = {
     "facebook": '<path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46a21 21 0 0 0-2.3-.16c-2.3 0-3.8 1.4-3.8 3.97v2.23H8v3h2.5V21h3Z"/>',
     "instagram": '<rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.9" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1"/>',
 }
-ANCHOR = "Est. 2022 · Ho Chi Minh City · Singapore</p>"
+ANCHOR = "Revenue Infrastructure for Asia's Market Leaders.</p>"
 BLOCK = re.compile(r"\n?<!-- bespoke:social -->.*?<!-- /bespoke:social -->", re.S)
 
 def row(demo):
